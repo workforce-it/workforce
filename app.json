@@ -1,0 +1,15 @@
+{
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "heroku/ruby"
+    }
+  ],
+  "environments": {
+    "review": {
+      "addons": ["heroku-redis:hobby-dev"]
+    }
+  }
+}
