@@ -1,0 +1,405 @@
+<% content_for :title do %>
+  <% if uk? %>Employee Rota Software<% else %>Employee Scheduling Software<% end %>
+<% end %>
+
+<% content_for :description do %>
+  <% if uk? %>Build comprehensive rotas in minutes, optimize staffing levels, and ensure compliance with our powerful employee rota software.<% else %>Quickly schedule staff while managing <%= labor %> costs and staying compliant with this employee scheduling software.<% end %>
+<% end %>
+
+<% if uk? %>
+<% content_for :newshead do%>
+   <link rel="canonical" href="<%= "https://workforce.com/uk/software/rota" %>" />
+        <link rel="alternate" hreflang="en-us" href="<%= "https://workforce.com/software/scheduling-software" %>">
+        <link rel="alternate" hreflang="en-gb" href="<%= "https://workforce.com/uk/software/rota" %>">
+        <link rel="alternate" hreflang="x-default" href="<%= "https://workforce.com/uk/software/rota" %>">
+        <meta property="og:title" content="Employee Rota Software">
+        <meta property="og:site_name" content="Workforce.com">
+        <meta property="og:url" content="<%= "https://workforce.com/uk/software/rota" %>">
+        <meta property="og:description" content="Build comprehensive rotas in minutes, optimize staffing levels, and ensure compliance with our powerful employee rota software.">
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="en-gb">
+        <meta property="og:locale:alternate" content="en-us">
+        <% end %>
+    <% end %>
+
+<div data-controller="demo-modal">
+  <div class="bg-white">
+    <div class="relative overflow-hidden">
+      <div class="absolute inset-y-0 h-full w-full" aria-hidden="true">
+        <div class="relative h-full">
+          <svg class="absolute right-full transform translate-y-1/3 translate-x-1/4 md:translate-y-1/2 sm:translate-x-1/2 lg:translate-x-full" width="404" height="784" fill="none" viewBox="0 0 404 784">
+            <defs>
+              <pattern id="e229dbec-10e9-49ee-8ec3-0286ca089edf" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <circle cx="1.5" cy="1.5" r="1.5" class="text-gray-200" fill="currentColor" />
+              </pattern>
+            </defs>
+            <rect width="404" height="784" fill="url(#e229dbec-10e9-49ee-8ec3-0286ca089edf)" />
+          </svg>
+          <svg class="absolute left-full transform -translate-y-3/4 -translate-x-1/4 sm:-translate-x-1/2 md:-translate-y-1/2 lg:-translate-x-3/4" width="404" height="784" fill="none" viewBox="0 0 404 784">
+            <defs>
+              <pattern id="d2a68204-c383-44b1-b99f-42ccff4e5365" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <circle cx="1.5" cy="1.5" r="1.5" class="text-gray-200" fill="currentColor" />
+              </pattern>
+            </defs>
+            <rect width="404" height="784" fill="url(#d2a68204-c383-44b1-b99f-42ccff4e5365)" />
+          </svg>
+        </div>
+      </div>
+      <div class="relative pt-6 pb-10 sm:pb-6 2xl:pb-10">
+        <%= render "layouts/nav" %>
+        <div class="grid gap-2 lg:grid-cols-12 mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6 space-x-6">
+          <div class="text-left col-span-6 flex flex-col justify-center">
+            <h1 class="text-6xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-7xl -mr-2">
+              <span class="block">Employee <%= schedules %></span>
+              created <span class="text-blue-tertiary">in minutes.</span>
+            </h1>
+            <p class="mt-3 text-xl text-gray-700 sm:text-lg md:mt-5 md:text-2xl max-w-3xl">
+              Build <%= schedules %>, optimize your staffing levels, manage <%= labor %> costs, and ensure <%= labor %> compliance in one powerful employee scheduling solution.
+            </p>
+            <div class="inline-flex flex-col md:flex-row my-5 md:space-x-4 space-y-4 md:space-y-0">
+              <div class="btn-green-action flex w-max items-center space-x-2" data-action="click->demo-modal#open">
+                <%= render "layouts/phone" %>
+                <span>Book a call</span>
+              </div>
+              <%= link_to "Create free account", try_path, class: "btn-blue-secondary px-8 py-2 w-max bg-white" %>
+            </div>
+          </div>
+          <div class="hidden sm:block col-span-6 relative">
+            <div class="inset-0 mx-auto absolute flex w-full h-full">
+              <div class="blob-3 w-3/6 h-full flex absolute transform rotate-12 -right-4 translate-y-8 scale-x-n125 scale-125"></div>
+            </div>
+            <div class="z-20 transform rotate-1 -mr-6">
+              <%= image_tag("scheduling-header.png", class: "filter saturate-100") %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="relative -mb-2">
+        <div class="relative inset-0 flex flex-col h-20 sm:h-72 2xl:h-96" aria-hidden="true">
+          <div class="flex-1 w-full bg-gray-wave">
+          </div>
+        </div>
+      </div>
+
+      <div class="relative py-8 sm:py-10 sm:pt-8 bg-gray-50 -mt-12 sm:-mt-48 2xl:-mt-60">
+        <div class="grid gap-10 lg:grid-cols-12 max-w-7xl mx-auto px-4 sm:mt-12 sm:px-6">
+          <div class="col-span-6 relative sm:pr-10 items-center flex sm:mb-12">
+            <div class="z-20 transform -rotate-1">
+              <%= image_tag("data-driven-scheduling.png") %>
+            </div>
+          </div>
+          <div class="col-span-6 text-left">
+            <h2 class="relative text-4xl text-gray-800 font-extrabold tracking-tight sm:text-5xl z-10 -mr-6">
+              Data-driven scheduling in a few clicks</span>
+            </h2>
+            <ul class="ml-8 my-8 space-y-2">
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 font-bold text-sm bg-yellow-400 bg-opacity-50 rounded-full">
+                  <%= render "layouts/check", custom_class: "h-4 w-4 text-yellow-500" %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Workforce.com integrates with your existing systems to capture data to create cost-effective <%= schedules %>.</p>
+              </li>
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 font-bold text-sm bg-yellow-400 bg-opacity-50 rounded-full">
+                  <%= render "layouts/check", custom_class: "h-4 w-4 text-yellow-500" %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Optimize your <%= schedules %> according to historical sales data to determine how many employees you need at a particular time, day, and location.</p>
+              </li>
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 font-bold text-sm bg-yellow-400 bg-opacity-50 rounded-full">
+                  <%= render "layouts/check", custom_class: "h-4 w-4 text-yellow-500" %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Create <%= schedule %> templates and apply them to an employee or team whenever you need them. </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="relative py-8 sm:py-10 sm:pt-8 bg-gray-50">
+        <div class="flex flex-col-reverse sm:grid gap-10 grid-cols-6 lg:grid-cols-12 max-w-7xl mx-auto px-4 sm:mt-12 sm:px-6">
+          <div class="col-span-6 text-left flex flex-col justify-center">
+            <h2 class="relative text-4xl text-gray-800 font-extrabold tracking-tight sm:text-5xl z-10 -mr-6">
+              Take control of <%= labor %> costs with real-time data</span>
+            </h2>
+            <ul class="ml-8 my-8 space-y-2">
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 font-bold text-sm bg-yellow-400 bg-opacity-50 rounded-full">
+                  <%= render "layouts/check", custom_class: "h-4 w-4 text-yellow-500" %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Equip managers to make informed decisions. They can see wage costs in real-time and adjust staffing levels as needed.</p>
+              </li>
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 font-bold text-sm bg-yellow-400 bg-opacity-50 rounded-full">
+                  <%= render "layouts/check", custom_class: "h-4 w-4 text-yellow-500" %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Stay on budget and see costs per team, per week, or per location in real time.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-span-6 relative sm:pl-10 items-center flex sm:mb-12">
+            <div class="z-20 transform rotate-1">
+              <%= image_tag("take-control.png") %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="hidden sm:block relative py-8 sm:py-10 sm:pt-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:mt-12 sm:px-6">
+          <div class="flex flex-col justify-center">
+            <h2 class="relative text-4xl text-center text-gray-800 font-extrabold tracking-tight max-w-4xl mx-auto sm:text-5xl z-10">
+              Ensure <%= labor %> compliance before publishing employee <%= schedules %></span>
+            </h2>
+            <p class="px-2 text-lg text-center sm:text-xl md:text-1.5xl text-gray-500 py-6">Avoid compliance risks. Account for <%= labor %> laws in the scheduling process -- automatically.</p>
+            <div class="relative items-center flex my-6">
+              <div class="z-20">
+                <%= image_tag("ensure-labor.png") %>
+              </div>
+            </div>
+            <ul class="grid gap-10 max-w-4xl lg:grid-cols-6 my-8 mx-auto">
+              <li class="col-span-2">
+                <span class="absolute -ml-8 my-1 p-1 font-bold text-sm bg-yellow-400 bg-opacity-50 rounded-full">
+                  <%= render "layouts/check", custom_class: "h-4 w-4 text-yellow-500" %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Schedule employees according to their contract or type of employment.</p>
+              </li>
+              <li class="col-span-2">
+                <span class="absolute -ml-8 my-1 p-1 font-bold text-sm bg-yellow-400 bg-opacity-50 rounded-full">
+                  <%= render "layouts/check", custom_class: "h-4 w-4 text-yellow-500" %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Receive alerts of company policy or <%= labor %> law violations before publishing <%= schedules %>.</p>
+              </li>
+              <li class="col-span-2">
+                <span class="absolute -ml-8 my-1 p-1 font-bold text-sm bg-yellow-400 bg-opacity-50 rounded-full">
+                  <%= render "layouts/check", custom_class: "h-4 w-4 text-yellow-500" %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Include the required break times in each <%= schedule %>.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden sm:block relative py-8 sm:py-10 sm:pt-8 bg-white">
+        <div class="grid gap-10 lg:grid-cols-5 max-w-5xl mx-auto px-4 sm:mt-12 sm:px-6 flex items-center mb-12">
+          <div class="col-span-2 relative pr-10 items-center flex">
+            <div class="z-20">
+              <%= image_tag("manage-overtime.png") %>
+            </div>
+          </div>
+          <div class="col-span-3 text-left">
+            <h2 class="relative text-4xl text-gray-800 font-extrabold tracking-tight sm:text-5xl z-10 -mr-6">
+              Manage overtime hours</span>
+            </h2>
+            <div class="my-3 space-y-2">
+              <p class="text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Spot unnecessary overtime hours and adjust employee <%= schedules %> quickly before sending out to staff.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative py-8 sm:py-10 sm:pt-16 bg-gray-50">
+        <div class="flex flex-col-reverse sm:grid gap-10 grid-cols-6 lg:grid-cols-12 max-w-7xl mx-auto px-4 sm:mt-12 sm:px-6">
+          <div class="col-span-6 text-left flex flex-col justify-center">
+            <h2 class="relative text-4xl text-gray-800 font-extrabold tracking-tight sm:text-5xl z-10 -mr-6">
+              Quickly fill staffing gaps in case of no-shows</span>
+            </h2>
+            <ul class="ml-8 my-8 space-y-2">
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 font-bold text-sm bg-yellow-400 bg-opacity-50 rounded-full">
+                  <%= render "layouts/check", custom_class: "h-4 w-4 text-yellow-500" %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">When employees aren’t able to work a shift, offer it to other staff to make sure it gets covered.</p>
+              </li>
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 font-bold text-sm bg-yellow-400 bg-opacity-50 rounded-full">
+                  <%= render "layouts/check", custom_class: "h-4 w-4 text-yellow-500" %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Managers can choose to broadcast an open shift to all available staff or offer it to select employees.</p>
+              </li>
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 font-bold text-sm bg-yellow-400 bg-opacity-50 rounded-full">
+                  <%= render "layouts/check", custom_class: "h-4 w-4 text-yellow-500" %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">See costs shown against all potential swaps and stay in control of wage costs.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-span-6 relative sm:pl-10 items-center flex sm:mb-12">
+            <div class="z-20 transform rotate-1">
+              <%= image_tag("quickly-fill.png") %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative py-8 sm:py-10 sm:pt-8 bg-gray-50 z-20">
+        <div class="grid gap-10 lg:grid-cols-12 max-w-7xl mx-auto px-4 sm:mt-12 sm:px-6 flex items-center">
+          <div class="col-start-2 col-span-4 relative sm:pr-10 items-center flex sm:mb-12">
+            <div class="z-20 transform -rotate-1">
+              <%= image_tag("inform-staff.png") %>
+            </div>
+          </div>
+          <div class="col-span-6 text-left">
+            <h2 class="relative text-4xl text-gray-800 font-extrabold tracking-tight sm:text-5xl z-10 -mr-6">
+             Inform staff quickly</span>
+            </h2>
+            <ul class="ml-8 my-8 space-y-2">
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 font-bold text-sm bg-yellow-400 bg-opacity-50 rounded-full">
+                  <%= render "layouts/check", custom_class: "h-4 w-4 text-yellow-500" %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Inform your team of new work, <%= schedules %> and any shift changes via the Workforce.com scheduling app, email, or SMS.</p>
+              </li>
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 font-bold text-sm bg-yellow-400 bg-opacity-50 rounded-full">
+                  <%= render "layouts/check", custom_class: "h-4 w-4 text-yellow-500" %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Use custom fields to include reminders and other valuable information about each shift.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative py-8 sm:py-10 sm:pt-8 sm:pb-16 bg-gray-50">
+        <div class="flex flex-col-reverse sm:grid gap-10 grid-cols-6 lg:grid-cols-12 max-w-7xl mx-auto px-4 sm:mt-12 sm:px-6">
+          <div class="col-span-6 text-left flex flex-col justify-center">
+            <h2 class="relative text-4xl text-gray-800 font-extrabold tracking-tight sm:text-5xl z-10 -mr-6">
+              Identify trends in the employee scheduling data</span>
+            </h2>
+            <ul class="ml-8 my-8 space-y-2">
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 font-bold text-sm bg-yellow-400 bg-opacity-50 rounded-full">
+                  <%= render "layouts/check", custom_class: "h-4 w-4 text-yellow-500" %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Create reports based on key metrics such as shift count, shift costs, scheduled hours, wage as a % of revenue, sales per <%= labor %> hour, and predicted sales.</p>
+              </li>
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 font-bold text-sm bg-yellow-400 bg-opacity-50 rounded-full">
+                  <%= render "layouts/check", custom_class: "h-4 w-4 text-yellow-500" %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Analyze employee scheduling data based on any duration, from an entire week to a specific day.</p>
+              </li>
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 font-bold text-sm bg-yellow-400 bg-opacity-50 rounded-full">
+                  <%= render "layouts/check", custom_class: "h-4 w-4 text-yellow-500" %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Reflect your organization hierarchy in the system and create reports across unlimited custom dimensions.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-span-5 relative px-10 sm:pl-10 items-center flex sm:mb-12">
+            <div class="z-20 transform rotate-1">
+              <%= image_tag("identify-trends.png") %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative py-8 sm:py-10 sm:pt-8 bg-white sm:pb-32">
+        <div class="max-w-7xl mx-auto px-4 sm:mt-20 sm:px-6">
+          <div class="flex flex-col justify-center">
+            <h2 class="relative text-3xl sm:text-4xl text-center text-gray-800 font-extrabold tracking-tight max-w-4xl mx-auto sm:text-5xl z-10">
+              Proven employee scheduling software in 10,000+ staff deployments</span>
+            </h2>
+            <p class="sm:px-2 text-base text-center sm:text-xl md:text-1.5xl text-gray-500 py-6 max-w-3xl mx-auto">Staff scheduling is key to effective workforce management. Our employee scheduling solution is easy to use yet filled with features for growing your business.</p>
+            <div class="grid gap-12 max-w-5xl lg:grid-cols-12 my-8 mx-auto">
+              <div class="col-span-6 space-y-2">
+                <div class="flex flex-col">
+                  <%= image_tag("1-equip.png", class: "w-1/5") %>
+                  <h3 class="text-2xl sm:text-3xl text-gray-700">Give managers the right tools.</h3>
+                </div>
+                <p class="text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Equip managers to build shifts, stay on top of <%= labor %> costs, and make quick and informed decisions for optimizing staffing levels and operations.</p>
+              </div>
+              <div class="col-span-6 space-y-2">
+                <div class="flex flex-col">
+                  <%= image_tag("4-avoid.png", class: "w-1/5") %>
+                  <h3 class="text-2xl sm:text-3xl text-gray-700">Avoid overspending.</h3>
+                </div>
+                <p class="text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Save on <%= labor %> costs without compromising productivity. We make it easy to spot areas where you can potentially overspend.</p>
+              </div>
+              <div class="col-span-6 space-y-2">
+                <div class="flex flex-col">
+                  <%= image_tag("5-prioritize.png", class: "w-1/5") %>
+                  <h3 class="text-2xl sm:text-3xl text-gray-700">Prioritize compliance.</h3>
+                </div>
+                <p class="text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Automate <%= labor %> compliance when building work <%= schedules %>. Quickly address potential violations or penalties when scheduling employees.</p>
+              </div>
+              <div class="col-span-6 space-y-2">
+                <div class="flex flex-col">
+                  <%= image_tag("2-ensure.png", class: "w-1/5") %>
+                  <h3 class="text-2xl sm:text-3xl text-gray-700">Ensure visibility among teams.</h3>
+                </div>
+                <p class="text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Avoid miscommunication by providing staff a single view of their <%= schedule %>. Notify them of new schedules, shift changes, and other important information.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="absolute inset-0 flex flex-col" aria-hidden="true">
+          <div class="flex-1 w-full bg-section-gradient">
+          </div>
+        </div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 pb-32">
+          <div class="pt-28 relative text-center">
+            <div class="text-white text-xl sm:text-2xl flex space-x-2 items-center justify-center">
+              <span>A two-week implementation story</span>
+            </div>
+            <h2 class="text-white text-4xl sm:text-5xl my-6 mb-12"><span class="underline">Case Study:</span> Increasing revenue</h2>
+            <div class="plyr__video-embed" data-controller="plyr">
+              <iframe width="560" height="315" src="https://www.youtube.com/watch?v=tPJdkXSbKEc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="mt-20 max-w-2xl mx-auto">
+              <h3 class="text-2xl sm:text-3xl text-center text-white font-normal text-opacity-90">Domino’s Israel saved 25,000 hours in 6 months and <span class="px-2 bg-opacity-80 bg-yellow-500">increased sales per <%= labor %> hour by 11%</span> with Workforce.com.</h3>
+              <h3 class="text-2xl sm:text-3xl text-center text-white font-normal text-opacity-90 mt-5"><span class="absolute text-5xl sm:text-6xl overflow-hidden h-10 -ml-4 sm:-ml-6 -mt-2.5">"</span>
+                For me, it’s a revolution. We saw good progress in the efficiency of our stores.<span class="absolute text-5xl sm:text-6xl overflow-hidden h-10 -mr-4 sm:-mr-6 -mt-2.5">"</span></h3>
+              <p class="text-white text-center text-opacity-80 text-lg sm:text-xl my-3">— Aerie Elbaz, COO, Domino’s Israel</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative py-8 sm:py-10 sm:pt-8 bg-white">
+        <div class="grid sm:gap-10 lg:grid-cols-12 max-w-7xl mx-auto px-4 mt-12 sm:px-6">
+          <div class="col-span-6 text-left flex flex-col justify-center">
+            <h2 class="relative text-4xl text-gray-800 font-extrabold tracking-tight sm:text-5xl z-10 -mr-6">
+              Integrate with your POS, payroll, and HR systems</span>
+            </h2>
+            <div class="mt-8 mb-2 sm:my-8 space-y-2">
+              <p class="text-lg sm:text-xl md:text-1.5xl text-gray-500">Integrate your current tools with our system for faster, more efficient workforce management operations, while providing robust scheduling & attendance for frontline teams.</p>
+            </div>
+          </div>
+          <div class="col-span-6 relative sm:pl-10 items-center flex sm:mb-12">
+            <div class="z-20">
+              <%= image_tag("integrations.png") %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 pb-16">
+          <div class="pt-20 relative text-center">
+            <h2 class="text-center text-3xl text-gray-800 text-opacity-90 font-extrabold tracking-tight sm:text-5xl">
+              <%= link_to "Learn about how it works", how_it_works_path, class: "underline" %>, <%= link_to "see how customers felt before & after", why_were_different_path, class: "underline" %>, or if you're ready to get started —
+            </h2>
+            <div class="flex flex-col md:flex-row items-center justify-center md:space-x-4 space-y-4 md:space-y-0 mt-8 mb-6">
+              <div class="btn-green px-8 py-2 mx-0 inline-flex space-x-2 items-center justify-center" data-action="click->demo-modal#open">
+                <%= render "layouts/phone" %>
+                <span>Book a call</span>
+              </div>
+              <%= link_to "Try Workforce.com today", try_path, class: "btn-blue-secondary mt-8 mb-6 px-8 py-2 mx-auto" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <%= render "layouts/demo_modal" %>
+</div>

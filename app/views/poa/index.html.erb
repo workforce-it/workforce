@@ -1,0 +1,54 @@
+<%= turbo_frame_tag "poa" do %>
+	<h2 class="relative text-left text-4xl text-gray-800 font-extrabold tracking-tight sm:text-5xl z-10 mb-2">Need a quote?</h2>
+	<p class="text-lg text-gray-600 text-left mb-5">Give us a few details and we'll reach out with pricing specifically tailored to your business requirements.</p>
+  <%= form_with(url: poa_path, method: :post, class: "relative", data: { controller: "poa phone-input disable-form", action: "submit->disable-form#disable", poa_hidden_class: "hidden", phone_input_region_value: current_region }) do |f| %>
+  	<div class="space-y-3">
+			<div class="flex space-x-3">
+				<div class="w-1/2">
+					<%= f.text_field :firstName, placeholder: "First name", data: { poa_target: "firstName"}, class: "w-full text-lg px-4 rounded-md border-2 border-gray-200 placeholder-gray-400 focus:border-0 focus:ring-blue-tertiary focus:border-1 focus:border-blue-tertiary" %>
+				</div>
+				<div class="w-1/2">
+					<%= f.text_field :lastName, placeholder: "Last name", data: { poa_target: "lastName"}, class: "w-full text-lg px-4 rounded-md border-2 border-gray-200 placeholder-gray-400 focus:border-0 focus:ring-blue-tertiary focus:border-1 focus:border-blue-tertiary" %>
+				</div>
+			</div>
+			<div class="flex space-x-3">
+				<div class="w-1/2">
+					<%= f.text_field :companyName, placeholder: "Company name", data: { poa_target: "companyName" }, class: "w-full text-lg px-4 rounded-md border-2 border-gray-200 placeholder-gray-400 focus:border-0 focus:ring-blue-tertiary focus:border-1 focus:border-blue-tertiary"%>
+				</div>
+				<div class="w-1/2">
+					<%= f.select :companySize, [["Staff range","Staff range"], ["0-19","0-19"], ["20-49", "20-49"], ["50-99", "50-99"], ["100-500","100-499"], ["500-1,000","500-999"], ["1,000-2,500","1000-2499"], ["2,500-5,000","2,500-4,999"], ["5,000-10,000","5,000-9,999"], ["10,000-25,000","10,000-24,999"], ["25,000 +","25,000 +"]], {}, { class: "w-full text-lg px-4 rounded-md border-2 border-gray-200 text-gray-400 focus:border-0 focus:ring-blue-tertiary focus:border-1 focus:border-blue-tertiary", "data-poa-target" => "companySize" } %>
+				</div>
+			</div>
+			<div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3">
+				<div class="sm:w-1/2">
+					<%= f.text_field :industry, placeholder: "Industry", data: { poa_target: "industry" }, class: "w-full text-lg px-4 rounded-md border-2 border-gray-200 placeholder-gray-400 focus:border-0 focus:ring-blue-tertiary focus:border-1 focus:border-blue-tertiary" %>
+				</div>
+				<div class="sm:w-1/2">
+					<%= f.text_field :system, placeholder: "Current system (e.g. excel)", data: { poa_target: "system" }, class: "w-full text-lg px-4 rounded-md border-2 border-gray-200 placeholder-gray-400 focus:border-0 focus:ring-blue-tertiary focus:border-1 focus:border-blue-tertiary" %>
+				</div>
+			</div>
+			<div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3">
+				<div class="sm:w-1/2">
+					<%= f.phone_field :phone, placeholder: "555 123 4567", class: "w-full text-lg px-4 rounded-md border-2 border-gray-200 placeholder-gray-400 focus:border-0 focus:ring-blue-tertiary focus:border-1 focus:border-blue-tertiary", autocomplete: "tel", data: { phone_input_target: "source", poa_target: "phone", action: "countrychange->phone-input#changeCountry blur->phone-input#validate" } %>
+				</div>
+				<div class="sm:w-1/2">
+					<%= f.email_field :email, placeholder: "yourname@company.com", data: { poa_target: "email" }, class: "w-full text-lg px-4 rounded-md border-2 border-gray-200 placeholder-gray-400 focus:border-0 focus:ring-blue-tertiary focus:border-1 focus:border-blue-tertiary" %>
+				</div>
+			</div>
+			<div class="flex">
+				<div class="w-full">
+					<%= f.text_area :inquiry, placeholder: "Additional information ...", rows: 4, class: "w-full text-lg px-4 rounded-md border-2 border-gray-200 placeholder-gray-400 focus:border-0 focus:ring-blue-tertiary focus:border-1 focus:border-blue-tertiary" %>
+				</div>
+			</div>
+
+
+			<%= f.hidden_field :country, data: { phone_input_target: "country" } %>
+			<%= f.hidden_field :country_name, data: { phone_input_target: "countryName" } %>
+			<%= f.hidden_field :country_code, data: { phone_input_target: "countryCode" } %>
+			<%= f.hidden_field :country_calling_code, data: { phone_input_target: "callingCode" } %>
+			
+			<span class="block text-red-500 text-xs my-2" data-poa-target="formError" data-phone-input-target="phoneError"></span>
+			<%= f.button "Submit", type: :submit, data: { action: "click->poa#submit", disable_with: "<i class='fa fa-spinner fa-spin'></i> Submitting..." }, class: "rounded-full hover:cursor-pointer w-max mt-10 float-right mb-8 text-white bg-blue-tertiary border-blue-tertiary text-lg px-6 py-2 inline-block relative" %>
+		</div>
+	<% end %>
+<% end %>

@@ -1,0 +1,376 @@
+<% content_for :title do %>
+  Time and Attendance Software
+<% end %>
+
+<% content_for :description do %>
+  Capture the most accurate electronic employee attendance records with this time and attendance software.
+<% end %>
+
+<div data-controller="demo-modal">
+  <div class="bg-white">
+    <div class="relative overflow-hidden">
+      <div class="absolute inset-y-0 h-full w-full" aria-hidden="true">
+        <div class="relative h-full">
+          <svg class="absolute right-full transform translate-y-1/3 translate-x-1/4 md:translate-y-1/2 sm:translate-x-1/2 lg:translate-x-full" width="404" height="784" fill="none" viewBox="0 0 404 784">
+            <defs>
+              <pattern id="e229dbec-10e9-49ee-8ec3-0286ca089edf" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <circle cx="1.5" cy="1.5" r="1.5" class="text-gray-200" fill="currentColor" />
+              </pattern>
+            </defs>
+            <rect width="404" height="784" fill="url(#e229dbec-10e9-49ee-8ec3-0286ca089edf)" />
+          </svg>
+          <svg class="absolute left-full transform -translate-y-3/4 -translate-x-1/4 sm:-translate-x-1/2 md:-translate-y-1/2 lg:-translate-x-3/4" width="404" height="784" fill="none" viewBox="0 0 404 784">
+            <defs>
+              <pattern id="d2a68204-c383-44b1-b99f-42ccff4e5365" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <circle cx="1.5" cy="1.5" r="1.5" class="text-gray-200" fill="currentColor" />
+              </pattern>
+            </defs>
+            <rect width="404" height="784" fill="url(#d2a68204-c383-44b1-b99f-42ccff4e5365)" />
+          </svg>
+        </div>
+      </div>
+      <div class="relative pt-6 pb-10 sm:pb-6 2xl:pb-10">
+        <%= render "layouts/nav" %>
+        <div class="grid gap-2 lg:grid-cols-12 mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6 space-x-6">
+          <div class="text-left col-span-6 flex flex-col justify-center">
+            <h1 class="text-6xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-7xl">
+              <span class="block">The most accurate</span>
+              <span class="text-blue-tertiary">time & attendance</span> tracking ever.
+            </h1>
+            <p class="mt-3 text-xl text-gray-700 sm:text-lg md:mt-5 md:text-2xl max-w-3xl">
+              Stop worrying about paperwork, payroll errors, and <%= labor %> compliance. Start managing your workforce productivity and <%= labor %> costs in real-time.
+            </p>
+            <div class="inline-flex flex-col md:flex-row my-5 md:space-x-4 space-y-4 md:space-y-0">
+              <div class="btn-green-action flex w-max items-center space-x-2" data-action="click->demo-modal#open">
+                <%= render "layouts/phone" %>
+                <span>Book a call</span>
+              </div>
+              <%= link_to "Create free account", try_path, class: "btn-blue-secondary px-8 py-2 w-max bg-white" %>
+            </div>
+          </div>
+          <div class="hidden sm:block col-span-6 relative">
+            <div class="inset-0 mx-auto absolute flex w-full h-full">
+              <div class="blob-3 w-3/6 h-full flex absolute transform rotate-12 -right-4 translate-y-8 scale-x-n125 scale-125"></div>
+            </div>
+            <div class="z-20 transform rotate-1 -mr-6">
+              <%= image_tag("the-most-accurate.png", class: "filter saturate-100") %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="relative -mb-2">
+        <div class="relative inset-0 flex flex-col h-20 sm:h-72 2xl:h-96" aria-hidden="true">
+          <div class="flex-1 w-full bg-gray-wave">
+          </div>
+        </div>
+      </div>
+
+      <div class="relative py-8 sm:py-10 sm:pt-8 bg-gray-50 -mt-12 sm:-mt-48 2xl:-mt-60">
+        <div class="grid gap-10 lg:grid-cols-12 max-w-7xl mx-auto px-4 sm:mt-12 sm:px-6">
+          <div class="col-span-6 relative sm:pr-10 items-center flex sm:mb-12">
+            <div class="z-20 transform -rotate-1">
+              <%= image_tag("capture-accurate.png") %>
+            </div>
+          </div>
+          <div class="col-span-6 text-left">
+            <h2 class="relative text-4xl text-gray-800 font-extrabold tracking-tight sm:text-5xl z-10 -mr-6">
+              Capture accurate attendance with the Kiosk App.</span>
+            </h2>
+            <p class="text-lg sm:text-xl md:text-1.5xl text-gray-500 pt-6">Workforce.com’s Time Clock App promotes employee accountability, prevents time theft, and ensures the integrity of employee attendance data.</p>
+            <ul class="ml-8 my-6 space-y-2">
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 w-7">
+                  <%= image_tag("capture-accurate-icon-1.png") %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">No more paper timecards or expensive equipment. Staff clock in and out in the app with their IOS and Android devices.</p>
+              </li>
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 w-7">
+                  <%= image_tag("capture-accurate-icon-2.png") %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Make sure the right worker is in the right shift, at the right place, at the right time with unique clock in/out passcodes, electronic photo verification, and GPS location data.</p>
+              </li>
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 w-7">
+                  <%= image_tag("capture-accurate-icon-3.png") %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Workforce.com automatically records clock ins and clock outs to electronic timesheets.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="relative py-8 sm:py-10 sm:pt-8 bg-gray-50">
+        <div class="flex flex-col-reverse sm:grid gap-10 grid-cols-6 lg:grid-cols-12 max-w-7xl mx-auto px-4 sm:mt-12 sm:px-6">
+          <div class="col-span-6 text-left flex flex-col justify-center">
+            <h2 class="relative text-4xl text-gray-800 font-extrabold tracking-tight sm:text-5xl z-10 -mr-6">
+              Optimize operations throughout the day.</span>
+            </h2>
+            <p class="text-lg sm:text-xl md:text-1.5xl text-gray-500 pt-6">Effective workforce management is about having complete oversight of your operations. Provide your managers with an attendance system that stays on top of employee productivity — all from a computer or mobile device.</p>
+            <ul class="ml-8 my-6 space-y-2">
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 w-7">
+                  <%= image_tag("optimize-operations-icon-1.png") %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Receive notifications when employees clock in and clock out, when employees are running late, and when they’re about to incur overtime costs.</p>
+              </li>
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 w-7">
+                  <%= image_tag("optimize-operations-icon-2.png") %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Easily manage absences if a worker can’t make it to their shift. Offer the shift to other members of your team via shift swapping in the Workforce.com app.</p>
+              </li>
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 w-7">
+                  <%= image_tag("optimize-operations-icon-3.png") %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Optimize workforce scheduling based on real-time sales and demand data.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-span-6 relative sm:pl-10 items-center flex sm:mb-12">
+            <div class="z-20 transform rotate-1">
+              <%= image_tag("optimize-operations.png") %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative py-8 sm:py-10 sm:pt-16 bg-white">
+        <div class="grid gap-10 lg:grid-cols-12 max-w-7xl mx-auto px-4 sm:mt-12 sm:px-6">
+          <div class="col-span-6 relative sm:pr-10 items-center flex sm:mb-12">
+            <div class="z-20 transform -rotate-1">
+              <%= image_tag("quickly-identify.png") %>
+            </div>
+          </div>
+          <div class="col-span-6 text-left">
+            <h2 class="relative text-4xl text-gray-800 font-extrabold tracking-tight sm:text-5xl z-10 -mr-6">
+              Quickly identify and solve operational issues.</span>
+            </h2>
+            <p class="text-lg sm:text-xl md:text-1.5xl text-gray-500 pt-6">Give and get immediate employee feedback with shift ratings in the Workforce.com app, so managers can resolve issues ASAP.</p>
+            <ul class="ml-8 my-6 space-y-2">
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 w-7">
+                  <%= image_tag("quickly-identify-icon-1.png") %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Rate employee performance after each shift. See by role and location where your teams perform best and where they need more training.</p>
+              </li>
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 w-7">
+                  <%= image_tag("quickly-identify-icon-2.png") %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Employees clocking in earlier or later than the assigned time? Ask them why upon clocking in or out.</p>
+              </li>
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 w-7">
+                  <%= image_tag("quickly-identify-icon-3.png") %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Prompt employees to provide feedback on what did and didn’t go well in each shift. Get insights on staffing levels, management, and more.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="relative py-8 sm:py-10 sm:pt-8 bg-white">
+        <div class="flex flex-col-reverse sm:grid gap-10 grid-cols-6 lg:grid-cols-12 max-w-7xl mx-auto px-4 sm:mt-12 sm:px-6">
+          <div class="col-span-6 text-left flex flex-col justify-center">
+            <h2 class="relative text-4xl text-gray-800 font-extrabold tracking-tight sm:text-5xl z-10 -mr-6">
+              Save time with our payroll & HRIS integrations.</span>
+            </h2>
+            <p class="text-lg sm:text-xl md:text-1.5xl text-gray-500 pt-6">Verifying electronic timesheets and exporting them to your payroll software is straightforward and fast. We make it easy to keep your HRIS sowftware as the single source of truth.</p>
+            <ul class="ml-8 my-6 space-y-2">
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 w-7">
+                  <%= image_tag("save-integration-icon-1.png") %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Workforce.com integrates with today’s leading payroll systems, POS systems, and human resource platforms.</p>
+              </li>
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 w-7">
+                  <%= image_tag("save-integration-icon-2.png") %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Timesheets that have been verified and match the <%= schedule %> are auto-approved, saving your managers time.</p>
+              </li>
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 w-7">
+                  <%= image_tag("save-integration-icon-3.png") %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Export verified and approved timesheets to your payroll system with a single click.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-span-6 relative sm:pl-10 items-center flex sm:mb-12">
+            <div class="z-20 transform rotate-1">
+              <%= image_tag("save-integration.png") %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative py-8 sm:py-10 sm:pt-16 bg-white">
+        <div class="grid gap-10 lg:grid-cols-12 max-w-7xl mx-auto px-4 sm:mt-12 sm:px-6">
+          <div class="col-span-6 relative sm:pr-10 items-center flex sm:mb-12">
+            <div class="z-20 transform -rotate-1">
+              <%= image_tag("avoid-compliance.png") %>
+            </div>
+          </div>
+          <div class="col-span-6 text-left">
+            <h2 class="relative text-4xl text-gray-800 font-extrabold tracking-tight sm:text-5xl z-10 -mr-6">
+              Avoid compliance risks automatically.</span>
+            </h2>
+            <p class="text-lg sm:text-xl md:text-1.5xl text-gray-500 pt-6">Simplify <%= labor %> compliance with accurate time logs and automatic management of employee rates.</p>
+            <ul class="ml-8 my-6 space-y-2">
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 w-7">
+                  <%= image_tag("avoid-compliance-icon-1.png") %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Automatically <%= schedule %> paid and unpaid breaks that meet your policies and legal requirements.</p>
+              </li>
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 w-7">
+                  <%= image_tag("avoid-compliance-icon-2.png") %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Prevent over- or underpayment of staff to manage <%= labor %> costs. The platform calculates the total hours worked, making computations simpler.</p>
+              </li>
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 w-7">
+                  <%= image_tag("avoid-compliance-icon-3.png") %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Accurate payroll, always. Automatically pay staff according to rates based on their respective locations. Even for employees working across multiple sites.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative py-8 sm:py-10 sm:pt-8 bg-white sm:pb-32">
+        <div class="max-w-7xl mx-auto px-4 sm:mt-20 sm:px-6">
+          <div class="flex flex-col justify-center">
+            <h2 class="relative text-3xl sm:text-4xl text-center text-gray-800 font-extrabold tracking-tight max-w-4xl mx-auto sm:text-5xl z-10">
+              Proven employee time tracking software in 10,000+ staff deployments</span>
+            </h2>
+            <p class="sm:px-2 text-base text-center sm:text-xl md:text-1.5xl text-gray-500 py-6 max-w-3xl mx-auto">Appropriate staff attendance is key to effective workforce management. Our employee time tracking solution is easy to use yet filled with features for growing your business.</p>
+            <div class="grid gap-12 max-w-5xl lg:grid-cols-12 my-8 mx-auto">
+              <div class="col-span-6 space-y-2">
+                <div class="flex flex-col">
+                  <%= image_tag("1-equip.png", class: "w-1/5") %>
+                  <h3 class="text-2xl sm:text-3xl text-gray-700">Give managers the right tools.</h3>
+                </div>
+                <p class="text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Equip managers to stay on top of <%= labor %> costs, and make quick and informed decisions for optimizing staffing levels and operations.</p>
+              </div>
+              <div class="col-span-6 space-y-2">
+                <div class="flex flex-col">
+                  <%= image_tag("4-avoid.png", class: "w-1/5") %>
+                  <h3 class="text-2xl sm:text-3xl text-gray-700">Avoid overspending.</h3>
+                </div>
+                <p class="text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Save on <%= labor %> costs without compromising productivity. We make it easy to spot areas where you can potentially overspend.</p>
+              </div>
+              <div class="col-span-6 space-y-2">
+                <div class="flex flex-col">
+                  <%= image_tag("5-prioritize.png", class: "w-1/5") %>
+                  <h3 class="text-2xl sm:text-3xl text-gray-700">Prioritize compliance.</h3>
+                </div>
+                <p class="text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Automate <%= labor %> compliance with built in handling of paid and unpaid breaks. Quickly address potential violations or penalties.</p>
+              </div>
+              <div class="col-span-6 space-y-2">
+                <div class="flex flex-col">
+                  <%= image_tag("2-ensure.png", class: "w-1/5") %>
+                  <h3 class="text-2xl sm:text-3xl text-gray-700">Ensure visibility among teams.</h3>
+                </div>
+                <p class="text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">See where employees are clocking in and out, aross multiple locations. Request feeedback after shifts for an accurate picture of what's happening on the ground.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <% if uk? %>
+        <div class="relative">
+          <div class="absolute inset-0 flex flex-col" aria-hidden="true">
+            <div class="flex-1 w-full bg-section-gradient">
+            </div>
+          </div>
+          <div class="max-w-4xl mx-auto px-4 sm:px-6 pb-32">
+            <div class="pt-28 relative text-center">
+              <div class="text-white text-xl sm:text-2xl flex space-x-2 items-center justify-center">
+                <span>Time tracking minus the tedious admin.</span>
+              </div>
+              <h2 class="text-white text-4xl sm:text-5xl my-6 mb-12"><span class="underline">Case Study:</span> Payroll in 1/4 of the time.</h2>
+              <div class="plyr__video-embed" data-controller="plyr">
+                <iframe width="560" height="315" src="https://www.youtube.com/watch?v=Yfrt_pJn0PM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="mt-20 max-w-2xl mx-auto">
+                <h3 class="text-2xl sm:text-3xl text-center text-white font-normal text-opacity-90 mt-5"><span class="absolute text-5xl sm:text-6xl overflow-hidden h-10 -ml-4 sm:-ml-6 -mt-2.5">"</span>
+                  It's allowed us to build up data on staff costings. It just saves so much time. Payroll 8 years ago was a 3 or 4 day job, <span class="px-2 bg-opacity-80 bg-yellow-500">we can now move it through in hours.</span><span class="absolute text-5xl sm:text-6xl overflow-hidden h-10 -mr-4 sm:-mr-6 -mt-2.5">"</span></h3>
+                <p class="text-white text-center text-opacity-80 text-lg sm:text-xl my-3">— Richard Weeks, General Manager, Hunley Hotel & Golf Club</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% else %>
+        <div class="relative">
+          <div class="absolute inset-0 flex flex-col" aria-hidden="true">
+            <div class="flex-1 w-full bg-section-gradient">
+            </div>
+          </div>
+          <div class="max-w-4xl mx-auto px-4 sm:px-6 pb-32">
+            <div class="pt-28 relative text-center">
+              <div class="text-white text-xl sm:text-2xl flex space-x-2 items-center justify-center">
+                <span>Time tracking minus the tedious admin.</span>
+              </div>
+              <h2 class="text-white text-4xl sm:text-5xl my-6 mb-12"><span class="underline">Case Study:</span> Payroll in 1/4 of the time.</h2>
+              <div class="plyr__video-embed" data-controller="plyr">
+                <iframe width="560" height="315" src="https://www.youtube.com/watch?v=FcdSUdP04y0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+              <div class="mt-20 max-w-2xl mx-auto">
+                <h3 class="text-2xl sm:text-3xl text-center text-white font-normal text-opacity-90 mt-5"><span class="absolute text-5xl sm:text-6xl overflow-hidden h-10 -ml-4 sm:-ml-6 -mt-2.5">"</span>
+                  Being able to see who’s there, when they took their break or didn’t take the break at the right time has been a huge help. What was half a day for me, sorting out <span class="px-2 bg-opacity-80 bg-yellow-500">payroll is now an hour at most</span> and a fraction of what I was dealing with before.<span class="absolute text-5xl sm:text-6xl overflow-hidden h-10 -mr-4 sm:-mr-6 -mt-2.5">"</span></h3>
+                <p class="text-white text-center text-opacity-80 text-lg sm:text-xl my-3">— Dickie O’Reilly, Spyder Surf</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
+      <div class="relative py-8 sm:py-10 sm:pt-8 bg-white">
+        <div class="grid sm:gap-10 lg:grid-cols-12 max-w-7xl mx-auto px-4 mt-12 sm:px-6">
+          <div class="col-span-6 text-left flex flex-col justify-center">
+            <h2 class="relative text-4xl text-gray-800 font-extrabold tracking-tight sm:text-5xl z-10 -mr-6">
+              Integrate with your POS, payroll, and HR systems</span>
+            </h2>
+            <div class="mt-8 mb-2 sm:my-8 space-y-2">
+              <p class="text-lg sm:text-xl md:text-1.5xl text-gray-500">Integrate your current tools with our system for faster, more efficient workforce management operations, while providing robust scheduling & attendance for frontline teams.</p>
+            </div>
+          </div>
+          <div class="col-span-6 relative sm:pl-10 items-center flex sm:mb-12">
+            <div class="z-20">
+              <%= image_tag("integrations.png") %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 pb-16">
+          <div class="pt-20 relative text-center">
+            <h2 class="text-center text-3xl text-gray-800 text-opacity-90 font-extrabold tracking-tight sm:text-5xl">
+              <%= link_to "Learn about how it works", how_it_works_path, class: "underline" %>, <%= link_to "see how customers felt before & after", why_were_different_path, class: "underline" %>, or if you're ready to get started —
+            </h2>
+            <div class="flex flex-col md:flex-row items-center justify-center md:space-x-4 space-y-4 md:space-y-0 mt-8 mb-6">
+              <div class="btn-green px-8 py-2 mx-0 inline-flex space-x-2 items-center justify-center" data-action="click->demo-modal#open">
+                <%= render "layouts/phone" %>
+                <span>Book a call</span>
+              </div>
+              <%= link_to "Try Workforce.com today", try_path, class: "btn-blue-secondary mt-8 mb-6 px-8 py-2 mx-auto" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <%= render "layouts/demo_modal" %>
+</div>

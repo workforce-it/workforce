@@ -1,0 +1,168 @@
+<% content_for :title do %>
+  Privacy Policy
+<% end %>
+<% content_for :description do %>
+ Privacy Policy for Workforce.com EU/UK
+<% end %>
+
+<div class="bg-white">
+  <div class="relative overflow-hidden">
+    <div class="relative pt-6 pb-16 sm:pb-24">
+      <%= render "layouts/nav" %>
+      <div class="max-w-4xl mx-auto py-8 px-4">
+        <section class="flex w-full mt-10 flex-wrap pb-6 mb-10 prose prose-xl mx-auto">
+        <section>
+              <h1 className='mt-8 text-blue-dark'>Privacy Policy (EU territories)</h1>
+              <p>Last updated November 2020</p>
+              <p>Workforce.com (“we”, “us”, “our”, “Workforce”) is a group of affiliated companies (“Affiliates”) operating in USA, Australia and United Kingdom through a number of entities based in Chicago, London and Brisbane, offering workforce management solutions and services.</p>
+              <p>If you are a Visitor to our website  www.workforce.com (“Website”) from one of the territories in the European Economic Area, United Kingdom or Switzerland, please explore this webpage to learn more about privacy at Workforce.com</p>
+              <div onClick={e => this.toggle(this.state.section2, 2)} className='mt-8 cursor-pointer flex'>
+                {this.state.section2
+                  ? <span className="material-icons absolute -ml-8">add</span>
+                  : <span className="material-icons absolute -ml-8">remove</span>
+                }
+                <p className='font-bold text-lg'>Workforce.com Privacy Statement for Website Visitors and other individuals we interact with</p>
+              </div>
+              <section className={this.state.section2 ? 'hidden' : 'block'}>
+                <p>Workforce HCM Ltd acts as Controller of the personal data of our EU based website visitors and other individuals with whom we have direct interactions, such as prospective clients or job applicants, as described in this Privacy Policy.</p>
+                <ul className="my-4 mx-8">
+                  <li>Workforce HCM Ltd</li>
+                  <li>The Frames, 1 Phipp Street</li>
+                  <li>London EC2A 4PS</li>
+                  <li>Tel: (+44) 0333 577 2373</li>
+                  <li>Email: <a href='mailto:support@workforce.com' className='link link__blue'>support@workforce.com</a></li>
+                </ul>
+                <section>
+                  <p className='font-bold'>Collection and use of Personal Data</p>
+
+                  <p><span className='underline'>Technical information.</span> When you visit our Website, the system automatically records data and information about your computer each time the website is accessed. The following data (“technical information”) is collected:</p>
+                  <ul className="mx-8 list-disc">
+                    <li>Information on the browser type and version used</li>
+                    <li>The user’s operating system</li>
+                    <li>The user’s internet service provider</li>
+                    <li>The user’s IP address</li>
+                    <li>Date and time of access</li>
+                    <li>Websites from which the user’s system accesses our website</li>
+                    <li>Websites accessed by the user’s system via our website</li>
+                    <li>The respective volume of data transmitted</li>
+                  </ul>
+                  <p>The data is also saved in our system’s log files. This data is not stored together with other personal data of the user.</p>
+                  <p>We collect and use this technical information for purposes of (network) security (for example, to ward off cyberattacks), to better understand our users’ needs, to continuously improve our website and to enable users to access the website from their computers.</p>
+                  <p>We collect this personal data under the legal basis in section 6(1)(f) of the GDPR, legitimate interests.</p>
+
+                  <div>
+                    <p><span className='underline'>Voluntary submission of personal data:</span> We also collect and process any personal data that you provide to us in our website’s forms, such as when you request a demo or consent to marketing communications or download a whitepaper.</p>
+                    <p>Collected personal data includes your first and last name, your email address, your business telephone number, your job title, your country, your industry, your employer, number of staff in your business.</p>
+                    <p>We use the collected data:</p>
+                    <ul className="mx-8 list-disc">
+                      <li>to communicate with the visitors requesting further information and services,</li>
+                      <li>to deliver the service being requested (whitepaper, demo etc),</li>
+                      <li>to understand how our visitors are interested in our products and optimize the services offered,</li>
+                      <li>to improve the website and safeguard our information technology systems.</li>
+                      <li>to set up the company user account</li>
+                      <li>to send marketing information. You may unsubscribe at any time.</li>
+                    </ul>
+                    <p>We collect this personal data under the legal basis in section 6(1)(a), GDPR - consent.  You have the right to withdraw your consent at any time by clicking the “un-suscribe” link in our emails to you or by emailing us at <a href='mailto:privacy@workforce.com' className='link link__blue'>privacy@workforce.com</a>.</p>
+                  </div>
+                  <div>
+                    <p className='underline'>Other individuals</p>
+                    <p>We may also collect public information about you from social media sites and any other publicly available directories and sites. We use this information as stated in this Privacy Policy.</p>
+                    <p>We may collect information about you through marketing events, research and campaigns, such as conferences and trade shows which you attended. The personal data collected includes your name, company, industry, email address, telephone number and interests.</p>
+                    <p>We use this information for marketing activities as permitted by the legislation in your jurisdiction.</p>
+                    <p>We collect this personal data under the legal basis in section 6(1)(a), GDPR - consent.  You have the right to withdraw your consent at any time by clicking the “unsubscribe” link in our emails to you or by emailing us at <a href='mailto:privacy@workforce.com' className='link link__blue'>privacy@workforce.com</a>.</p>
+                  </div>
+                </section>
+
+                <section>
+                  <p className='font-bold'>Retention of your Personal Data</p>
+                  <p>We hold the personal data for as long as there is a business need or regulatory requirement. In deciding the period for which we will hold the personal data, we take into account the following:</p>
+                  <ul className="mx-8 list-disc">
+                    <li>How long has been since our relationship with you ended,</li>
+                    <li>Whether we have a reasonable expectation that you would need to contact us in relation to previous purchases, and</li>
+                    <li>The regulatory requirements applicable to the information and business process for which it was used</li>
+                  </ul>
+                  <p>Once the retention time is over, we dispose of the personal data in a safe and permanent way.</p>
+                </section>
+
+                <section>
+                  <p className='font-bold'>Sharing your personal data</p>
+                  <p>We may share your personal data with third parties to support our delivery of services and products to our clients, maintain our website and protect our systems, operations and overall business.</p>
+                  <p>We share data with the following categories of third parties:</p>
+                  <ul className="mx-8 list-disc">
+                    <li>Service providers - third parties providing the following categories of services:</li>
+                    <ul className="mx-8 list-circle">
+                      <li>web hosting services</li>
+                      <li>web analytics</li>
+                      <li>targeted advertising</li>
+                    </ul>
+                    <li>Affiliates - our affiliates may receive your personal data for reporting and market analysis purposes.</li>
+                  </ul>
+                  <p>We have contracts with service providers and a data sharing agreement with our affiliates to instruct and set rules on data use.</p>
+                  <p>Personal data may also be transmitted to third countries or international organisations. For your protection and the protection of your personal data, appropriate safeguards are provided for such data transmissions which include the use of EU standard contractual clauses.  For information on EU standard contractual clauses, please visit <a href='https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/standard-contractual-clauses-scc_en' className='link link__blue'> https://ec.europa.eu/info/law/law-topic/data-protection/international-dimension-data-protection/standard-contractual-clauses-scc_en</a>.</p>
+                  <p>In some circumstances we are legally obliged to share the information, for example under a court order. Before sharing the information, we will satisfy ourselves that we have a lawful basis on which to share the information and document our decision making.</p>
+                </section>
+
+                <section>
+                  <p className='font-bold'>Cookies</p>
+                  <p>Cookies are small pieces of information sent by a website or application to a visitor’s computer. We will ask for your consent to use non-essential cookies. If you choose not to accept our cookies, we cannot guarantee that your website experience will be as fulfilling as it would otherwise be. We may also place cookies from third parties for functional and marketing purposes. For further information, see <a href='/uk/coookies' className='link link__blue'>here.</a></p>
+                </section>
+                <section>
+                  <p className='font-bold'>Links to other sites</p>
+                  <p>Please be aware that while visiting our website/websites you may follow links to other sites or services that are beyond our sphere of influence. We are not responsible for the content or for their collection and use of your personal information. Consult their Privacy Policies and Terms and Conditions prior to using their services.</p>
+                </section>
+
+                <section>
+                  <p className='font-bold'>Rights of the individuals</p>
+                  <p>We are committed to ensuring fair and transparent processing of your personal data and to respect your rights as granted by the GDPR. Depending on the specific GDPR requirements, the following rights may be applicable to your personal data:</p>
+                  <ul className="mx-8 list-disc">
+                    <li>Right to be informed, Art. 13, 14 GDPR</li>
+                    <li>Right of access, Art. 15 GDPR</li>
+                    <li>Right to rectification, Art. 16 GDPR</li>
+                    <li>Right to erasure (“right to be forgotten”), Art. 17 GDPR</li>
+                    <li>Right to restriction of processing, Art. 18 GDPR</li>
+                    <li>Right to data portability, Art. 20 GDPR</li>
+                  </ul>
+                  <p>To exercise your rights, please email <a href='mailto:privacy@workforce.com' className='link link__blue'>privacy@workforce.com</a>. In order to process your request and for identification purposes, please note that we will process your personal data in accordance with Art. 6 (1) (c) GDPR - compliance with a legal obligation.</p>
+                  <p className='underline'>Right to object</p>
+                  <p>You have the right to object, on reasons relating to your particular situation, at any time to processing of personal data concerning you which is based on our legitimate interests, including profiling based on those provisions.</p>
+                  <p>We will no longer process your personal data unless we have compelling legitimate grounds for the processing that override your interests, rights and freedoms or the processing is necessary for the establishment, exercise or defence of legal claims.</p>
+                  <p>Where your personal data is processed for direct marketing purposes, you have the right to object at any time to processing of personal data, which includes profiling to the extent that it is related to such direct marketing. We will stop processing your personal data for direct marketing purposes, as well as profiling.</p>
+                  <p className='underline'>Right to not be subject to a decision based solely on automated processing, including profiling</p>
+                  <p>We do not use automated decision making means in our processing. We do not use your personal data to evaluate, analyse and predict any aspects concerning yourself, for example personal preferences, interests, behaviour, location or movements(“profiling”).</p>
+                </section>
+
+                <section>
+                  <p className='font-bold'>Protecting your personal data</p>
+                  <p>We use a variety of security measures and technologies to help protect your personal information from unauthorised access, use, disclosure, alteration or destruction in line with applicable data protection and privacy laws.</p>
+                  <p>The transmission to us of information via the internet or a mobile phone network connection may not be completely secure and any transmission is at your own risk.</p>
+                </section>
+
+                <section>
+                  <p className='font-bold'>What if you do not want to provide us with your personal information?</p>
+                  <p>Where you are given the option to share your personal information with us, you can always choose not to do so.  If you object to the processing of your personal information, or if you have provided your consent to processing and you later choose to withdraw it, we will respect that choice in accordance with our legal obligations. This could mean you are unable to make full use of the services and products offered by us.</p>
+                </section>
+
+                <section>
+                  <p className='font-bold'>Contact us</p>
+                  <p>If you have questions or requests regarding this Privacy Policy, or if you would like to exercise your rights, please contact us by email to <a href='mailto:privacy@workforce.com' className='link link__blue'>privacy@workforce.com</a> or by mail to our address <a href='https://www.workforce.com/contact-us' className='link link__blue'>https://www.workforce.com/contact-us</a></p>
+                  <p>We have appointed DataRep as our EU Data Representative. Please see their contact details <a href='../files/WORK03-Representative-contact-summary-2021.pdf' target="_blank" rel="noopener noreferrer" className='link link__blue'>here</a>.</p>
+                </section>
+
+                <section>
+                  <p className='font-bold'>How to Lodge a Complaint </p>
+                  <p>Individuals located in the European Economic Area, United Kingdom and Switzerland whose personal data may be processed by us, as processors, may file a complaint in respect of a potential violation of this Privacy Policy or applicable law by contacting us at  <a href='mailto:privacy@workforce.com' className='link link__blue'>privacy@workforce.com</a> or by contacting our <a href='../files/WORK03-Representative-contact-summary-2021.pdf' target="_blank" rel="noopener noreferrer" className='link link__blue'>EU Data Representative</a>.</p>
+                  <p>Complaints may also be sent to the relevant supervisory authority. Our supervisory authority is the UK Information Commissioner’s Office  <a href='https://ico.org.uk/global/contact-us/' className='link link__blue'>https://ico.org.uk/global/contact-us/</a></p>
+                  <p>See list of all EU and Switzerland supervisory authorities here:
+                    <ul>
+                      <li><a href='https://ec.europa.eu/info/law/law-topic/data-protection/reform/what-are-data-protection-authorities-dpas_en/' className='link link__blue'>https://ec.europa.eu/info/law/law-topic/data-protection/reform/what-are-data-protection-authorities-dpas_en</a></li>
+                      <li><a href=' https://www.edoeb.admin.ch/edoeb/en/home/the-fdpic/contact.html' className='link link__blue'> https://www.edoeb.admin.ch/edoeb/en/home/the-fdpic/contact.html</a></li>
+                    </ul>
+                  </p>
+                </section>
+              </section>
+            </section>
+         </section>
+      </div>
+    </div>
+  </div>
+</div>

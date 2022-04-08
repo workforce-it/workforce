@@ -1,0 +1,217 @@
+<% content_for :title do %>
+  New Hire Onboarding for Shift Workers
+<% end %>
+
+<% content_for :description do %>
+  With Workforce.com, you can onboard new staff and get their details — all paperless. It's hassle-free with our digital onboarding process! Book a demo or start a free trial now.
+<% end %>
+
+<div data-controller="demo-modal">
+  <div class="bg-white">
+    <div class="relative overflow-hidden">
+      <div class="absolute inset-y-0 h-full w-full" aria-hidden="true">
+        <div class="relative h-full">
+          <svg class="absolute right-full transform translate-y-1/3 translate-x-1/4 md:translate-y-1/2 sm:translate-x-1/2 lg:translate-x-full" width="404" height="784" fill="none" viewBox="0 0 404 784">
+            <defs>
+              <pattern id="e229dbec-10e9-49ee-8ec3-0286ca089edf" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <circle cx="1.5" cy="1.5" r="1.5" class="text-gray-200" fill="currentColor" />
+              </pattern>
+            </defs>
+            <rect width="404" height="784" fill="url(#e229dbec-10e9-49ee-8ec3-0286ca089edf)" />
+          </svg>
+          <svg class="absolute left-full transform -translate-y-3/4 -translate-x-1/4 sm:-translate-x-1/2 md:-translate-y-1/2 lg:-translate-x-3/4" width="404" height="784" fill="none" viewBox="0 0 404 784">
+            <defs>
+              <pattern id="d2a68204-c383-44b1-b99f-42ccff4e5365" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <circle cx="1.5" cy="1.5" r="1.5" class="text-gray-200" fill="currentColor" />
+              </pattern>
+            </defs>
+            <rect width="404" height="784" fill="url(#d2a68204-c383-44b1-b99f-42ccff4e5365)" />
+          </svg>
+        </div>
+      </div>
+      <div class="relative pt-6 pb-10 sm:pb-6 2xl:pb-10">
+        <%= render "layouts/nav" %>
+        <div class="flex grid gap-2 lg:grid-cols-12 mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6 sm:space-x-6">
+          <div class="text-left col-span-6 flex flex-col justify-center sm:pt-24 sm:pb-40">
+            <span class="relative block uppercase mb-3 text-gray-400">Employee Onboarding</span>
+            <h1 class="text-6xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-7xl -mr-20">
+              <span class="block">Simple & <span class="text-blue-tertiary">paperless</span>
+              <span class="block">employee onboarding.
+            </h1>
+            <p class="mt-3 text-xl text-gray-700 sm:text-lg md:mt-5 md:text-2xl max-w-3xl">
+              Enrich your employee onboarding experience and say goodbye to paperwork.
+            </p>
+            <div class="inline-flex flex-col md:flex-row my-5 md:space-x-4 space-y-4 md:space-y-0">
+              <div class="btn-green-action flex w-max items-center space-x-2" data-action="click->demo-modal#open">
+                <%= render "layouts/phone" %>
+                <span>Book a call</span>
+              </div>
+              <%= link_to "Create free account", try_path, class: "btn-blue-secondary px-8 py-2 w-max bg-white" %>
+            </div>
+          </div>
+          <div class="col-span-12 sm:col-span-6 relative flex transform sm:translate-x-24 justify-center">
+            <div class="bg-green-500 absolute h-6 w-full flex items-center justify-center top-6">
+              <div class="top-0 sm:top-5 flex z-30 bg-white rounded-full shadow-lg items-center space-x-2 px-3 py-1 ring-2 ring-green-500 ring-opacity-40">
+                <span class="relative flex h-3 w-3 z-20">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                </span>
+                <p class="text-green-600 text-sm sm:text-lg">TRY ME: Demo paperless onboarding</p>
+              </div>
+            </div>
+            <% if uk? %>
+              <iframe
+                src="https://onboarding.workforce.com/invite/demo?locale=en-GB&country=United%20Kingdom"
+                class="h-144 sm:h-auto shadow-2xl rounded-xl pt-6 bg-gray-100 w-full"
+                title="UK Workforce Onboarding Demo"
+              ></iframe>
+            <% else %>
+              <iframe
+                src="https://onboarding.workforce.com/invite/demo?locale=en-US&country=United%20States"
+                class="h-144 sm:h-auto shadow-2xl rounded-xl pt-6 bg-gray-100 w-full"
+                title="US Workforce Onboarding Demo"
+              ></iframe>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="relative -mb-2">
+        <div class="relative inset-0 flex flex-col h-20 sm:h-72 2xl:h-96" aria-hidden="true">
+          <div class="flex-1 w-full bg-gray-wave">
+          </div>
+        </div>
+      </div>
+
+      <div class="relative py-8 sm:py-10 sm:pt-8 bg-gray-50 -mt-12 sm:-mt-48 2xl:-mt-60">
+        <div class="max-w-4xl mx-auto px-4 sm:mt-12 sm:px-6">
+          <div class="flex flex-col justify-center">
+            <h2 class="relative text-4xl text-center text-gray-800 font-extrabold tracking-tight max-w-4xl mx-auto sm:text-5xl z-10">
+              Make the first step count</span>
+            </h2>
+            <p class="px-2 text-lg text-center sm:text-xl md:text-1.5xl text-gray-500 py-6">It’s all about getting it right—from filing a new hire’s details to providing a good onboarding experience overall. An employee’s first day doesn’t have to be all about filling out forms and getting information overload, reading company rules and policies. Keep it simple.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="relative py-8 sm:py-10 sm:pt-8 bg-gray-50">
+        <div class="grid gap-10 lg:grid-cols-12 max-w-7xl mx-auto px-4 sm:mt-12 sm:px-6">
+          <div class="col-span-6 relative sm:pr-10 justify-center flex sm:mb-12">
+            <div class="z-20">
+              <%= image_tag("make-the.png") %>
+            </div>
+          </div>
+          <div class="col-span-6 text-left flex flex-col justify-center">
+            <h2 class="relative text-4xl text-gray-800 font-extrabold tracking-tight sm:text-5xl z-10 -mr-6">
+              Simplify onboarding for managers and new hires.</span>
+            </h2>
+            <p class="text-lg sm:text-xl md:text-1.5xl text-gray-500 pt-6">Set the right tone for new staff, and at the same time avoid oversights and time spent on admin work for managers.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="relative py-8 sm:py-10 sm:pt-8 bg-gray-50">
+        <div class="flex flex-col-reverse sm:grid gap-10 grid-cols-6 lg:grid-cols-12 max-w-7xl mx-auto px-4 sm:mt-12 sm:px-6">
+          <div class="col-span-6 text-left flex flex-col justify-center">
+            <h2 class="relative text-4xl text-gray-800 font-extrabold tracking-tight sm:text-5xl z-10 -mr-8">
+              Accurate information minus the paper stack.</span>
+            </h2>
+            <p class="text-lg sm:text-xl md:text-1.5xl text-gray-500 pt-6">Say goodbye to long forms and paperwork. Go digital and collect personal information, bank details, addresses, and integrate them into your payroll system in one go.</p>
+            <p class="text-lg sm:text-xl md:text-1.5xl text-gray-500 pt-6">Our platform also verifies that all information given is valid, correct, and complete.</p>
+          </div>
+          <div class="col-span-6 relative sm:pl-10 items-center flex sm:mb-12">
+            <div class="z-20 p-6">
+              <%= image_tag("accurate-information.png") %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative py-8 sm:py-10 sm:pt-8 bg-white">
+        <div class="grid gap-10 lg:grid-cols-12 max-w-7xl mx-auto px-4 sm:mt-12 sm:px-6">
+          <div class="col-span-6 text-left">
+            <div class="z-20">
+              <%= image_tag("submission-within-few-clicks.png") %>
+            </div>
+          </div>
+          <div class="col-span-6 text-left flex-col flex justify-center">
+            <h2 class="relative text-4xl text-gray-800 font-extrabold tracking-tight sm:text-5xl z-10 -mr-6 sm:mt-10">
+              Submission with a few clicks.</span>
+            </h2>
+            <p class="text-lg sm:text-xl md:text-1.5xl text-gray-500 pt-6">Whether through phone or computer, new staff can provide required information within clicks, giving them more time to prepare for their first day and new role.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative py-8 sm:py-10 sm:pt-8 bg-white">
+        <div class="flex flex-col-reverse sm:grid gap-10 grid-cols-6 lg:grid-cols-12 max-w-7xl mx-auto px-4 sm:mt-12 sm:px-6">
+          <div class="col-span-6 text-left flex flex-col justify-center">
+            <h2 class="relative text-4xl text-gray-800 font-extrabold tracking-tight sm:text-5xl z-10 -mr-8">
+             Ease new staff into company policies and culture.</span>
+            </h2>
+            <p class="text-lg sm:text-xl md:text-1.5xl text-gray-500 pt-6">Learning a company’s systems and culture goes beyond a day. Help your new staff get familiar with how you do things. Send the necessary documents they need to acknowledge or read before their first working day.</p>
+          </div>
+          <div class="col-span-6 relative sm:pl-10 items-center flex sm:mb-12">
+            <div class="z-20 p-6">
+              <%= image_tag("ease-new-staff.png") %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative py-8 sm:py-10 sm:pt-8 bg-white sm:pb-32">
+        <div class="grid gap-10 lg:grid-cols-12 max-w-7xl mx-auto px-4 sm:mt-12 sm:px-6">
+          <div class="col-span-6 text-left">
+            <div class="z-20">
+              <%= image_tag("getting-to-know-employees.png") %>
+            </div>
+          </div>
+          <div class="col-span-6 text-left flex-col flex justify-center">
+            <h2 class="relative text-4xl text-gray-800 font-extrabold tracking-tight sm:text-5xl z-10 -mr-6 sm:mt-10">
+              Get to know employees better.</span>
+            </h2>
+            <p class="text-lg sm:text-xl md:text-1.5xl text-gray-500 pt-6">From hobbies to food restrictions, you can learn more about your new staff through our employee onboarding tool. </p>
+            <p class="text-lg sm:text-xl md:text-1.5xl text-gray-500 pt-6">With just a quick set up, you can ask questions to new team members. Take note of details that can help in creating an excellent working experience for them. </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative py-8 sm:py-10 sm:pt-8 bg-white sm:pb-32">
+        <div class="grid sm:gap-10 lg:grid-cols-12 max-w-7xl mx-auto px-4 mt-12 sm:px-6">
+          <div class="col-span-6 text-left flex flex-col justify-center">
+            <h2 class="relative text-4xl text-gray-800 font-extrabold tracking-tight sm:text-5xl z-10 -mr-6">
+              Integrate with your POS, payroll, and HR systems</span>
+            </h2>
+            <div class="mt-8 mb-2 sm:my-8 space-y-2">
+              <p class="text-lg sm:text-xl md:text-1.5xl text-gray-500">Integrate your current tools with our system for faster, more efficient workforce management operations, while providing robust scheduling & attendance for frontline teams.</p>
+            </div>
+          </div>
+          <div class="col-span-6 relative sm:pl-10 items-center flex sm:mb-12">
+            <div class="z-20">
+              <%= image_tag("integrations.png") %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 pb-16">
+          <div class="pt-20 relative text-center">
+            <h2 class="text-center text-3xl text-gray-800 text-opacity-90 font-extrabold tracking-tight sm:text-5xl">
+              <%= link_to "Learn about how it works", how_it_works_path, class: "underline" %>, <%= link_to "see how customers felt before & after", why_were_different_path, class: "underline" %>, or if you're ready to get started —
+            </h2>
+            <div class="flex flex-col md:flex-row items-center justify-center md:space-x-4 space-y-4 md:space-y-0 mt-8 mb-6">
+              <div class="btn-green px-8 py-2 mx-0 inline-flex space-x-2 items-center justify-center" data-action="click->demo-modal#open">
+                <%= render "layouts/phone" %>
+                <span>Book a call</span>
+              </div>
+              <%= link_to "Try Workforce.com today", try_path, class: "btn-blue-secondary mt-8 mb-6 px-8 py-2 mx-auto" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <%= render "layouts/demo_modal" %>
+</div>

@@ -1,0 +1,64 @@
+<% content_for :title do %>
+  Security
+<% end %>
+
+<div class="bg-white">
+  <div class="relative overflow-hidden">
+    <div class="relative pt-6 pb-16 sm:pb-24">
+      <%= render "layouts/nav" %>
+      <div class="max-w-4xl mx-auto py-8 px-4">
+        <section class="flex w-full mt-20 flex-wrap pb-6 mb-10 prose prose-xl mx-auto">
+           <h2>Report a Security Vulnerability</h2>
+
+            <section id="terms">
+              <p>In addition to these Terms and Conditions (the &quot;Agreement&quot;) regarding the Workforce.com Responsible Disclosure Program (the &quot;Program&quot;), there may be additional restrictions depending upon applicable local laws.</p>
+              <p>
+                <ul>
+
+                  <li>The parties to this Agreement are you and Tanda Inc. (&quot;Workforce.com&quot;).</li>
+                  <li>By reporting a vulnerability, you affirm that you have not disclosed and agree that you will not disclose the vulnerability to anyone other than Workforce.com. Absent Workforce.com’s prior written consent, any disclosure outside of this process would violate this Agreement. You agree that money damages may not be a sufficient remedy for a breach of this paragraph by you and that Workforce.com may be entitled to specific performance as a remedy for any such breach. Such remedy will not be deemed to be the exclusive remedy for any such breach but will be in addition to all other remedies available at law or equity to Workforce.com.</li>
+                  <li>By reporting a vulnerability, you are granting Workforce.com a worldwide, royalty-free, non-exclusive license to use your submission for the purpose of addressing the vulnerability in Workforce.com’s products and services.</li>
+                  <li>If a reported vulnerability affects a third party or another vendor, Workforce.com reserves the right to forward details of the issue along to the third party or vendor without further discussion with you.</li>
+                  <li>You are responsible for all taxes associated with and imposed on any Reward you may receive from Workforce.com.</li>
+                  <li>You may only exploit, investigate, or target security bugs against your own accounts and/or your own devices. Testing must not violate any law, or disrupt or compromise any data or access data that is not yours; intentional access of customer data other than your own is prohibited.</li>
+                  <li>If you inadvertently access proprietary customer, employee, or business related information during your testing, the information must not be used, disclosed, stored, or recorded in any way. Inadvertent access of the data must be declared within your submission.</li>
+                  <li>Your testing activities must not negatively impact Workforce.com, Workforce.com’s products or services generally, or Workforce.com’s online environment availability or performance.</li>
+                  <li>Workforce.com may choose not to remediate at its sole discretion.</li>
+                  <li>This Agreement constitutes the entire agreement of the parties with respect to the items listed above. This Agreement is covered by Illinois law, without regard to its conflict of law principles. This Agreement may be amended or modified only by a subsequent agreement in writing.</li>
+                  <li>If any portion of this Agreement is found to be illegal or unenforceable, then the parties will be relieved of their responsibilities arising under such portion, but only to the extent that such portion is illegal or unenforceable.</li>
+                  <li>You must not be the author of the code with the vulnerability.</li>
+                  <li>You must not be a Workforce.com employee, contractor, or a family member of an employee or contractor.</li>
+                </ul></p>
+              <p>WORKFORCE.COM RESERVES THE RIGHT TO MODIFY OR CANCEL THE WORKFORCE.COM RESPONSIBLE DISCLOSURE PROGRAM AT ANY TIME WITHOUT NOTICE. ALL PARTICIPANTS AND SUBMISSIONS ARE STRICTLY VOLUNTARY. THIS OFFER IS VOID WHERE PROHIBITED BY LAW AND IN PARTICIPATING, YOU MUST NOT VIOLATE ANY LAW. YOU ALSO MUST NOT DISRUPT ANY SERVICE OR COMPROMISE ANYONE&apos;S DATA.</p>
+
+              <p>
+                <div class="check__box">
+                  <label>
+                    <span class="w-4/5">I agree to the Legal Terms and Conditions above.</span>
+                    <input type="checkbox" id="agreeToTerms" />
+                  </label>
+                </div>
+              </p>
+            </section>
+
+            <span id="bugcrowdScriptTarget" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById("agreeToTerms").addEventListener("click", () => {
+    const script = document.createElement('script')
+    script.setAttribute('src', 'https://bugcrowd.com/aa43a03f-4175-497f-b652-b31d425b6901/external/script')
+    script.setAttribute('data-bugcrowd-program', 'https://bugcrowd.com/aa43a03f-4175-497f-b652-b31d425b6901/external/report')
+    script.setAttribute('async', true)
+
+    const target = document.getElementById("bugcrowdScriptTarget")
+    target.parentNode.insertBefore(script, target)
+
+    const terms = document.getElementById("terms")
+    terms.style.display = "none"
+  })
+</script>

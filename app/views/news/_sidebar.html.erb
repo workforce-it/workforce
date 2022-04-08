@@ -1,0 +1,39 @@
+<% if @events.any? %>
+  <div class="border-b-2 border-gray-600 w-full mb-5 pb-2">
+    <h3 class="text-gray-800 text-3xl">Upcoming Webinars</h3>
+  </div>
+  <% @events.each do |event| %>
+    <div class="flex space-x-4 items-center my-5">
+      <div class="w-16 h-16 flex-shrink-0 rounded-lg bg-white text-center border overflow-hidden">
+        <div class="bg-red-500 text-white py-0.5text-sm">
+          <%= event["utc_start_date"].to_date.strftime("%B") %>
+        </div>
+        <span class="text-2xl leading-9 text-gray-800"><%= event["utc_start_date"].to_date.strftime("%d") %></span>
+      </div>
+      <div class="flex flex-col">
+        <span><%= event["utc_start_date"].to_datetime.localtime("-04:00").strftime("%k:%M") %> ET</span>
+        <%= link_to event["title"], event["website"], class: "text-xl font-bold tracking-tight leading-tight text-gray-800" %>
+      </div>
+    </div>
+  <% end %>
+  <div class="mt-12"></div>
+<% end %>
+<div class="border-b-2 border-gray-600 w-full mb-5 pb-2">
+  <h3 class="text-gray-800 text-3xl">Relevant Videos</h3>
+</div>
+<% @videos.each do |video| %>
+  <div class="my-8 text-gray-600">
+    <iframe width="100%" height="200" src="https://www.youtube.com/embed/<%= video[:embed] %>?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <h3 class="text-xl font-bold tracking-tight leading-tight text-gray-800 mt-4"><%= video[:title] %></h3>
+    <p><%= excerpt(video[:content], 106) %></p>
+  </div>
+<% end %>
+<% unless !current_page?(news_path) %>
+  <div class="hidden news-modal p-8 rounded-md inline-block" style="background-color: rgb(229, 238, 247)">
+  	<h4 class="text-2xl leading-tight text-gray-600 mb-2">Want to<span class="text-blue-tertiary"> stay updated</span> on the latest workforce news?</h4>
+  	<p class="text-gray-600 text-base mb-3">Join 200,000 HR and workforce professionals</p>
+    <input class="w-full" type="text" placeholder="Full Name" value="" style="border-width: 2px; font-size: 1rem; padding: 0.5rem; border-radius: 0.25rem; margin-bottom: 1rem;">
+    <input class="w-full" type="email" placeholder="Email" value="" style="border-width: 2px; font-size: 1rem; padding: 0.5rem; border-radius: 0.25rem;">
+    <button class="btn w-auto rounded-full bg-blue-tertiary text-white mt-5 py-1.5 px-7 float-right">Subscribe</button>
+  </div>
+<% end %>

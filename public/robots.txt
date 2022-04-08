@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /us/
+Disallow: *?page=*
+Disallow: /uk/news
+Disallow: /uk/news/*
+
+Sitemap: https://workforce.com/index.xml

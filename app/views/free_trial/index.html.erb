@@ -1,0 +1,77 @@
+<% content_for :title do %>
+  Free Trial
+<% end %>
+
+<% content_for :description do %>
+  If you want to reduce <%= labor %> spend across across your business, start a free 14 day trial of Workforce.com.
+<% end %>
+
+<div class="try-bg bg-blue-light block relative sm:flex sm:fixed">
+	<div class="md:max-w-4xl lg:px-3">
+		<div class="relative overflow-hidden sm:rounded-lg grid lg:grid-cols-12 sm:grid-cols-1">
+			<div class="bg-white col-span-8 p-8 sm:p-16 pt-32 sm:pt-20">
+				<div class="container mx-auto">
+					<h1 class="text-4xl text-gray-600">Welcome to Workforce.com</h1>
+					<p class="text-gray-400 text-lg">Lets get started with a few simple steps</p>
+					<%= form_with(url: try_path, method: :post, data: { controller: "free-trial phone-input", free_trial_inactive_class: "hidden", free_trial_active_class: "block", phone_input_region_value: current_region }) do |f| %>
+						<%= recaptcha_v3(action: "signup", turbolinks: true) %>
+
+						<div data-free-trial-target="emailStep">	
+							<div class="mb-3 mt-8">
+								<strong class="text-gray-600">Email Address</strong>
+							</div>
+							<%= f.email_field :email, placeholder: "name@company.com", data: { free_trial_target: "email" }, class: "w-full px-6 rounded-md border-2 border-gray-200 placeholder-gray-400 focus:border-0 focus:ring-blue-tertiary focus:border-1 focus:border-blue-tertiary" %>
+							<span class="block text-red-500 text-xs my-2" data-free-trial-target="emailFormError"></span>
+							<button type="submit" data-action="click->free-trial#emailStep" class="rounded-md hover:cursor-pointer w-full mt-3 mb-8 text-white bg-blue-tertiary border-blue-tertiary px-6 py-2 text-center cursor-pointer">Continue</button>
+							<div>
+								<p class="mb-4 text-center mt-4 text-gray-400">Already use Workforce?<a href="https://my.tanda.co/login" class="text-blue-legacy">Log in</a></p>
+							</div>
+						</div>
+
+						<div class="hidden" data-free-trial-target="companyStep">	
+							<div class="mb-3 mt-8">
+								<strong class="text-gray-600">Company Info</strong>
+							</div>
+							<div class="space-y-2">
+								<%= f.text_field :companyName, placeholder: "Company Name", data: { free_trial_target: "companyName" }, class: "w-full px-6 rounded-md border-2 border-gray-200 placeholder-gray-400 focus:border-0 focus:ring-blue-tertiary focus:border-1 focus:border-blue-tertiary"%>
+								<%= f.select :companySize, [["Staff range","Staff range"], ["0-19","0-19"], ["20-49", "20-49"],["50-99", "50-99"], ["100-500","100-499"], ["500-1,000","500-999"], ["1,000-2,500","1000-2499"], ["2,500-5,000","2,500-4,999"], ["5,000-10,000","5,000-9,999"], ["10,000-25,000","10,000-24,999"], ["25,000+","25,000 +"]], {}, { class: "w-full px-6 rounded-md border-2 border-gray-200 text-gray-400 focus:border-0 focus:ring-blue-tertiary focus:border-1 focus:border-blue-tertiary", "data-free-trial-target" => "companySize" } %>
+							</div>
+							<%= render partial: "hidden_ip_fields", locals: { f: f } %>
+							<span class="block text-red-500 text-xs my-2" data-free-trial-target="companyFormError"></span>
+							<button type="submit" data-action="click->free-trial#companyStep" class="rounded-md hover:cursor-pointer w-full mt-3 mb-8 text-white bg-blue-tertiary border-blue-tertiary px-6 py-2 text-center cursor-pointer">Continue</button>
+						</div>
+
+						<div class="hidden" data-free-trial-target="personalStep">	
+							<div class="mb-3 mt-8">
+								<strong class="text-gray-600">Your Info</strong>
+							</div>
+							<div class="space-y-2">
+								<div class="flex space-x-2">
+									<%= f.text_field :firstName, placeholder: "First Name", data: { free_trial_target: "firstName"}, class: "w-1/2 px-6 rounded-md border-2 border-gray-200 placeholder-gray-400 focus:border-0 focus:ring-blue-tertiary focus:border-1 focus:border-blue-tertiary" %>
+									<%= f.text_field :lastName, placeholder: "Last Name", data: { free_trial_target: "lastName"}, class: "w-1/2 px-6 rounded-md border-2 border-gray-200 placeholder-gray-400 focus:border-0 focus:ring-blue-tertiary focus:border-1 focus:border-blue-tertiary" %>
+								</div>
+								<%= f.phone_field :phone, placeholder: "555 123 4567", class: "w-full px-6 rounded-md border-2 border-gray-200 placeholder-gray-400 focus:border-0 focus:ring-blue-tertiary focus:border-1 focus:border-blue-tertiary", autocomplete: "tel", data: { phone_input_target: "source", free_trial_target: "phone", action: "countrychange->phone-input#changeCountry blur->phone-input#validate" } %>
+							</div>
+							<span class="block text-red-500 text-xs my-2" data-free-trial-target="personalFormError" data-phone-input-target="phoneError"></span>
+							<%= f.button "Submit", type: :submit, data: { action: "click->free-trial#personalStep" }, class: "rounded-md hover:cursor-pointer w-full mt-3 mb-8 text-white bg-blue-tertiary border-blue-tertiary px-6 py-2" %>
+						</div>
+						<div class="hidden bg-white bg-opacity-70 absolute z-20 inset-0 flex flex-col items-center justify-center" data-free-trial-target="loading">
+							<%= image_tag("rocket.gif") %>
+							<h3 class="text-2xl font-bold text-blue-tertiary -mt-8 mb-12 bg-white">Creating your account...</h3>
+						</div>
+
+					<% end %>
+
+				</div>
+			</div>
+			<div class="col-span-8 h-64 sm:h-auto overflow-hidden sm:col-span-4 bg-blue-light flex items-center justify-center p-3">
+				<%= image_tag("company_logos.png", class: "transform translate-y-2 sm:translate-y-0") %>
+			</div>
+			<div class="col-span-8 relative block sm:hidden bg-blue-light ">
+				<p class="mt-4 mb-4 text-sm text-gray-400 md:mt-0 md:order-1 w-full text-center">
+		        	&copy; <%= Time.now.year %> Workforce.com. All rights reserved.
+		      	</p>
+		  </div>
+		</div>
+	</div>
+</div>

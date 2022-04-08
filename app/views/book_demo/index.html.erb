@@ -1,0 +1,45 @@
+<%= turbo_frame_tag "book_demo" do %>
+	<h2 class="relative text-left text-4xl text-gray-800 font-extrabold tracking-tight sm:text-5xl z-10 mb-2"><%= booking_heading(params[:type].to_sym) %></h2>
+	<p class="text-lg text-gray-600 text-left mb-5"><%= booking_text(params[:type].to_sym) %></p>
+  <%= form_with(url: book_demo_path, method: :post, class: "relative", data: { controller: "book-demo phone-input disable-form", book_demo_hidden_class: "hidden", phone_input_region_value: current_region }) do |f| %>
+  	<%= recaptcha_v3(action: "submit", turbolinks: true) %>
+  	<div class="space-y-3">
+			<div class="flex space-x-3">
+				<div class="w-1/2">
+					<%= f.text_field :firstName, placeholder: "First Name", data: { book_demo_target: "firstName"}, class: "w-full text-lg px-4 rounded-md border-2 border-gray-200 placeholder-gray-400 focus:border-0 focus:ring-blue-tertiary focus:border-1 focus:border-blue-tertiary" %>
+				</div>
+				<div class="w-1/2">
+					<%= f.text_field :lastName, placeholder: "Last Name", data: { book_demo_target: "lastName"}, class: "w-full text-lg px-4 rounded-md border-2 border-gray-200 placeholder-gray-400 focus:border-0 focus:ring-blue-tertiary focus:border-1 focus:border-blue-tertiary" %>
+				</div>
+			</div>
+			<div class="flex space-x-3">
+				<div class="w-1/2">
+					<%= f.text_field :companyName, placeholder: "Company Name", data: { book_demo_target: "companyName" }, class: "w-full text-lg px-4 rounded-md border-2 border-gray-200 placeholder-gray-400 focus:border-0 focus:ring-blue-tertiary focus:border-1 focus:border-blue-tertiary"%>
+				</div>
+				<div class="w-1/2">
+					<%= f.select :companySize, [["Staff range","Staff range"], ["0-19","0-19"], ["20-49", "20-49"], ["50-99", "50-99"], ["100-500","100-499"], ["500-1,000","500-999"], ["1,000-2,500","1000-2499"], ["2,500-5,000","2,500-4,999"], ["5,000-10,000","5,000-9,999"], ["10,000-25,000","10,000-24,999"], ["25,000 +","25,000 +"]], {}, { class: "w-full text-lg px-4 rounded-md border-2 border-gray-200 text-gray-400 focus:border-0 focus:ring-blue-tertiary focus:border-1 focus:border-blue-tertiary", "data-book-demo-target" => "companySize" } %>
+				</div>
+			</div>
+			<div class="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3">
+				<div class="sm:w-1/2">
+					<%= f.phone_field :phone, placeholder: "555 123 4567", class: "w-full text-lg px-4 rounded-md border-2 border-gray-200 placeholder-gray-400 focus:border-0 focus:ring-blue-tertiary focus:border-1 focus:border-blue-tertiary", autocomplete: "tel", data: { phone_input_target: "source", book_demo_target: "phone", action: "countrychange->phone-input#changeCountry blur->phone-input#validate" } %>
+				</div>
+				<div class="sm:w-1/2">
+					<%= f.email_field :email, placeholder: "your_name@company.com", data: { book_demo_target: "email" }, class: "w-full text-lg px-4 rounded-md border-2 border-gray-200 placeholder-gray-400 focus:border-0 focus:ring-blue-tertiary focus:border-1 focus:border-blue-tertiary" %>
+				</div>
+			</div>
+
+			<%= f.hidden_field :country, data: { phone_input_target: "country" } %>
+			<%= f.hidden_field :country_name, data: { phone_input_target: "countryName" } %>
+			<%= f.hidden_field :country_code, data: { phone_input_target: "countryCode" } %>
+			<%= f.hidden_field :country_calling_code, data: { phone_input_target: "callingCode" } %>
+			
+			<span class="block text-red-500 text-xs my-2" data-book-demo-target="formError" data-phone-input-target="phoneError"></span>
+			<%= f.button "Book a call", type: :submit, data: { action: "click->book-demo#submit", disable_with: "<i class='fa fa-spinner fa-spin'></i> Booking you in..." }, class: "rounded-full hover:cursor-pointer w-max mt-10 float-right mb-8 text-white bg-blue-tertiary border-blue-tertiary text-lg px-6 py-2 inline-block relative shadow-pop-left" %>
+		</div>
+		<div class="absolute z-20 inset-0 flex flex-col items-center justify-center hidden" data-book-demo-target="loading">
+			<%= image_tag("rocket.gif") %>
+			<h3 class="text-2xl font-bold text-blue-tertiary -mt-8 mb-12 bg-white">Booking your call...</h3>
+		</div>
+	<% end %>
+<% end %>

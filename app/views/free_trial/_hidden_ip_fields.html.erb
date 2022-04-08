@@ -1,0 +1,13 @@
+<%= f.hidden_field :city, data: { free_trial_target: "city" } %>
+<%= f.hidden_field :region, data: { free_trial_target: "region" } %>
+<%= f.hidden_field :region_code, data: { free_trial_target: "regionCode" } %>
+<%= f.hidden_field :country, data: { free_trial_target: "country", phone_input_target: "country" } %>
+<%= f.hidden_field :country_name, data: { free_trial_target: "countryName", phone_input_target: "countryName" } %>
+<%= f.hidden_field :country_code, data: { free_trial_target: "countryCode", phone_input_target: "countryCode" } %>
+<%= f.hidden_field :continent_code, data: { free_trial_target: "continentCode" } %>
+<%= f.hidden_field :in_eu, data: { free_trial_target: "inEU" } %>
+<%= f.hidden_field :postal, data: { free_trial_target: "postal" } %>
+<%= f.hidden_field :latitude, data: { free_trial_target: "latitude" } %>
+<%= f.hidden_field :longitude, data: { free_trial_target: "longitude" } %>
+<%= f.hidden_field :time_zone, data: { controller: "time-zone-select" } %>
+<%= f.hidden_field :country_calling_code, data: { free_trial_target: "callingCode", phone_input_target: "callingCode" } %>

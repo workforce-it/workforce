@@ -1,0 +1,146 @@
+<% content_for :title do %>
+  Workday + Workforce Integration
+<% end %>
+
+<% content_for :description do %>
+  Make managing payroll quick and easy with employee timesheets synced straight to Workday.
+<% end %>
+
+<div data-controller="demo-modal">
+  <div class="bg-blue-light">
+    <div class="relative overflow-hidden">
+      <%= render "layouts/pattern" %>
+      <div class="relative pt-6 pb-10 sm:pb-6 2xl:pb-10">
+        <%= render "layouts/nav" %>
+        <div class="flex flex-col sm:flex-row relative space-y-reverse space-y-12 sm:space-y-64 sm:space-x-20 mt-16 mx-auto max-w-6xl px-4 sm:mt-24 sm:px-6 sm:mb-20 2xl:mb-0">
+          <div class="text-left sm:w-10/12 flex flex-col justify-center">
+            <%= image_tag("integrations/logos/workday.png", class: "filter saturate-100 w-32 mb-2") %>
+            <h1 class="relative block uppercase mb-3 text-gray-400 font-normal">Workday + Workforce.com</h1>
+            <span class="text-6xl tracking-tight font-extrabold text-blue-dark sm:text-5xl md:text-7xl sm:-mr-16">
+             Get payroll done on time <span class=" text-blue-tertiary">without the stress.</span>
+            </span>
+            <p class="mt-3 text-xl text-body sm:text-lg md:mt-6 md:text-xl max-w-md">
+              Review and approve timesheets in Workforce.com, then with a few clicks, export them to Workday for quick and painless payroll processing. 
+            </p>
+            <div class="inline-flex sm:flex-col items-center md:flex-row my-7 space-x-4 sm:space-y-4 md:space-y-0">
+              <div class="btn-blue-action cursor-pointer mx-0 flex w-max items-center space-x-2 text-base" data-action="click->demo-modal#open">
+                <div class="flex space-x-2 items-center">
+                  <%= render "layouts/camera" %>
+                  <span>Book a demo</span>
+                </div>
+              </div>
+              <%= link_to "Create free account", try_path, class: "text-blue-dark text-base font-medium" %>
+            </div>
+          </div>
+          <div class="sm:w-7/12 h-full sm:absolute sm:pl-4 -right-2 top-4 z-50">
+            <div class="rounded-2xl shadow-pop-right overflow-hidden">
+              <div class="plyr__video-embed" data-controller="plyr">
+                <iframe width="560" height="315" src="https://www.youtube.com/watch?v=xztuFFMCmxs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative -mb-2">
+        <div class="relative inset-0 flex flex-col h-20 sm:h-72 2xl:h-96" aria-hidden="true">
+          <div class="flex-1 w-full bg-gray-wave filter brightness-0 invert">
+          </div>
+        </div>
+      </div>
+
+      <div class="relative py-8 sm:py-10 sm:pb-20 sm:pt-8 bg-white -mt-12 sm:-mt-48 2xl:-mt-60">
+        <div class="max-w-6xl mx-auto px-4 sm:mt-24 sm:px-6">
+          <div class="flex flex-col">
+            <h2 class="max-w-3xl relative text-4xl text-blue-dark font-extrabold tracking-tight sm:text-5xl z-10">
+              There's lots involved in payroll that isn't done by payroll software.</span>
+            </h2>
+            <p class="max-w-3xl text-lg sm:text-lg md:text-xl text-body py-6">Configure your most complex workforce management processes with clicks, not code. Tailor the Workforce.com system to all the nuances of your scheduling and timekeeping operations, while letting Workday handle payroll via our seamless integration.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="relative py-8 sm:py-10 sm:pt-16 bg-blue-light">
+        <div class="grid gap-10 lg:grid-cols-12 max-w-6xl mx-auto px-4 sm:mt-12 items-center">
+          <div class="col-span-7 text-left">
+            <h2 class="relative text-3xl text-blue-dark font-extrabold tracking-tight sm:text-5xl">
+              Export timesheets securely.
+            </h2>
+            <p class="max-w-2xl text-lg sm:text-lg md:text-xl text-body py-6">Review and approve timesheets in Workforce.com, then export them to Workday for quick and painless payroll processing. Export timesheets per employee, or in a single batch comprising all employees. There are no files to download as timesheets are sent securely via Workday’s Pay Input API.</p>
+          </div>
+          <div class="col-span-5 relative items-center flex sm:mb-12">
+            <div class="z-20 transform">
+              <%= image_tag("integrations/workday_integration.png", class: "w-full") %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative py-8 sm:py-10 sm:pt-16 bg-blue-light sm:pb-2">
+        <div class="grid gap-10 lg:grid-cols-12 max-w-6xl mx-auto px-4 sm:mt-12">
+          <div class="col-span-5 sm:col-span-6 relative items-center flex sm:mb-12">
+            <%= render "layouts/logo", custom_class: "h-60 w-2/5 transform translate-x-8 sm:translate-x-2 -translate-y-2" %>
+            <div class="absolute bg-gray-50 p-2 rounded-2xl h-12 sm:h-20 w-12 sm:w-20 shadow-lg transform -rotate-2 flex justify-center items-center transform right -translate-x-14 sm:-translate-x-24 right-0 ">
+              <%= image_tag("workday.png") %>
+            </div>
+            <div class="transform -scale-x-n1 -scale-y-n1 rotate-90 absolute -translate-x-5 sm:translate-x-12 translate-y-2">
+              <%= render "layouts/drawn_arrow", custom_class: "h-32 sm:h-44 w-32 sm:w-44 fill-current text-gray-800 -rotate-45 transform -translate-y-32 translate-x-24" %> 
+            </div>
+            <div class="transform scale-x-n1 scale-y-n1 absolute translate-x-24 sm:translate-x-56 -translate-y-24">
+              <%= render "layouts/drawn_arrow", custom_class: "h-28 sm:h-36 w-28 sm:w-36 fill-current text-gray-800 rotate-12 transform" %> 
+            </div>
+          </div>
+          <div class="col-span-6 text-left">
+            <h2 class="relative text-3xl text-blue-dark font-extrabold tracking-tight sm:text-5xl">
+              Sync employee data.
+            </h2>
+            <p class="max-w-2xl text-lg sm:text-lg md:text-xl text-body py-6">Every hour, all employee information in Workday is synced directly into Workforce.com - no need for data re-entry. Fields like employee names, cell phone numbers, job titles, pay cycles, certifications, and hourly rates are all applied in Workforce.com’s scheduling system.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative py-8 bg-blue-light">
+        <div class="grid gap-10 lg:grid-cols-12 max-w-6xl mx-auto px-4 sm:mt-12 items-center">
+          <div class="col-span-6 text-left">
+            <h2 class="relative text-3xl text-blue-dark font-extrabold tracking-tight sm:text-5xl">
+              Manage overriding rates.
+            </h2>
+            <p class="max-w-2xl text-lg sm:text-lg md:text-xl text-body py-6">Workforce.com helps you navigate a minefield of inconsistent pay rates. The system utilizes all overriding rates found in Workday, automatically applying them to the right employees on pay day without updating payroll data or altering defined pay groups.</p>
+          </div>
+          <div class="col-span-6 relative sm:pr-10 items-center flex sm:mb-12">
+            <div class="z-20 transform">
+              <%= image_tag("integrations/workday_rates.png", class: "w-4/5") %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <div class="relative -mb-32 lg:-mb-40 2xl:-mb-60">
+        <div class="relative inset-0 flex flex-col h-52 sm:h-72 2xl:h-96" aria-hidden="true">
+          <div class="h-24 sm:flex-1 w-full bg-white-wave">
+          </div>
+        </div>
+      </div>
+
+      <div class="relative bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 pb-16">
+          <div class="pt-20 relative text-center">
+            <h2 class="text-center text-2xl text-blue-dark text-opacity-90 font-extrabold tracking-tight sm:text-4xl">
+              Tailor Workforce.com to all the nuances of your scheduling and timekeeping operations, while letting Workday handle payroll via our seamless integration. 
+            </h2>
+            <div class="flex flex-col md:flex-row items-center justify-center md:space-x-4 space-y-4 md:space-y-0 mt-8 mb-6">
+              <div class="btn-green-action mx-0 inline-flex space-x-2 items-center justify-center" data-action="click->demo-modal#open">
+              <%= render "layouts/phone" %>
+              <span>Book a call</span>
+              </div>
+              <%= link_to "Try Workforce.com today", try_path, class: "font-medium text-blue-dark mt-8 mb-6 py-2 mx-auto" %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div> 
+  </div>
+  <%= render "layouts/demo_modal" %>
+</div>

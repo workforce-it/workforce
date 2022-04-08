@@ -1,0 +1,433 @@
+<% content_for :title do %>
+  Restaurant & Hospitality Scheduling Software
+<% end %>
+
+<% content_for :description do %>
+  Hospitality Employee Scheduling Software. Make scheduling, team communication, and labor compliance easy, while staying on top of overtime spend.
+<% end %>
+
+<div data-controller="demo-modal">
+  <div class="bg-white">
+    <div class="relative overflow-hidden">
+      <div class="absolute inset-y-0 h-full w-full" aria-hidden="true">
+        <div class="relative h-full">
+          <svg class="absolute right-full transform translate-y-1/3 translate-x-1/4 md:translate-y-1/2 sm:translate-x-1/2 lg:translate-x-full" width="404" height="784" fill="none" viewBox="0 0 404 784">
+            <defs>
+              <pattern id="e229dbec-10e9-49ee-8ec3-0286ca089edf" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <circle cx="1.5" cy="1.5" r="1.5" class="text-gray-200" fill="currentColor" />
+              </pattern>
+            </defs>
+            <rect width="404" height="784" fill="url(#e229dbec-10e9-49ee-8ec3-0286ca089edf)" />
+          </svg>
+          <svg class="absolute left-full transform -translate-y-3/4 -translate-x-1/4 sm:-translate-x-1/2 md:-translate-y-1/2 lg:-translate-x-3/4" width="404" height="784" fill="none" viewBox="0 0 404 784">
+            <defs>
+              <pattern id="d2a68204-c383-44b1-b99f-42ccff4e5365" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <circle cx="1.5" cy="1.5" r="1.5" class="text-gray-200" fill="currentColor" />
+              </pattern>
+            </defs>
+            <rect width="404" height="784" fill="url(#d2a68204-c383-44b1-b99f-42ccff4e5365)" />
+          </svg>
+        </div>
+      </div>
+      <div class="relative pt-6 pb-10 sm:pb-6 2xl:pb-10">
+        <%= render "layouts/nav" %>
+        <div class="flex flex-col sm:flex-row relative space-y-reverse space-y-12 sm:space-y-64 sm:space-x-20 mt-16 mx-auto max-w-6xl px-4 sm:mt-24 sm:px-6 sm:mb-48">
+          <div class="text-left sm:w-10/12 flex flex-col justify-center">
+            <span class="relative block uppercase mb-3 text-gray-400">Workforce Management for Restaurants & Hospitality</span>
+            <h1 class="text-6xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-8xl -mr-2 sm:mr-0">
+              <span class="block">Deliver better service while <span class="text-blue-tertiary">increasing SPLH.</span></span>
+            </h1>
+            <p class="mt-3 text-xl text-gray-700 sm:text-lg md:mt-7 md:text-1.5xl max-w-md">
+              Simplify employee scheduling, improve team communication, optimize <%= labor %> costs, then export it all to payroll with our workforce management software for hospitality.
+            </p>
+            <div class="inline-flex flex-col md:flex-row my-5 md:space-x-4 space-y-4 md:space-y-0">
+              <div class="btn-green-action cursor-pointer mx-0 flex w-max items-center space-x-2 opacity-90" data-action="click->demo-modal#open">
+                <div class="flex space-x-2 items-center">
+                  <%= render "layouts/camera" %>
+                  <span>Book a demo</span>
+                </div>
+              </div>
+              <%= link_to "Create free account", try_path, class: "btn-blue-secondary px-8 py-2 w-max bg-white" %>
+            </div>
+          </div>
+          <div class="sm:w-8/12 h-full sm:absolute sm:pl-4 -right-28">
+            <div class="absolute flex flex-col items-center space-x-2 transform -translate-x-64 bottom-2 -rotate-2">
+              <span class="handwriting font-bold text-gray-600 text-6xl text-center leading-10 transform translate-y-3 -translate-x-3 -rotate-2">See how <span class="block mt-2">they did it</span></span>
+              <%= render "layouts/drawn_arrow", custom_class: "h-20 w-20 fill-current text-gray-600 transform translate-x-20 -translate-y-4 rotate-12" %> 
+            </div>
+
+            <div class="rounded-2xl shadow-pop-right overflow-hidden">
+              <div class="plyr__video-embed" data-controller="plyr">
+                <iframe width="560" height="315" src="<% if uk? %>https://www.youtube.com/watch?v=Yfrt_pJn0PM<% else %>https://www.youtube.com/watch?v=IaK5B3WWPYU<% end %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="relative -mb-2">
+        <div class="relative inset-0 flex flex-col h-20 sm:h-72 2xl:h-96" aria-hidden="true">
+          <div class="flex-1 w-full bg-gray-wave">
+          </div>
+        </div>
+      </div>
+
+      <div class="relative py-8 sm:py-10 sm:pt-8 bg-gray-50 -mt-12 sm:-mt-48 2xl:-mt-60">
+        <div class="max-w-4xl mx-auto px-4 my-12 sm:px-6">
+          <div class="my-4 flex space-x-2 justify-start sm:justify-center items-center">
+            <%= render "layouts/star", custom_class: "h-8 w-8 text-yellow-400" %>
+            <%= render "layouts/star", custom_class: "h-8 w-8 text-yellow-400" %>
+            <%= render "layouts/star", custom_class: "h-8 w-8 text-yellow-400" %>
+            <%= render "layouts/star", custom_class: "h-8 w-8 text-yellow-400" %>
+            <%= render "layouts/star", custom_class: "h-8 w-8 text-yellow-400" %>
+          </div>
+          <div class="flex flex-col justify-center">
+            <h2 class="relative text-4xl sm:text-center text-gray-800 font-extrabold tracking-tight max-w-4xl mx-auto sm:text-6xl z-10">
+              Trusted scheduling software designed to increase profitability.
+            </h2>
+            <p class="sm:px-2 max-w-5xl mx-auto text-lg sm:text-center sm:text-xl md:text-1.5xl text-gray-500 py-6">
+              With custom BI reporting, demand-driven scheduling, and live <%= labor %> cost insights, our software helps 10,000+ operations teams make decisions that improve the bottom line.
+            </p>
+          </div>
+          <div class="flex space-x-3 sm:space-x-10 items-center sm:justify-center mt-5 sm:mt-10">
+            <%= image_tag("g2.png", class: "h-20 sm:h-32 pr-4 pt-1") %>
+            <%= image_tag("capterra.png", class: "h-20 sm:h-32") %>
+            <%= image_tag("software-advice.png", class: "h-20 sm:h-32 pt-1") %>            
+          </div>
+        </div>
+      </div>
+
+      
+      <div data-controller="sliding-picker" data-sliding-picker-axis-value="X" data-sliding-picker-active-class="bg-white shadow-sm" class="relative py-8 sm:py-32 sm:pt-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:mt-16 sm:px-6">
+          <div class="flex flex-col justify-center">
+            <h2 class="relative text-5xl sm:text-center text-gray-800 font-extrabold tracking-tight max-w-4xl mx-auto sm:text-6xl z-10">
+              See how it works.</span>
+            </h2>
+          </div>
+          <ul class="-mx-6 px-6 py-3 sm:py-1.5 sm:px-1.5 bg-gray-light bg-opacity-60 space-y-1 sm:space-y-0 sm:rounded-full cursor-pointer flex flex-wrap sm:space-x-2 sm:w-max sm:mx-auto text-base sm:text-xl my-6 sm:my-12" role="tablist">
+            <li data-transition="0%" data-sliding-picker-target="picker" data-action="click->sliding-picker#pick" class="hover:bg-white text-gray-700 rounded-full px-4 py-1 mt-1 sm:mt-0 bg-white shadow-sm" aria-selected="true">
+              Smart Scheduling
+            </li>
+            <li data-transition="-100%" data-sliding-picker-target="picker" data-action="click->sliding-picker#pick" class="hover:bg-white text-gray-700 rounded-full px-4 py-1" aria-selected="false">
+              Workforce Visibility
+            </li>
+            <li data-transition="-200%" data-sliding-picker-target="picker" data-action="click->sliding-picker#pick" class="hover:bg-white text-gray-700 rounded-full px-4 py-1" aria-selected="false">
+              Leading Indicators™
+            </li>
+            <li data-transition="-300%" data-sliding-picker-target="picker" data-action="click->sliding-picker#pick" class="hover:bg-white text-gray-700 rounded-full px-4 py-1" aria-selected="false">
+              Payroll Integrations
+            </li>
+            <li data-transition="-400%" data-sliding-picker-target="picker" data-action="click->sliding-picker#pick" class="hover:bg-white text-gray-700 rounded-full px-4 py-1" aria-selected="false">
+              HR Engagement
+            </li>
+          </ul>
+        </div>
+        <div data-sliding-picker-target="content" class="relative flex transition duration-300 ease-in-out">
+          <section class="min-w-full bg-white">
+            <section class="flex flex-col sm:flex-row space-y-10 sm:space-y-0 space-x-6 max-w-6xl mx-auto px-4 sm:mt-12 sm:px-16">
+              <div class="sm:w-6/12 sm:mb-12 flex flex-col justify-center space-y-3">
+                <div class="mt-5 sm:mt-10 px-4 sm:px-6 flex justify-center sm:block">
+                  <div class="absolute flex flex-col items-center justify-center h-24 sm:h-32 w-24 sm:w-32 -mt-6 sm:-mt-8 -ml-3 sm:ml-2 z-0 transform -translate-x-36 sm:-translate-x-16">
+                    <span class="absolute handwriting text-white font-bold text-7xl sm:text-8xl">1</span>
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <linearGradient x1="-1.17230468e-05%" y1="-20.203665%" x2="99.9997948%" y2="-20.203665%" id="linearGradient-1">
+                          <stop stop-color="#5cd2e9" offset="0%"></stop>
+                          <stop stop-color="#3c98c9" offset="100%"></stop>
+                        </linearGradient>
+                      </defs>
+                      <path fill="url(#linearGradient-1)" d="M52.4,-27.8C64.5,-9.5,68.3,16.1,58.2,36.5C48.1,56.9,24,72.2,0.1,72.1C-23.8,72.1,-47.7,56.7,-55.4,37.6C-63.2,18.6,-54.8,-4.1,-42.9,-22.4C-31,-40.7,-15.5,-54.5,2.4,-55.9C20.2,-57.2,40.4,-46.1,52.4,-27.8Z" transform="translate(100 100)" />
+                    </svg>
+                  </div>
+                  <h2 class="relative text-left text-3.5xl text-gray-800 font-extrabold leading-none tracking-tight sm:text-5xl z-10 transform translate-x-4 sm:translate-x-16 sm:-translate-y-2">
+                    Smarter <%= schedules %> <span class="block">based on demand.</span>
+                  </h2>
+                </div>
+                <p class="text-lg sm:text-xl md:text-1.5xl text-gray-700 sm:pr-6">
+                  With Workforce.com, revenue and shift data from previous weeks are used to accurately forecast upcoming demand, and build the best <%= schedule %>.<span class="sm:block"> We make sure the right person is scheduled at the right time, <%= link_to "automatically.", software_auto_scheduling_path, class: "text-gray-700 underline" %></span>
+                </p>
+                <div class="pt-3 flex space-x-2">
+                  <div class="btn-green-action cursor-pointer mx-0 flex w-max items-center space-x-2 opacity-90" data-action="click->demo-modal#open">
+                    <div class="flex space-x-2 items-center">
+                      <%= render "layouts/camera" %>
+                      <span>Book a demo</span>
+                    </div>
+                  </div>
+                  <%= link_to "Learn more", software_auto_scheduling_path, class: "w-auto items-center mx-auto inline-flex justify-center py-1.5 sm:px-3 text-base font-medium text-gray-700 opacity-80 font-bold" %>
+                </div>
+              </div>
+              <div class="sm:w-6/12 relative sm:pl-10 items-center flex sm:mb-12">
+                <%= image_tag("demand_larger.png", class: "w-4/5 rounded-lg shadow-lg z-20 transform rotate-1 self-center sm:-mt-10") %>
+                <%= image_tag("auto_build.png", class: "hidden sm:block absolute rounded-full bottom-2 h-10 shadow-lg -left-8  transform -rotate-2 z-20") %>
+                <div class="hidden sm:block transform -scale-x-n1 -scale-y-n1 rotate-90 absolute translate-x-20 -bottom-14 ">
+                  <%= render "layouts/drawn_arrow", custom_class: "h-14 sm:h-20 w-14 sm:w-20 fill-current text-gray-800 -rotate-45 transform" %> 
+                </div>
+                <%= image_tag("automatic-restaurant.png", class: "absolute bg-white rounded-md shadow-md w-2/3 -bottom-10 right-2 sm:-right-10 z-20") %>
+              </div>
+            </section>
+          </section>
+
+          <section class="min-w-full bg-white">
+            <section class="flex flex-col sm:flex-row space-y-10 sm:space-y-0 space-x-6 max-w-6xl mx-auto px-4 sm:mt-12 sm:px-16">
+              <div class="sm:w-6/12 sm:mb-12 flex flex-col justify-center space-y-3">
+                <div class="mt-5 sm:mt-10 px-4 sm:px-6 flex justify-center sm:block">
+                  <div class="absolute flex flex-col items-center justify-center h-24 sm:h-32 w-24 sm:w-32 -mt-6 sm:-mt-8 -ml-3 sm:ml-2 z-0 transform -translate-x-36 sm:-translate-x-16">
+                    <span class="absolute handwriting text-white font-bold text-7xl sm:text-8xl">2</span>
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <linearGradient x1="-1.17230468e-05%" y1="-20.203665%" x2="99.9997948%" y2="-20.203665%" id="linearGradient-1">
+                          <stop stop-color="#5cd2e9" offset="0%"></stop>
+                          <stop stop-color="#3c98c9" offset="100%"></stop>
+                        </linearGradient>
+                      </defs>
+                      <path fill="url(#linearGradient-1)" d="M52.4,-27.8C64.5,-9.5,68.3,16.1,58.2,36.5C48.1,56.9,24,72.2,0.1,72.1C-23.8,72.1,-47.7,56.7,-55.4,37.6C-63.2,18.6,-54.8,-4.1,-42.9,-22.4C-31,-40.7,-15.5,-54.5,2.4,-55.9C20.2,-57.2,40.4,-46.1,52.4,-27.8Z" transform="translate(100 100)" />
+                    </svg>
+                  </div>
+                  <h2 class="relative text-left text-3.5xl text-gray-800 font-extrabold leading-none tracking-tight sm:text-5xl z-10 transform translate-x-4 sm:translate-x-16 sm:-translate-y-2">
+                    A 30,000 ft view with<span class="block">custom BI reporting.
+                  </h2>
+                </div>
+                <p class="text-lg sm:text-xl md:text-1.5xl text-gray-700 sm:pr-6">
+                  When frontline teams have the right software to make the best <%= labor %> decisions, it's visible all the way up to the executive level. Workforce.com gives C-suite execs a bigger picture of ops, with real-time 'drill down' dashboards for metrics that matter most.
+                </p>
+                <div class="pt-3 flex space-x-2">
+                  <div class="btn-green-action cursor-pointer mx-0 flex w-max items-center space-x-2 opacity-90" data-action="click->demo-modal#open">
+                    <div class="flex space-x-2 items-center">
+                      <%= render "layouts/camera" %>
+                      <span>Book a demo</span>
+                    </div>
+                  </div>
+                  <%= link_to "Learn more", role_by_role_path, class: "w-auto items-center mx-auto inline-flex justify-center py-1.5 sm:px-3 text-base font-medium text-gray-700 opacity-80 font-bold" %>
+                </div>
+              </div>
+              <div class="sm:w-6/12 relative sm:pl-10 items-center flex sm:mb-12">
+                <div class="bg-white p-2 border-opacity-20 border-2 border-gray-200 w-full rounded-lg shadow-lg z-20 mb-12 transform -rotate-1 mr-5 sm:ml-5">
+                  <%= image_tag("bi_1.jpg", class: "filter saturate-150") %>
+                </div>
+                <div class="bg-white right-2 sm:-right-14 absolute w-4/5 rounded-lg shadow-lg p-3 z-20 border-opacity-20 border-2 border-gray-200 bottom-2 sm:-bottom-5">
+                  <%= image_tag("bi_final.jpg", class: "filter saturate-150")  %>
+                </div>
+              </div>
+            </section>
+          </section>
+
+          <section class="min-w-full bg-white">
+            <section class="flex flex-col sm:flex-row space-y-10 sm:space-y-0 space-x-6 max-w-6xl mx-auto px-4 sm:mt-12 sm:px-16">
+              <div class="sm:w-6/12 sm:mb-12 flex flex-col justify-center space-y-3">
+                <div class="mt-5 sm:mt-10 px-4 sm:px-6 flex justify-center sm:block">
+                  <div class="absolute flex flex-col items-center justify-center h-24 sm:h-32 w-24 sm:w-32 -mt-6 sm:-mt-8 -ml-3 sm:ml-2 z-0 transform -translate-x-36 sm:-translate-x-16">
+                    <span class="absolute handwriting text-white font-bold text-7xl sm:text-8xl">3</span>
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <linearGradient x1="-1.17230468e-05%" y1="-20.203665%" x2="99.9997948%" y2="-20.203665%" id="linearGradient-1">
+                          <stop stop-color="#5cd2e9" offset="0%"></stop>
+                          <stop stop-color="#3c98c9" offset="100%"></stop>
+                        </linearGradient>
+                      </defs>
+                      <path fill="url(#linearGradient-1)" d="M52.4,-27.8C64.5,-9.5,68.3,16.1,58.2,36.5C48.1,56.9,24,72.2,0.1,72.1C-23.8,72.1,-47.7,56.7,-55.4,37.6C-63.2,18.6,-54.8,-4.1,-42.9,-22.4C-31,-40.7,-15.5,-54.5,2.4,-55.9C20.2,-57.2,40.4,-46.1,52.4,-27.8Z" transform="translate(100 100)" />
+                    </svg>
+                  </div>
+                  <h2 class="relative text-left text-3.5xl text-gray-800 font-extrabold leading-none tracking-tight sm:text-5xl z-10 transform translate-x-6 sm:translate-x-16 sm:-translate-y-2">
+                    Reduce <%= labor %> costs <span class="block">by between 4-11%.</span>
+                  </h2>
+                </div>
+                <p class="text-lg sm:text-xl md:text-1.5xl text-gray-700 sm:pr-6">
+                  Workforce.com Leading Indicators™ maps your <%= labor %> costs to sales in real time. With this data, frontline managers are able to receive alerts on potential overtime, and stay ontop of SPLH. This proprietry feature suite delivers results from day one.
+                </p>
+                <div class="pt-3 flex space-x-2">
+                  <div class="btn-green-action cursor-pointer mx-0 flex w-max items-center space-x-2 opacity-90" data-action="click->demo-modal#open">
+                    <div class="flex space-x-2 items-center">
+                      <%= render "layouts/camera" %>
+                      <span>Book a demo</span>
+                    </div>
+                  </div>
+                  <p class="hidden sm:flex w-auto items-center mx-auto inline-flex justify-center py-1.5 sm:px-3 text-base font-medium text-gray-700 opacity-80 font-bold cursor-pointer" data-action="click->demo-modal#open">Contact sales to learn more</p>
+                </div>
+              </div>
+              <div class="sm:w-6/12 relative items-start flex sm:mb-12">
+                <%= image_tag("insights.png", class: "w-full rounded-lg shadow-lg z-20 transform rotate-1 sm:translate-x-8 sm:mt-6") %>
+                <%= image_tag("costed-larger.png", class: "hidden sm:block absolute -bottom-5 sm:bottom-10 translate-x-36 h-36 transform rotate-1 z-30 pt-3") %>
+                <%= image_tag("indicators.png", class: "absolute bg-white rounded-md shadow-md w-5/12 -bottom-20 right-52 sm:bottom-20 sm:-right-20 z-20 pb-3") %>
+              </div>
+            </section>
+          </section>
+
+          <section class="min-w-full bg-white">
+            <section class="flex flex-col sm:flex-row space-y-10 sm:space-y-0 space-x-6 max-w-6xl mx-auto px-4 sm:mt-12 sm:px-16">
+              <div class="sm:w-6/12 sm:mb-12 flex flex-col justify-center space-y-3">
+                <div class="mt-5 sm:mt-10 px-4 sm:px-6 flex justify-center sm:block">
+                  <div class="absolute flex flex-col items-center justify-center h-24 sm:h-32 w-24 sm:w-32 -mt-6 sm:-mt-8 -ml-3 sm:ml-2 z-0 transform -translate-x-36 sm:-translate-x-16">
+                    <span class="absolute handwriting text-white font-bold text-7xl sm:text-8xl">4</span>
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <linearGradient x1="-1.17230468e-05%" y1="-20.203665%" x2="99.9997948%" y2="-20.203665%" id="linearGradient-1">
+                          <stop stop-color="#5cd2e9" offset="0%"></stop>
+                          <stop stop-color="#3c98c9" offset="100%"></stop>
+                        </linearGradient>
+                      </defs>
+                      <path fill="url(#linearGradient-1)" d="M52.4,-27.8C64.5,-9.5,68.3,16.1,58.2,36.5C48.1,56.9,24,72.2,0.1,72.1C-23.8,72.1,-47.7,56.7,-55.4,37.6C-63.2,18.6,-54.8,-4.1,-42.9,-22.4C-31,-40.7,-15.5,-54.5,2.4,-55.9C20.2,-57.2,40.4,-46.1,52.4,-27.8Z" transform="translate(100 100)" />
+                    </svg>
+                  </div>
+                  <h2 class="relative text-left text-3.5xl text-gray-800 font-extrabold leading-none tracking-tight sm:text-5xl z-10 transform translate-x-12 sm:translate-x-16 sm:-translate-y-2">
+                    Payroll integrations <span class="sm:block">that actually work.</span>
+                  </h2>
+                </div>
+                <p class="text-lg sm:text-xl md:text-1.5xl text-gray-700 sm:pr-6">
+                  Our team of implementation engineers build and maintain our payroll integrations. Each integration has stringent testing, performance budgets, and error monitoring, to ensure that it works when you need it most: at 4pm on pay day.</span>
+                </p>
+                <div class="pt-3 flex space-x-2">
+                  <div class="btn-green-action cursor-pointer mx-0 flex w-max items-center space-x-2 opacity-90" data-action="click->demo-modal#open">
+                    <div class="flex space-x-2 items-center">
+                      <%= render "layouts/camera" %>
+                      <span>Book a demo</span>
+                    </div>
+                  </div>
+                  <%= link_to "Learn more", software_payroll_integration_path, class: "w-auto items-center mx-auto inline-flex justify-center py-1.5 sm:px-3 text-base font-medium text-gray-700 opacity-80 font-bold" %>
+                </div>
+              </div>
+              <div class="sm:w-6/12 relative sm:pl-10 items-center flex sm:mb-12">
+                <% if uk? %>
+                  <%= image_tag("payroll-header.png", class: "w-full rounded-lg shadow-lg z-20 self-center") %>
+                <% else %>
+                  <%= image_tag("payroll-header-us.png", class: "w-full rounded-lg shadow-lg z-20 self-center") %>
+                <% end %>
+              </div>
+            </section>
+          </section>
+
+          <section class="min-w-full bg-white">
+            <section class="flex flex-col sm:flex-row space-y-10 sm:space-y-0 space-x-6 max-w-6xl mx-auto px-4 sm:mt-12 sm:px-16">
+              <div class="sm:w-6/12 sm:mb-12 flex flex-col justify-center space-y-3">
+                <div class="mt-5 sm:mt-10 px-4 sm:px-6 flex justify-center sm:block">
+                  <div class="absolute flex flex-col items-center justify-center h-24 sm:h-32 w-24 sm:w-32 -mt-6 sm:-mt-8 -ml-3 sm:ml-2 z-0 transform -translate-x-36 sm:-translate-x-16">
+                    <span class="absolute handwriting text-white font-bold text-7xl sm:text-8xl">5</span>
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <linearGradient x1="-1.17230468e-05%" y1="-20.203665%" x2="99.9997948%" y2="-20.203665%" id="linearGradient-1">
+                          <stop stop-color="#5cd2e9" offset="0%"></stop>
+                          <stop stop-color="#3c98c9" offset="100%"></stop>
+                        </linearGradient>
+                      </defs>
+                      <path fill="url(#linearGradient-1)" d="M52.4,-27.8C64.5,-9.5,68.3,16.1,58.2,36.5C48.1,56.9,24,72.2,0.1,72.1C-23.8,72.1,-47.7,56.7,-55.4,37.6C-63.2,18.6,-54.8,-4.1,-42.9,-22.4C-31,-40.7,-15.5,-54.5,2.4,-55.9C20.2,-57.2,40.4,-46.1,52.4,-27.8Z" transform="translate(100 100)" />
+                    </svg>
+                  </div>
+                  <h2 class="relative text-left text-3.5xl text-gray-800 font-extrabold leading-none tracking-tight sm:text-5xl z-10 transform translate-x-12 sm:translate-x-16 sm:-translate-y-2">
+                    Meet employees <span class="sm:block">where they're at.</span>
+                  </h2>
+                </div>
+                <p class="text-lg sm:text-xl md:text-1.5xl text-gray-700 sm:pr-6">
+                  Retain employees and stay in the loop with workforce management software designed to increase employee engagement. Employees can swap shifts, manage their schedules, and provide live feedback all from their mobile phone.
+                </p> 
+                <div class="pt-3 flex space-x-2">
+                  <div class="btn-green-action cursor-pointer mx-0 flex w-max items-center space-x-2 opacity-90" data-action="click->demo-modal#open">
+                    <div class="flex space-x-2 items-center">
+                      <%= render "layouts/camera" %>
+                      <span>Book a demo</span>
+                    </div>
+                  </div>
+                  <%= link_to "Learn more", software_employee_app_path, class: "w-auto items-center mx-auto inline-flex justify-center py-1.5 sm:px-3 text-base font-medium text-gray-700 opacity-80 font-bold" %>
+                </div>
+              </div>
+              <div class="sm:w-6/12 relative items-center flex sm:mb-12">
+                <%= image_tag("shift-communication-UK.png", class: "w-full") %>
+              </div>
+            </section>
+          </section>
+          
+        </div>
+      </div>
+
+      <div class="relative py-8 sm:py-32 sm:pt-16 bg-gray-50">
+        <div class="max-w-5xl mx-auto px-4 sm:mt-12 sm:px-6">
+          <div class="flex flex-col">
+            <span class="relative text-center hidden sm:block uppercase mb-3 text-gray-400">Workforce Management Ebooks & Case Studies</span>
+            <h2 class="relative text-4xl text-left text-gray-800 font-extrabold tracking-tight max-w-4xl mt-5 sm:mt-0 sm:text-center sm:mx-auto sm:text-6xl z-10 w-11/12 sm:w-full">
+              Insights for hospitality leaders.</span>
+            </h2>
+            <p class="sm:px-2 max-w-4xl mx-auto text-lg sm:text-center sm:text-xl md:text-1.5xl text-gray-500 py-6">
+              We help thousands of businesses through our software, and we also research and write about workforce management. Read the latest news relevant to hospitality industry leaders.
+            </p>
+          </div>
+          <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 max-w-5xl mx-auto my-5 sm:my-14">
+            <div class="sm:w-6/12">
+              <%= link_to "/news/how-to-solve-short-staffing-with-more-efficient-scheduling", class: "group relative flex flex-col justify-between h-full rounded-lg shadow-md overflow-hidden items-end" do %>
+                <div class="absolute block z-10 w-full h-full center-both overflow-hidden">
+                  <%= image_tag("shortages.png", class: "group-hover:scale-105 filter brightness-110 transition-all duration-500 transform ease-in-out object-cover object-center w-full h-full absolute center-both", alt: "workforce news") %>
+                  <div class="absolute inset-0 bg-opacity-50 bg-blue-secondary mix-blend-multiply"></div>
+                  <div aria-hidden="true" class="absolute inset-x-0 top-0 h-full bg-gradient-to-t from-blue-secondary opacity-90 w-full"></div>
+                </div>
+                <div class="z-50 p-4 lg:p-8">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z" clip-rule="evenodd" />
+                    <path d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z" />
+                  </svg>
+                </div>
+                <div class="transform ease-in-out duration-500 group-hover:-translate-y-1 text-white opacity-95 z-30 p-4 lg:p-8 lg:pt-16">
+                  <h3 class="text-2xl sm:text-4xl tracking-tight leading-tight">Scheduling techniques to retain workers amidst nationwide labor shortages</h3>
+                  <p class="text-lg mt-3">Read the analysis ➜</p>
+                </div>
+              <% end %>
+            </div>
+            <div class="sm:w-6/12 flex flex-col space-y-4">
+              <%= link_to "https://wfmwhitepapers.s3.us-east-2.amazonaws.com/Complete_Guide_to_Workforce_Analytics.pdf", class: "group relative flex flex-col justify-between h-full rounded-lg shadow-md overflow-hidden items-end" do %>
+                <div class="absolute block z-10 w-full h-full center-both overflow-hidden">
+                  <%= image_tag("analytics.png", class: "group-hover:scale-105 transition-all duration-500 transform ease-in-out object-cover object-center w-full h-full absolute center-both", alt: "workforce news") %>
+                  <div class="absolute inset-0 bg-green-500 bg-opacity-20 mix-blend-multiply"></div>
+                  <div aria-hidden="true" class="absolute inset-x-0 top-0 h-full bg-gradient-to-t from-green-600 opacity-90 w-full"></div>
+                </div>
+                <div class="z-50 p-4 lg:p-8">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+                  </svg>
+                </div>
+                <div class="transform ease-in-out duration-500 group-hover:-translate-y-1 text-white opacity-95 z-30 p-4 lg:p-8 lg:pt-16">
+                  <h3 class="text-2xl sm:text-4xl tracking-tight leading-tight">Complete guide to workforce analytics</h3>
+                  <p class="text-lg mt-3">Download the ebook ➜</p>
+                </div>
+              <% end %>
+              <%= link_to "/news/vaccine-mandates-what-are-they-and-how-should-businesses-handle-them", class: "group relative flex flex-col justify-between h-full rounded-lg shadow-md overflow-hidden items-end" do %>
+                <div class="absolute block z-10 w-full h-full center-both overflow-hidden">
+                  <%= image_tag("clock.png", class: "group-hover:scale-105 transition-all duration-500 transform ease-in-out object-cover object-center w-full h-full absolute center-both", alt: "workforce news") %>
+                  <div class="absolute inset-0 bg-yellow-400 bg-opacity-20 mix-blend-multiply"></div>
+                  <div aria-hidden="true" class="absolute inset-x-0 top-0 h-full bg-gradient-to-t from-yellow-400 opacity-90 w-full"></div>
+                </div>
+                <div class="z-50 p-4 lg:p-8">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M2 5a2 2 0 012-2h8a2 2 0 012 2v10a2 2 0 002 2H4a2 2 0 01-2-2V5zm3 1h6v4H5V6zm6 6H5v2h6v-2z" clip-rule="evenodd" />
+                    <path d="M15 7h1a2 2 0 012 2v5.5a1.5 1.5 0 01-3 0V7z" />
+                  </svg>
+                </div>
+                <div class="transform ease-in-out duration-500 group-hover:-translate-y-1 text-white opacity-95 z-30 p-4 lg:p-8 lg:pt-16">
+                  <h3 class="text-2xl sm:text-4xl tracking-tight leading-tight">Vaccine mandates & shift workers</h3>
+                  <p class="text-lg mt-3">Read the article ➜</p>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="absolute inset-0 flex flex-col" aria-hidden="true">
+          <div class="flex-1 w-full bg-section-gradient">
+          </div>
+        </div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 pb-32">
+          <div class="pt-28 relative text-center">
+            <h2 class="text-center text-3xl text-white text-opacity-90 font-extrabold tracking-tight sm:text-5xl">
+              <%= link_to "See solutions for CFOs & HRIS", role_by_role_path, class: "underline" %>, <%= link_to "learn how customers felt before & after", why_were_different_path, class: "underline" %>, or if you're ready to get started —
+            </h2>
+            <div class="flex flex-col md:flex-row items-center justify-center md:space-x-4 space-y-4 md:space-y-0 mt-8 mb-6">
+              <div class="btn-green px-4 sm:px-8 shadow-md py-2 mx-0 inline-flex space-x-2 items-center justify-center" data-action="click->demo-modal#open">
+                <%= render "layouts/phone" %>
+                <span>Book a call with our sales team</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div> 
+  </div>
+  <%= render "layouts/demo_modal", booking_type: :demo %>
+</div>

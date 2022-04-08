@@ -1,0 +1,15 @@
+<div class="bg-gray-800 my-5">
+	<div class="flex flex-wrap items-center justify-center">
+		<div class="xl:hidden cat-scroller-col w-1/12 inline-flex justify-end max-w-full">
+			<button class="py-3 px-2 xs:px-5 mr-2 text-gray-500" type="button">&lt;</button>
+		</div>
+		<section class="text-center py-2 flex items-center justify-center overflow-x-auto overflow-y-hidden w-10/12 xl:w-full cat-nav">
+			<%= link_to "Latest News", news_path, class: "text-white py-2 px-3 mx-3 whitespace-no-wrap #{'text-opacity-80' unless current_page?(news_path)}" %>
+			<%= link_to "Magazine", "https://magazine.workforce.com/", class: "text-white text-opacity-80 py-2 px-3 mx-3 whitespace-no-wrap" %>
+			<%= link_to "Ebooks & Whitepapers", whitepapers_path, class: "text-white py-2 px-3 mx-3 whitespace-no-wrap #{'text-opacity-80' unless current_page?(whitepapers_path)}" %>
+		</section>
+		<div class="xl:hidden cat-scroller-col w-1/12">
+			<button class="py-3 px-2 max-w-full md:ml-2 text-gray-500 w-full" type="button">&gt;</button>
+		</div>
+	</div>
+</div>

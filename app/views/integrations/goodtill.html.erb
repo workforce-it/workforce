@@ -1,0 +1,190 @@
+<% content_for :title do %>
+  Goodtill ePOS + Workforce Integration
+<% end %>
+
+<% content_for :description do %>
+  Import and combine Goodtill sales data with your rotas for more cost-efficient schedules.
+<% end %>
+
+<div data-controller="demo-modal">
+  <div class="bg-white">
+    <div class="relative overflow-hidden">
+      <div class="absolute inset-y-0 h-full w-full" aria-hidden="true">
+        <div class="relative h-full">
+          <svg class="absolute right-full transform translate-y-1/3 translate-x-1/4 md:translate-y-1/2 sm:translate-x-1/2 lg:translate-x-full" width="404" height="784" fill="none" viewBox="0 0 404 784">
+            <defs>
+              <pattern id="e229dbec-10e9-49ee-8ec3-0286ca089edf" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <circle cx="1.5" cy="1.5" r="1.5" class="text-gray-200" fill="currentColor" />
+              </pattern>
+            </defs>
+            <rect width="404" height="784" fill="url(#e229dbec-10e9-49ee-8ec3-0286ca089edf)" />
+          </svg>
+          <svg class="absolute left-full transform -translate-y-3/4 -translate-x-1/4 sm:-translate-x-1/2 md:-translate-y-1/2 lg:-translate-x-3/4" width="404" height="784" fill="none" viewBox="0 0 404 784">
+            <defs>
+              <pattern id="d2a68204-c383-44b1-b99f-42ccff4e5365" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <circle cx="1.5" cy="1.5" r="1.5" class="text-gray-200" fill="currentColor" />
+              </pattern>
+            </defs>
+            <rect width="404" height="784" fill="url(#d2a68204-c383-44b1-b99f-42ccff4e5365)" />
+          </svg>
+        </div>
+      </div>
+      <div class="relative pt-6 pb-10 sm:pb-6 2xl:pb-10">
+        <%= render "layouts/nav" %>
+        <div class="flex flex-col-reverse space-y-reverse space-y-10 sm:grid gap-2 lg:grid-cols-12 mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6 sm:space-x-8 sm:space-y-0">
+          <div class="text-left col-span-6 flex flex-col justify-center">
+            <%= image_tag("integrations/logos/goodtill.png", class: "filter saturate-100 w-1/5 mb-3") %>
+            <h1 class="relative block uppercase mb-3 text-gray-400 font-normal">Goodtill + Workforce.com</h1>
+            <span class="text-6xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-7xl sm:-mr-16">
+              Build better rotas <span class=" text-blue-tertiary">with real sales data.</span>
+            </span>
+            <p class="mt-3 text-xl text-gray-700 sm:text-lg md:mt-5 md:text-2xl max-w-3xl">
+              Import and combine Goodtill sales data with your rotas for more cost-efficient schedules.
+            </p>
+            <div class="inline-flex flex-col md:flex-row my-5 md:space-x-4 space-y-4 md:space-y-0">
+              <div class="btn-green-action flex w-max items-center space-x-2" data-action="click->demo-modal#open">
+                <%= render "layouts/phone" %>
+                <span>Book a call</span>
+              </div>
+              <%= link_to "Create free account", try_path, class: "btn-blue-secondary px-8 py-2 w-max bg-white" %>
+            </div>
+          </div>
+          <div class="block col-span-6 relative sm:pr-6">
+            <div class="z-20 sm:mt-8">
+              <div class="hidden sm:block absolute w-7/12 z-20 rounded-md overflow-hidden shadow-md bg-white rotate-2 right-0 transform translate-y-44 translate-x-2">
+                <%= image_tag("automatic-restaurant.png", class: "filter saturate-100") %>
+              </div>
+              <div class="hidden sm:block transform scale-y-n1 absolute translate-x-32 sm:-translate-x-12 right-0 translate-y-24 rotate-12 z-30">
+                <%= render "layouts/drawn_arrow", custom_class: "h-28 sm:h-36 w-28 sm:w-36 fill-current text-gray-800 transform" %> 
+              </div>
+              <%= image_tag("integrations/goodtill-header.png", class: "filter saturate-100 pl-5 w-4/5 rounded-md shadow-sm") %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="relative -mb-2">
+        <div class="relative inset-0 flex flex-col h-20 sm:h-72 2xl:h-96" aria-hidden="true">
+          <div class="flex-1 w-full bg-gray-wave">
+          </div>
+        </div>
+      </div>
+
+      <div class="relative py-8 sm:py-10 sm:pb-20 sm:pt-8 bg-gray-50 -mt-12 sm:-mt-48 2xl:-mt-60">
+        <div class="max-w-4xl mx-auto px-4 sm:mt-12 sm:px-6">
+          <div class="flex flex-col justify-center">
+            <h2 class="relative text-4xl text-center text-gray-800 font-extrabold tracking-tight max-w-4xl mx-auto sm:text-5xl z-10">
+              Using Goodtill with Workforce.com</span>
+            </h2>
+            <p class="px-2 max-w-5xl mx-auto text-lg text-center sm:text-xl md:text-1.5xl text-gray-500 py-6">Frontline mangers instinctively know that <span class="italic">the best rota for next week isn't always the same one from last week</span>. With Goodtill ePOS connected to Workforce.com, scheduling teams can use real sales data to build rotas that match their forecasted demand. </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative py-8 sm:py-10 sm:pt-16 bg-white">
+        <div class="grid gap-10 lg:grid-cols-12 max-w-7xl mx-auto px-4 sm:mt-12 sm:px-6">
+          <div class="col-span-5 sm:col-span-7 relative sm:pr-10 items-center flex sm:mb-12">
+            <div class="z-20 transform">
+              <div class="absolute w-6/12 z-20 rounded-md overflow-hidden shadow-md bg-white right-0 transform translate-y-24 sm:translate-y-40 translate-x-2">
+                <%= image_tag("integrations/demand-adjust.png", class: "filter saturate-100") %>
+              </div>
+              <div class="hidden sm:block transform -scale-x-n1 absolute translate-x-32 sm:translate-x-44 translate-y-64 rotate-45 z-30">
+                <%= render "layouts/drawn_arrow", custom_class: "h-28 sm:h-36 w-28 sm:w-36 fill-current text-gray-800 rotate-12 transform" %> 
+              </div>
+              <%= image_tag("integrations/goodtill-pos.png", class: "w-8/12 -rotate-2 transform") %>
+            </div>
+          </div>
+          <div class="col-span-5 text-left sm:pt-10">
+            <h2 class="relative text-4xl text-gray-800 font-extrabold tracking-tight sm:text-5xl z-10">
+              Sync revenue data & adjust for demand.
+            </h2>
+            <p class="text-lg sm:text-xl md:text-1.5xl text-gray-500 pt-6">Pull revenue and itemized sales data from your Goodtill ePOS, then use Workforce.com's demand modifiers to build schedules tailored to SPLH sales per <%= labor %> hour. Adjust the demand slider, and never worry about being understaffed again.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative py-8 sm:py-10 sm:pt-32 bg-white">
+        <div class="grid gap-10 lg:grid-cols-12 max-w-7xl mx-auto px-4 sm:mt-12 sm:px-6 sm:pl-16">
+          <div class="col-span-6 text-left sm:pt-14">
+            <h2 class="relative text-4xl text-gray-800 font-extrabold tracking-tight sm:text-5xl z-10">
+              Build sales-optimized <%= schedules %> automatically.
+            </h2>
+            <p class="text-lg sm:text-xl md:text-1.5xl text-gray-500 pt-6 sm:pr-6">Once Goodtill sales data is synced to Workforce.com, it's easy to accurately forecast upcoming demand, and build the best schedule. With the most up to date revenue data, the optimal <%= schedule %> can be built automatically.</p>
+          </div>
+          <div class="col-span-6 relative sm:pr-10 items-center flex sm:mb-12">
+            <div class="z-20 transform">
+              <div class="hidden sm:block absolute w-9/12 z-20 overflow-hidden rotate-2 right-0 transform translate-y-48 translate-x-20">
+                <%= image_tag("data-driven-scheduling.png", class: "filter saturate-100") %>
+              </div>
+              <%= image_tag("demand.png", class: "w-full rounded-md shadow-md px-6 py-3") %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative py-8 sm:py-10 sm:pt-16 sm:pt-16 bg-white sm:pb-32">
+        <div class="grid gap-10 lg:grid-cols-12 max-w-7xl mx-auto px-4 sm:mt-12 sm:px-6">
+          <div class="col-span-5 sm:col-span-7 relative sm:pr-10 items-center flex sm:mb-12 sm:pl-10">
+            <%= render "layouts/logo", custom_class: "h-60 w-2/5 transform translate-x-8 sm:translate-x-16 -translate-y-2" %>
+            <div class="absolute bg-gray-50 p-2 rounded-2xl h-12 sm:h-20 w-12 sm:w-20 shadow-lg transform -rotate-2 flex justify-center items-center transform right -translate-x-14 sm:-translate-x-36 sm:-translate-x-40 right-0 ">
+              <%= image_tag("integrations/logos/goodtill.png") %>
+            </div>
+            <div class="transform -scale-x-n1 -scale-y-n1 rotate-90 absolute -translate-x-5 sm:translate-x-28 translate-y-2">
+              <%= render "layouts/drawn_arrow", custom_class: "h-32 sm:h-44 w-32 sm:w-44 fill-current text-gray-800 -rotate-45 transform -translate-y-32 translate-x-24" %> 
+            </div>
+            <div class="transform scale-x-n1 scale-y-n1 absolute translate-x-24 sm:translate-x-72 -translate-y-24">
+              <%= render "layouts/drawn_arrow", custom_class: "h-28 sm:h-36 w-28 sm:w-36 fill-current text-gray-800 rotate-12 transform" %> 
+            </div>
+          </div>
+          <div class="col-span-5 text-left">
+            <h2 class="relative text-4xl text-gray-800 font-extrabold tracking-tight sm:text-5xl z-10">
+              Securely developed & maintained inhouse
+            </h2>
+            <p class="text-lg sm:text-xl md:text-1.5xl text-gray-500 pt-6">Our team of implementation engineers build and maintain our point of sale integrations. Every integration has stringent testing and error monitoring, to ensure that it works when you need it most.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="absolute inset-0 flex flex-col" aria-hidden="true">
+          <div class="flex-1 w-full bg-section-gradient">
+          </div>
+        </div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 pb-20 sm:pb-32">
+          <div class="pt-28 relative text-center">
+            <div class="text-white text-xl sm:text-2xl flex space-x-2 items-center justify-center">
+              <span>285 sites</span>
+              <span class="bg-white h-2 w-2 rounded-full"></span>
+              <span>7,000 employees</span>
+            </div>
+            <h2 class="text-white text-3.5xl sm:text-5xl my-6 mb-12"><span class="underline">Case Study:</span> "With Workforce.com we've saved 25-30 <%= labor %> hours a week'"</h2>
+            <div class="plyr__video-embed" data-controller="plyr">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/DCz_KwXSdkU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="mt-14 sm:mt-20 max-w-2xl mx-auto">
+              <h3 class="text-1.5xl sm:text-3xl text-center text-white font-normal text-opacity-90"><span class="absolute text-6xl overflow-hidden h-10 -ml-6 -mt-2.5">"</span>One of the big challenges they've solved for us is high <%= labor %> cost. Stores that use Workforce.com can save between 25-30 <%= labor %> hours a week. In euros <span class="px-2 bg-opacity-80 bg-yellow-500">that's saving €150-€160 per week per store</span>.<span class="absolute text-6xl overflow-hidden h-10 -mr-6 -mt-2.5">"</span></h3>
+              <p class="text-white text-center text-opacity-80 text-base sm:text-xl my-3">— Martin Steenks, Frachise Operations Director, Domino's Netherlands</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 pb-16">
+          <div class="pt-20 relative text-center">
+            <h2 class="text-center text-3xl text-gray-800 text-opacity-90 font-extrabold tracking-tight sm:text-5xl">
+              <%= link_to "Learn about how it works", how_it_works_path, class: "underline" %>, <%= link_to "see how customers felt before & after", why_were_different_path, class: "underline" %>, or if you're ready to get started —
+            </h2>
+            <div class="flex flex-col md:flex-row items-center justify-center md:space-x-4 space-y-4 md:space-y-0 mt-8 mb-6">
+              <div class="btn-green px-8 py-2 mx-0 inline-flex space-x-2 items-center justify-center" data-action="click->demo-modal#open">
+                <%= render "layouts/phone" %>
+                <span>Book a call</span>
+              </div>
+              <%= link_to "Try Workforce.com today", try_path, class: "btn-blue-secondary mt-8 mb-6 px-8 py-2 mx-auto" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <%= render "layouts/demo_modal" %>
+</div>

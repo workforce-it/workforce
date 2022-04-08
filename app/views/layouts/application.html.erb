@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%= render 'layouts/meta_tags' %>
+    <%= render 'layouts/google_analytics' %>
+    <%= render 'layouts/linkedin_tracking' %>
+
+    <%= javascript_pack_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_pack_tag "application", "data-turbo-track": "reload" %>
+
+    <%= render 'layouts/hotjar' %>
+    <%= render 'layouts/cookie_bot' %>
+    <%= render "layouts/cross_region_redirect" %>
+  </head>
+
+  <body>
+    <%= yield %>
+    <% unless controller.controller_name == "free_trial" %><%= render "layouts/footer" %><% end %>
+
+    <%= render 'layouts/intercom' %>
+    <%= render 'layouts/pardot' %>
+  </body>
+</html>

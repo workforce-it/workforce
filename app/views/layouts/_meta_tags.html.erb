@@ -1,0 +1,45 @@
+<title><%= page_title %></title>
+
+    <% if page_description %>
+    <meta name='description' content='<%= page_description %>' />
+    <% end %>
+
+    <% if content_for?(:newshead) %>
+      <%= yield(:newshead) %>
+    <% elsif request.fullpath === "/uk" %>
+        <link rel="canonical" href="<%= "https://workforce.com/uk/" %>" />
+        <link rel="alternate" hreflang="en-us" href="<%= "https://workforce.com/" %>">
+        <link rel="alternate" hreflang="en-gb" href="<%= "https://workforce.com/uk/"%>">
+        <link rel="alternate" hreflang="x-default" href="<%= "https://workforce.com/" %>" />
+        <meta property="og:title" content="<%= page_title %>>">
+        <meta property="og:site_name" content="Workforce.com">
+        <meta property="og:url" content="https://workforce.com/uk/">
+        <meta property="og:description" content="<%= page_description %>">
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="en-gb">
+        <meta property="og:locale:alternate" content="en-us">
+    <% else %>
+        <link rel="canonical" href="<%= "https://workforce.com#{@canonical || request.fullpath}" %>" />
+        <link rel="alternate" hreflang="en-us" href="<%= "https://workforce.com#{@us_alternate || request.fullpath.remove("/uk")}" %>">
+        <link rel="alternate" hreflang="en-gb" href="<%= "https://workforce.com#{@uk_alternate || "/uk#{request.fullpath.remove("/uk")}"}" %>">
+        <link rel="alternate" hreflang="x-default" href="<%= "https://workforce.com#{@canonical || request.fullpath.remove("/uk")}" %>">
+        <meta property="og:title" content="<%= page_title %>>">
+        <meta property="og:site_name" content="Workforce.com">
+        <meta property="og:url" content="<%= "https://workforce.com" + request.fullpath %>">
+        <meta property="og:description" content="<%= page_description %>">
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="en-us">
+        <meta property="og:locale:alternate" content="en-gb">
+    <% end %>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <link rel="icon" href="<%= asset_path 'favicon.ico' %>"/>
+    
+    <% if content_for?(:metaimage) %>
+        <meta property="og:image" content='<%= yield(:metaimage).strip %>'/>
+    <% else %>
+        <meta property="og:image" content="<%= asset_path 'meta.png' %>"/>
+    <% end %>

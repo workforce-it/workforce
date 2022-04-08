@@ -1,0 +1,115 @@
+<% content_for :title do %>
+  Payroll & HRIS Integrations 
+<% end %>
+
+<% content_for :description do %>
+  Connect best-of-breed scheduling to payroll, HRIS, point of sale systems, and more. All integrations are purpose built and maintained inhouse.
+<% end %>
+
+<div data-controller="demo-modal">
+  <div class="bg-white">
+    <div class="relative overflow-hidden">
+      <div class="relative pt-6 pb-10 sm:pb-6 2xl:pb-10">
+        <%= render "layouts/nav" %>
+        <div class="mt-16 sm:mb-20 mx-auto max-w-5xl px-4 sm:mt-24 sm:px-0 2xl:mb-8">
+          <div class="text-center">
+            <h1 class="text-5xl tracking-tight font-extrabold text-gray-900 sm:text-6xl md:text-8xl">
+              <% if uk? %>
+                <span class="block">Partners & <span class="text-blue-tertiary">integrations</span></span>
+              <% else %>
+                <span class="block">Keep everything <span class="text-blue-tertiary">in sync</span></span>
+              <% end %>
+            </h1>
+            <p class="mx-auto mt-3 text-center text-xl sm:text-lg md:text-2xl text-gray-700 md:mt-5 max-w-3xl">
+             Connect best-of-breed scheduling to payroll, HRIS, point of sale systems, and more. All integrations are purpose built and maintained inhouse.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="relative -mb-2">
+        <div class="relative inset-0 flex flex-col h-60 2xl:h-96" aria-hidden="true">
+          <div class="h-24 sm:flex-1 w-full bg-gray-wave">
+          </div>
+        </div>
+      </div>
+
+      <div class="-mt-52 sm:-mt-48 2xl:-mt-64 relative py-8 sm:py-20 sm:pt-20 sm:pb-38 bg-gray-50 z-20">
+        <div data-controller="toggle-category" data-toggle-category-picker-class="bg-gray-light font-bold" data-toggle-category-hidden-class="hidden" class="flex mx-auto max-w-6xl px-4 flex-col sm:flex-row sm:space-x-24">
+          <div class="w-full sm:w-2/12">
+            <div class="flex sm:flex-col flex-wrap space-x-2 sm:space-x-0 sm:space-y-2 justify-center mb-10" aria-label="Tabs">
+              <div data-category="all" data-toggle-category-target="picker" data-action="click->toggle-category#pick" class="w-max sm:w-full bg-gray-light font-bold hover:text-gray-800 cursor-pointer px-3 py-2 text-gray-700 text-lg sm:text-xl rounded-md">
+                All Integrations
+              </div>
+              <div data-category="payroll" data-toggle-category-target="picker" data-action="click->toggle-category#pick" class="w-max sm:w-full hover:text-gray-800 cursor-pointer px-3 py-2 text-gray-700 text-lg sm:text-xl rounded-md">
+                Payroll
+              </div>
+              <% unless uk? %>
+                <div data-category="hris" data-toggle-category-target="picker" data-action="click->toggle-category#pick" class="w-max sm:w-full hover:text-gray-800 cursor-pointer px-3 py-2 text-gray-700 text-lg sm:text-xl rounded-md">
+                  HRIS
+                </div>
+              <% end %>
+              <div data-category="pos" data-toggle-category-target="picker" data-action="click->toggle-category#pick" class=" w-max sm:w-full text-gray-700 cursor-pointer px-3 py-2 rounded-md text-lg sm:text-xl" aria-current="page">
+                Point of Sale
+              </div>
+              <% unless us? %>
+                <div data-category="consulting" data-toggle-category-target="picker" data-action="click->toggle-category#pick" class="w-max sm:w-full hover:text-gray-800 cursor-pointer px-3 py-2 text-gray-700 text-lg sm:text-xl rounded-md">
+                  Advisory
+                </div>
+                <div data-category="other" data-toggle-category-target="picker" data-action="click->toggle-category#pick" class="w-max sm:w-full hover:text-gray-800 px-3 cursor-pointer py-2 text-gray-700 text-lg sm:text-xl rounded-md">
+                  Reporting
+                </div>
+              <% end %>
+            </div>
+          </div>
+          <div class="w-full sm:w-10/12">
+            <div class="grid gap-4 sm:gap-5 grid-cols-1 lg:grid-cols-3">
+              <% @integrations.each do |integration| %>
+                <a <% if integration[:link] == :call %> data-action="click->demo-modal#open" <% else %>href="<%= integration[:link] %>" <% end %>data-toggle-category-target="content" data-category="<%= integration[:type] %>" class="cursor-pointer border-opacity-20 border-2 border-gray-200 flex flex-col rounded-lg shadow-lg overflow-hidden justify-center text-lg font-medium hover:border-4 hover:border-yellow-200">
+                  <div class="flex-1 bg-white py-10 px-7 flex flex-col justify-between text-center">
+                    <div class="flex-1 space-y-3">
+                      <div class="h-10 mb-4">
+                        <%= image_tag("integrations/logos/#{integration[:image_path]}", class: "h-full mx-auto w-auto") %>
+                      </div>
+                      <p class="text-xl px-2 mt-4 sm:px-0 leading-5 font-bold text-gray-700">
+                        <%= integration[:title] %>
+                      </p>
+                      <p class="text-base sm:text-base text-gray-600 leading-snug">
+                        <%= integration[:description] %>
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>     
+
+      <div class="relative -mt-32 -mb-2 transform scale-y-n1">
+        <div class="relative inset-0 flex flex-col h-52 sm:h-72 2xl:h-96" aria-hidden="true">
+          <div class="h-24 sm:flex-1 w-full bg-gray-wave">
+          </div>
+        </div>
+      </div>
+      
+      <div class="relative bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 pb-32">
+          <div class="pt-20 relative text-center">
+            <h2 class="text-center text-3xl text-gray-800 text-opacity-90 font-extrabold tracking-tight sm:text-5xl">
+              <%= link_to "Learn about how it works", how_it_works_path, class: "underline" %>, <%= link_to "see the benefits based on role", role_by_role_path, class: "underline" %>, or if you're ready to get started —
+            </h2>
+            <div class="flex flex-col md:flex-row items-center justify-center md:space-x-4 space-y-4 md:space-y-0 mt-8 mb-6">
+              <div class="btn-green px-8 py-2 mx-0 inline-flex space-x-2 items-center justify-center" data-action="click->demo-modal#open">
+                <%= render "layouts/phone" %>
+                <span>Book a call</span>
+              </div>
+              <%= link_to "Try Workforce.com today", try_path, class: "btn-blue-secondary mt-8 mb-6 px-8 py-2 mx-auto" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <%= render "layouts/demo_modal", booking_type: :integration %>
+</div>
+-

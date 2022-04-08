@@ -1,0 +1,24 @@
+<% content_for :title do %>
+  Cookies
+<% end %>
+<% content_for :description do %>
+ Cookie Policy for Workforce.com
+<% end %>
+
+<div class="bg-white">
+  <div class="relative overflow-hidden">
+    <div class="relative pt-6 pb-16 sm:pb-24">
+      <%= render "layouts/nav" %>
+      <div class="max-w-4xl mx-auto py-8 px-4">
+        <section class="flex w-full mt-20 flex-wrap pb-6 mb-10 prose prose-xl mx-auto">
+           <h1>Cookies Statement</h1>
+           <section>
+                <%= render 'layouts/cookie_declaration' %>
+           </section>
+        </div>
+      
+        </section>
+      </div>
+    </div>
+  </div>
+</div>

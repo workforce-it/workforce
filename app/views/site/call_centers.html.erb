@@ -1,0 +1,231 @@
+<% content_for :title do %>
+  Call Center Scheduling Software
+<% end %>
+
+<% content_for :description do %>
+  Automate forecasts for staffing needs and quickly create optimal schedules with this call center scheduling software.
+<% end %>
+
+<div data-controller="demo-modal">
+  <div class="bg-white">
+    <div class="relative overflow-hidden">
+      <div class="absolute inset-y-0 h-full w-full" aria-hidden="true">
+        <div class="relative h-full">
+          <svg class="absolute right-full transform translate-y-1/3 translate-x-1/4 md:translate-y-1/2 sm:translate-x-1/2 lg:translate-x-full" width="404" height="784" fill="none" viewBox="0 0 404 784">
+            <defs>
+              <pattern id="e229dbec-10e9-49ee-8ec3-0286ca089edf" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <circle cx="1.5" cy="1.5" r="1.5" class="text-gray-200" fill="currentColor" />
+              </pattern>
+            </defs>
+            <rect width="404" height="784" fill="url(#e229dbec-10e9-49ee-8ec3-0286ca089edf)" />
+          </svg>
+          <svg class="absolute left-full transform -translate-y-3/4 -translate-x-1/4 sm:-translate-x-1/2 md:-translate-y-1/2 lg:-translate-x-3/4" width="404" height="784" fill="none" viewBox="0 0 404 784">
+            <defs>
+              <pattern id="d2a68204-c383-44b1-b99f-42ccff4e5365" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <circle cx="1.5" cy="1.5" r="1.5" class="text-gray-200" fill="currentColor" />
+              </pattern>
+            </defs>
+            <rect width="404" height="784" fill="url(#d2a68204-c383-44b1-b99f-42ccff4e5365)" />
+          </svg>
+        </div>
+      </div>
+      <div class="relative pt-6 pb-10 sm:pb-6 2xl:pb-10">
+        <%= render "layouts/nav" %>
+        <div class="flex flex-col sm:flex-row space-y-12 sm:space-y-0 sm:space-x-20 mt-16 mx-auto max-w-7xl px-4 sm:mt-24 sm:px-6">
+          <div class="sm:w-1/2 relative">
+            <div class="z-20">
+              <%= image_tag("call_centers_header.png", class: "filter saturate-100") %>
+            </div>
+          </div>
+          <div class="text-left sm:w-1/2 flex flex-col justify-center">
+            <span class="relative block uppercase mb-3 text-gray-400">Call Center Scheduling Software</span>
+            <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+              <span class="block">The easiest way to create <span class="text-blue-tertiary">optimized schedules</span> instantly.</span>
+            </h1>
+            <p class="mt-3 text-xl text-gray-700 sm:text-lg md:mt-5 md:text-1.5xl max-w-3xl">
+              Forget over-and under-staffing. With Workforce.com’s scheduling software for call centers, it’s easy to quickly create and adjust schedules based on automated, accurate forecasts.
+            </p>
+            <div class="inline-flex flex-col md:flex-row my-5 md:space-x-4 space-y-4 md:space-y-0">
+              <div class="btn-green-action flex w-max items-center space-x-2" data-action="click->demo-modal#open">
+                <%= render "layouts/phone" %>
+                <span>Book a call</span>
+              </div>
+              <%= link_to "Create free account", try_path, class: "btn-blue-secondary px-8 py-2 w-max bg-white" %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="relative -mb-2">
+        <div class="relative inset-0 flex flex-col h-20 sm:h-72 2xl:h-96" aria-hidden="true">
+          <div class="flex-1 w-full bg-gray-wave">
+          </div>
+        </div>
+      </div>
+
+      <div class="relative py-8 sm:py-10 sm:pt-8 bg-gray-50 -mt-12 sm:-mt-48 2xl:-mt-72">
+        <div class="flex flex-col-reverse sm:grid gap-10 grid-cols-6 lg:grid-cols-12 max-w-6xl mx-auto px-4 sm:mt-12 sm:px-6">
+          <div class="col-span-6 text-left flex flex-col justify-center">
+            <h2 class="relative text-2.5xl leading-8 text-gray-800 font-extrabold tracking-tight sm:text-5xl z-10">
+              Everything you need for quick & easy scheduling.</span>
+            </h2>
+            <ul class="ml-8 my-6 space-y-2">
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 w-7">
+                  <%= image_tag("everything-icon1.png") %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Build schedules for your team in minutes. With drag and drop scheduling, you can create your agents’ schedules in just a few clicks.</p>
+              </li>
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 w-7">
+                  <%= image_tag("everything-icon2.png") %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">No need to build schedules from scratch. Create templates or simply copy and paste shifts from one week to the next for schedules that stay consistent over time.</p>
+              </li>
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 w-7">
+                  <%= image_tag("everything-icon3.png") %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Manage and schedule breaks easily. Simply indicate the break times for each shift while building schedules.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-span-6 relative sm:pl-10 items-center flex sm:mb-12">
+            <div class="z-20 transform rotate-1">
+              <%= image_tag("everything.png") %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative py-8 sm:py-10 sm:pt-16 bg-white">
+        <div class="grid gap-10 lg:grid-cols-12 max-w-6xl mx-auto px-4 sm:mt-12 sm:px-6">
+          <div class="col-span-6 relative sm:pr-10 items-center flex sm:mb-12">
+            <div class="z-20 transform -rotate-1">
+              <%= image_tag("accurately.png") %>
+            </div>
+          </div>
+          <div class="col-span-6 text-left">
+            <h2 class="relative text-2.5xl leading-8 text-gray-800 font-extrabold tracking-tight sm:text-5xl z-10 -mr-6">
+              Accurately forecast staffing needs.</span>
+            </h2>
+            <ul class="ml-8 my-6 space-y-2">
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 w-7">
+                  <%= image_tag("accurately-icon1.png") %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Get an accurate picture of how many employees you need in a shift.</p>
+              </li>
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 w-7">
+                  <%= image_tag("accurately-icon2.png") %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Integrate your existing systems with Workforce.com to get accurate forecasts based on volume of calls, number of tickets expected, and the skills of agents needed to meet your KPIs.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="relative py-8 sm:py-10 sm:pt-8 bg-white">
+        <div class="flex flex-col-reverse sm:grid gap-10 grid-cols-6 lg:grid-cols-12 max-w-6xl mx-auto px-4 sm:mt-12 sm:px-6">
+          <div class="col-span-6 text-left flex flex-col justify-center">
+            <h2 class="relative text-2.5xl leading-8 text-gray-800 font-extrabold tracking-tight sm:text-5xl z-10 -mr-6">
+              Get deeper insights with easy-to-generate reports.</span>
+            </h2>
+            <ul class="ml-8 my-6 space-y-2">
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 w-7">
+                  <%= image_tag("get-deeper-icon1.png") %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Identify trends and potential issues in your operations using ready-made report templates. Or design your own reports around the metrics most important to you.</p>
+              </li>
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 w-7">
+                  <%= image_tag("get-deeper-icon2.png") %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Use reporting insights to find the best times for employee training and development.</p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-span-6 relative sm:pl-10 items-center flex sm:mb-12">
+            <div class="z-20 transform rotate-1">
+              <%= image_tag("get-deeper.png") %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative py-8 sm:py-10 sm:pt-16 bg-white">
+        <div class="grid gap-10 lg:grid-cols-12 max-w-6xl mx-auto px-4 sm:mt-12 sm:px-6">
+          <div class="col-span-6 relative sm:pr-10 items-center flex sm:mb-12">
+            <div class="z-20 transform -rotate-1">
+              <%= image_tag("easily.png") %>
+            </div>
+          </div>
+          <div class="col-span-6 text-left">
+            <h2 class="relative text-2.5xl leading-8 text-gray-800 font-extrabold tracking-tight sm:text-5xl z-10">
+              Easily cope with last-minute schedule changes.</span>
+            </h2>
+            <ul class="ml-8 my-6 space-y-2">
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 w-7">
+                  <%= image_tag("easily-icon1.png") %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Never miss a leave request from your staff. See requests come in and approve them in a single click via the platform’s leave management system.</p>
+              </li>
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 w-7">
+                  <%= image_tag("easily-icon2.png") %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Avoid scheduling staff who are unavailable. When scheduling, the platform automatically shows if an employee is unavailable to work a shift.</p>
+              </li>
+              <li>
+                <span class="absolute -ml-8 my-1 p-1 w-7">
+                  <%= image_tag("easily-icon3.png") %>
+                </span>
+                <p class="px-2 text-lg sm:text-xl md:text-1.5xl text-gray-500 pb-2">Fill unexpected absences quickly with shift swapping. Offer open shifts to other employees. See the cost of potential swaps and see to it that you stay within budget.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative py-8 sm:py-10 sm:pt-8 bg-white">
+        <div class="grid sm:gap-10 lg:grid-cols-12 max-w-7xl mx-auto px-4 mt-12 sm:px-6">
+          <div class="col-span-6 text-left flex flex-col justify-center">
+            <h2 class="relative text-4xl text-gray-800 font-extrabold tracking-tight sm:text-5xl z-10 -mr-6">
+              Integrate with your POS, payroll, and HR systems</span>
+            </h2>
+            <div class="mt-8 mb-2 sm:my-8 space-y-2">
+              <p class="text-lg sm:text-xl md:text-1.5xl text-gray-500">Integrate your current tools with our system for faster, more efficient workforce management operations, while providing robust scheduling & attendance for frontline teams.</p>
+            </div>
+          </div>
+          <div class="col-span-6 relative sm:pl-10 items-center flex sm:mb-12">
+            <div class="z-20">
+              <%= image_tag("integrations.png") %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 pb-16">
+          <div class="pt-20 relative text-center">
+            <h2 class="text-center text-3xl text-gray-800 text-opacity-90 font-extrabold tracking-tight sm:text-5xl">
+              <%= link_to "Learn about how it works", how_it_works_path, class: "underline" %>, <%= link_to "see how customers felt before & after", why_were_different_path, class: "underline" %>, or if you're ready to get started —
+            </h2>
+            <div class="flex flex-col md:flex-row items-center justify-center md:space-x-4 space-y-4 md:space-y-0 mt-8 mb-6">
+              <div class="btn-green px-8 py-2 mx-0 inline-flex space-x-2 items-center justify-center" data-action="click->demo-modal#open">
+                <%= render "layouts/phone" %>
+                <span>Book a call</span>
+              </div>
+              <%= link_to "Try Workforce.com today", try_path, class: "btn-blue-secondary mt-8 mb-6 px-8 py-2 mx-auto" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <%= render "layouts/demo_modal" %>
+</div>

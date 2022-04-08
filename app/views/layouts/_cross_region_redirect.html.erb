@@ -1,0 +1,13 @@
+<% if unknown_region? %>
+  <script>
+    (function () {
+      const tz = Intl.DateTimeFormat().resolvedOptions().timeZone
+      if (tz.match(/Europe/g)) {
+        window.location.replace("<%= url_for(_routes.recognize_path(request.path).merge(locale: "uk")) %>")
+      }
+      if (tz.match(/Australia/g) && window.location.pathname !== "/security" && window.location.pathname !== "/gdpr") {
+        window.location.replace("https://www.tanda.co")
+      }
+    })()
+  </script>
+<% end %>

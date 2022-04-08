@@ -1,0 +1,361 @@
+<% content_for :title do %>
+  How real frontline businesses use Workforce.com
+<% end %>
+
+<% content_for :description do %>
+  Thousands of restaurants, hospitals, and franchises have switched to Workforce.com to save time scheduling, lower their <%= labor %> costs, and sync daily timesheets to payroll. 
+<% end %>
+
+<div data-controller="demo-modal">
+  <div class="bg-blue-light">
+    <div class="relative overflow-hidden">
+      <%= render "layouts/pattern" %>
+      <div class="relative pt-6 pb-10 sm:pb-6 2xl:pb-10">
+        <%= render "layouts/nav" %>
+        <div class="flex flex-col sm:flex-row relative space-y-reverse space-y-12 sm:space-y-14 sm:space-x-20 mt-16 mx-auto max-w-6xl px-4 sm:mt-24 sm:px-6 sm:mb-48">
+          <div class="text-left sm:w-5/12 flex flex-col justify-center">
+            <span class="relative block uppercase mb-3 text-gray-400">Customer Stories</span>
+            <h1 class="text-6xl tracking-tight font-extrabold text-blue-dark sm:text-5xl md:text-7xl -mr-2 sm:mr-0">
+              <span class="block">Software that backs <span class="text-blue-tertiary">frontline businesses.</span>
+            </h1>
+            <p class="mt-3 text-xl text-body sm:text-lg md:mt-6 md:text-xl max-w-md">
+              Thousands of restaurants, hospitals, and franchises have switched to Workforce.com to save time scheduling, lower their <%= labor %> costs, and sync daily timesheets to payroll. Here are their stories.
+            </p>
+            <div class="inline-flex sm:flex-col items-center md:flex-row my-7 space-x-4 sm:space-y-4 md:space-y-0">
+              <div class="btn-blue-action cursor-pointer mx-0 flex w-max items-center space-x-2 text-base" data-action="click->demo-modal#open">
+                <div class="flex space-x-2 items-center">
+                  <%= render "layouts/camera" %>
+                  <span>Book a demo</span>
+                </div>
+              </div>
+              <%= link_to "Create free account", try_path, class: "text-blue-dark text-base font-medium" %>
+            </div>
+          </div>
+          <div class="sm:w-8/12 h-full sm:absolute sm:pl-4 -right-40">
+            <div class="w-full grid grid-cols-2 md:grid-cols-3 gap-4">
+              <div class="col-span-1">
+                <%= link_to "/news/reef-accelerates-expansion-with-workforce-com", class: "group relative flex flex-col justify-between h-full rounded-lg shadow-md overflow-hidden" do %>
+                  <div class="absolute block z-10 w-full h-full center-both overflow-hidden">
+                    <%= image_tag("stories/reef.png", class: "group-hover:scale-105 filter brightness-110 transition-all duration-500 transform ease-in-out object-cover object-center w-full h-full absolute center-both", alt: "workforce news") %>
+                    <div class="absolute inset-0 bg-customers-reef opacity-50 mix-blend-multiply"></div>
+                    <div aria-hidden="true" class="absolute inset-x-0 top-0 h-full bg-gradient-to-t from-customers-reef opacity-70 w-full"></div>
+                  </div>
+                  <div class="flex justify-between items-center p-4 lg:p-5 z-50">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 text-white" fill="currentColor" stroke="currentColor" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 263.8 71.6" style="enable-background:new 0 0 263.8 71.6;" xml:space="preserve"> <g id="Layer_2_1_"> <g id="Layer_1-2"> <path d="M67.8,21.6C67.8,9.9,60.3,0,43.5,0H9v32.2H0v10.9h9v28.5h11.8V43.1h13.3l21.7,28.5h14.8l-22-28.8 C61.9,41.1,67.8,31.9,67.8,21.6z M20.8,32.2V10.9H43c8.1,0,13,3.8,13,10.7s-4.9,10.7-13,10.7H20.8z"/> <polygon points="80.6,71.6 129.9,71.6 129.9,60.7 92.4,60.7 92.4,41.2 129.2,41.2 129.2,30.3 92.4,30.3 92.4,10.9 129.9,10.9 129.9,0 80.6,0 "/> <polygon points="147.5,71.6 196.9,71.6 196.9,60.7 159.4,60.7 159.4,41.2 196.1,41.2 196.1,30.3 159.4,30.3 159.4,10.9 196.9,10.9 196.9,0 147.5,0 "/> <polygon points="263.8,10.9 263.8,0 214.4,0 214.4,71.6 226.3,71.6 226.3,41.2 263.1,41.2 263.1,30.3 226.3,30.3 226.3,10.9 "/> </g> </g> </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+                    </svg>
+                  </div>
+                  <div class="transform ease-in-out duration-500 group-hover:-translate-y-1 text-white opacity-95 z-30 p-4 lg:p-5 lg:pt-64">
+                    <div class="flex space-x-1 items-center">
+                      <p class="text-lg leading-none">Read case study</p>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-3 text-white mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+              <div class="col-span-1 z-20 sm:transform sm:-translate-y-16">
+                <%= link_to "/news/covidcheck-colorado-administers-300000-vaccines-with-workforce-com", class: "group relative flex flex-col justify-between h-full rounded-lg shadow-md overflow-hidden" do %>
+                  <div class="absolute block z-10 w-full h-full center-both overflow-hidden">
+                    <%= image_tag("stories/covid.png", class: "group-hover:scale-105 filter brightness-110 transition-all duration-500 transform ease-in-out object-cover object-center w-full h-full absolute center-both filter saturate-50", alt: "workforce news") %>
+                    <div class="absolute inset-0 bg-customers-covid mix-blend-multiply opacity-50"></div>
+                    <div aria-hidden="true" class="absolute inset-x-0 top-0 h-full bg-gradient-to-t from-customers-covid opacity-70 w-full"></div>
+                  </div>
+                  <div class="flex justify-between items-center p-4 lg:p-5 z-50">
+                    <%= image_tag("stories/covid-logo.png", class: "h-5 filter brightness-0 invert") %>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <div class="transform ease-in-out duration-500 group-hover:-translate-y-1 text-white opacity-95 z-30 p-4 lg:p-5 lg:pt-64">
+                    <div class="flex space-x-1 items-center">
+                      <p class="text-lg leading-none">Watch video</p>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-3 text-white mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+              <div class="col-span-1 z-20 sm:transform sm:translate-y-8">
+                <%= link_to "/news/75078", class: "group relative flex flex-col justify-between h-full rounded-lg shadow-md overflow-hidden" do %>
+                  <div class="absolute block z-10 w-full h-full center-both overflow-hidden">
+                    <%= image_tag("stories/greenforce.png", class: "group-hover:scale-105 filter brightness-110 transition-all duration-500 transform ease-in-out object-cover object-center w-full h-full absolute center-both", alt: "workforce news") %>
+                    <div class="absolute inset-0 bg-customers-greenforce opacity-60 mix-blend-multiply"></div>
+                    <div aria-hidden="true" class="absolute inset-x-0 top-0 h-full bg-gradient-to-t from-customers-greenforce opacity-80 w-full"></div>
+                  </div>
+                  <div class="flex justify-between items-center p-4 lg:p-5 z-50">
+                    <%= image_tag("stories/greenforce-logo.png", class: "h-5 filter brightness-0 invert") %>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+                    </svg>
+                  </div>
+                  <div class="transform ease-in-out duration-500 group-hover:-translate-y-1 text-white opacity-95 z-30 p-4 lg:p-5 lg:pt-64">
+                    <div class="flex space-x-1 items-center">
+                      <p class="text-lg leading-none">Read case study</p>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-3 text-white mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+              <div class="col-span-1 z-20">
+                <%= link_to "/news/myhealth-medical-center-improves-employee-engagement-and-streamlines-scheduling-with-workforce-com", class: "group relative flex flex-col justify-between h-full rounded-lg shadow-md overflow-hidden" do %>
+                  <div class="absolute block z-10 w-full h-full center-both overflow-hidden">
+                    <%= image_tag("stories/myhealth.png", class: "group-hover:scale-105 filter brightness-110 transition-all duration-500 transform ease-in-out object-cover object-center w-full h-full absolute center-both filter saturate-50", alt: "workforce news") %>
+                    <div class="absolute inset-0 bg-customers-myhealth opacity-50 mix-blend-multiply"></div>
+                    <div aria-hidden="true" class="absolute inset-x-0 top-0 h-full bg-gradient-to-t from-customers-myhealth opacity-70 w-full"></div>
+                  </div>
+                  <div class="flex justify-between items-center p-4 lg:p-5 z-50">
+                   <%= image_tag("stories/myhealth-logo.png", class: "h-4 filter brightness-0 invert") %>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+                    </svg>
+                  </div>
+                  <div class="transform ease-in-out duration-500 group-hover:-translate-y-1 text-white opacity-95 z-30 p-4 lg:p-5 lg:pt-64">
+                    <div class="flex space-x-1 items-center">
+                      <p class="text-lg leading-none">Read case study</p>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-3 text-white mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+              <div class="col-span-1 z-20 sm:transform sm:-translate-y-16">
+                <%= link_to "/news/united-cinemas-uses-workforce-com-to-reduce-manual-input-and-improve-customer-experience", class: "group relative flex flex-col justify-between h-full rounded-lg shadow-md overflow-hidden" do %>
+                  <div class="absolute block z-10 w-full h-full center-both overflow-hidden">
+                    <%= image_tag("stories/united.png", class: "group-hover:scale-105 filter brightness-110 transition-all duration-500 transform ease-in-out object-cover object-center w-full h-full absolute center-both filter saturate-50", alt: "workforce news") %>
+                    <div class="absolute inset-0 bg-customers-united opacity-60 mix-blend-multiply"></div>
+                    <div aria-hidden="true" class="absolute inset-x-0 top-0 h-full bg-gradient-to-t from-customers-united opacity-70 w-full"></div>
+                  </div>
+                  <div class="flex justify-between items-center p-4 lg:p-5 z-50">
+                    <%= image_tag("stories/united-logo.png", class: "h-8 filter brightness-0 invert") %>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z" />
+                    </svg>
+                  </div>
+                  <div class="transform ease-in-out duration-500 group-hover:-translate-y-1 text-white opacity-95 z-30 p-4 lg:p-5 lg:pt-64">
+                    <div class="flex space-x-1 items-center">
+                      <p class="text-lg leading-none">Read case study</p>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-3 text-white mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+              <div class="col-span-1 z-20 sm:transform sm:translate-y-8">
+                <%= link_to "/news/the-lake-elsinore-storm-go-undefeated-in-workforce-management-with-workforce-com", class: "group relative flex flex-col justify-between h-full rounded-lg shadow-md overflow-hidden" do %>
+                  <div class="absolute block z-10 w-full h-full center-both overflow-hidden">
+                    <%= image_tag("stories/lake-elsinor.png", class: "group-hover:scale-105 filter brightness-110 transition-all duration-500 transform ease-in-out object-cover object-center w-full h-full absolute center-both", alt: "workforce news") %>
+                    <div class="absolute inset-0 bg-customers-elsinor opacity-50 mix-blend-multiply"></div>
+                    <div aria-hidden="true" class="absolute inset-x-0 top-0 h-full bg-gradient-to-t from-customers-elsinor opacity-70 w-full"></div>
+                  </div>
+                  <div class="flex justify-between items-center p-4 lg:p-5 z-50">
+                    <%= image_tag("stories/storm-logo.png", class: "h-8 filter brightness-0 invert") %>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <div class="transform ease-in-out duration-500 group-hover:-translate-y-1 text-white opacity-95 z-30 p-4 lg:p-5 lg:pt-64">
+                    <div class="flex space-x-1 items-center">
+                      <p class="text-lg leading-none">Watch video</p>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-3 text-white mt-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="relative -mb-2">
+        <div class="relative inset-0 flex flex-col h-20 sm:h-72 2xl:h-96" aria-hidden="true">
+          <div class="flex-1 w-full bg-gray-wave filter brightness-0 invert">
+          </div>
+        </div>
+      </div>
+
+      <div class="relative py-8 sm:py-10 sm:pt-8 bg-white -mt-12 sm:-mt-48 2xl:-mt-60">
+        <div class="max-w-6xl mx-auto px-4 my-12 sm:my-32 sm:px-6">
+          <div class="flex flex-col justify-center">
+            <h2 class="relative text-4xl sm:text-left text-blue-dark font-extrabold tracking-tight sm:text-5xl z-10">
+              Helping businesses see change, fast.
+            </h2>
+          </div>
+          <div class="flex flex-col space-y-4 sm:space-y-0 sm:flex-row sm:space-x-3 sm:space-x-20 sm:items-center sm:justify-center mt-5 sm:mt-16">
+            <div class="w-9/12 sm:w-auto flex flex-col space-y-2">
+               <h4 class="text-2xl w-max sm:text-3xl text-blue-dark border-l-4 border-blue-accent pl-3">55 locations</h4>
+              <span class="text-base leading-tight text-body">onboarded within 6 weeks at COVIDCheck Colorado.</span>
+            </div>
+            <div class="w-9/12 sm:w-auto flex flex-col space-y-2">
+              <h4 class="text-2xl w-max sm:text-3xl text-blue-dark border-l-4 border-blue-accent pl-3">100% increase</h4>
+              <span class="text-base leading-tight text-body">in revenue per customer for Lake Elsinore Storm.</span>
+            </div>
+            <div class="w-9/12 sm:w-auto flex flex-col space-y-2">
+              <h4 class="text-2xl w-max sm:text-3xl text-blue-dark border-l-4 border-blue-accent pl-3">10 hours saved</h4>
+              <span class="text-base leading-tight text-body">in administrative time per week for Greenforce Staffing.</span>
+            </div>
+            <div class="w-9/12 sm:w-auto flex flex-col space-y-2">
+              <h4 class="text-2xl w-max sm:text-3xl text-blue-dark border-l-4 border-blue-accent pl-3">2,000+</h4>
+              <span class="text-base leading-tight text-body">clock-ins in the first two weeks of onboarding with REEF.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative py-8 sm:py-10 sm:pt-8 bg-blue-light -mt-12">
+        <div class="max-w-6xl mx-auto px-4 my-12 sm:mt-32 sm:px-6">
+          <div class="flex flex-col justify-center">
+            <span class="text-blue-accent text-xl my-5 font-medium">Working together</span>
+            <h2 class="relative text-4xl sm:text-5xl sm:text-left sm:max-w-3xl text-blue-dark font-extrabold tracking-tight sm:text-5xl z-10">
+              We partner with customers to implement results, not software.
+            </h2>
+            <p class="max-w-2xl text-lg sm:text-lg md:text-xl text-body py-6">
+              Workforce.com is the fastest-moving workforce management platform, and committed to delivering real results on the frontline.
+            </p>
+          </div>
+          
+          <div data-controller="sliding-picker" data-sliding-picker-axis-value="X" data-sliding-picker-active-class="brightness-100 border-blue-accent opacity-100" class="relative flex flex-col-reverse sm:flex-col py-8 sm:py-32 sm:pt-16 bg-blue-light sm:-mx-5 overflow-hidden">
+            <div data-sliding-picker-target="content" class="relative flex transition duration-300 ease-in-out">
+              <section class="min-w-full bg-blue-light">
+                <section class="flex flex-col sm:flex-row space-y-10 sm:space-y-0 sm:space-x-6 max-w-6xl items-center justify-between">
+                  <div class="sm:w-5/12 sm:mb-12 flex flex-col justify-center space-y-8 sm:ml-1">
+                    <div class="flex justify-center sm:block">
+                      <h4 class="relative text-left text-2xl text-blue-dark font-bold leading-none tracking-tight sm:text-3.5xl  transform sm:translate-x-3">
+                        How we set up 55 sites in 6 weeks with COVIDCheck Colorado
+                      </h4>
+                    </div>
+                    <div class="flex flex-col space-y-2">
+                      <h5 class="text-lg font-medium text-blue-dark border-l-2 border-blue-accent pl-3">Problem</h5>
+                      <p class="text-base sm:text-lg text-body transform sm:translate-x-3">
+                        With 55 testing sites and over 2,000 frontline workers across their entire state, COVIDCheck Colorado needed a workforce management platform fast, so they could effectively manage the distribution of tests and vaccines across the state. 
+                      </p>
+                    </div>
+                    <div class="flex flex-col space-y-2">
+                      <h5 class="text-lg font-medium text-blue-dark border-l-2 border-blue-accent pl-3">Solution</h5>
+                      <p class="text-base sm:text-lg text-body transform sm:translate-x-3">
+                        We worked with the team to get core locations onboarded in the first two weeks, then inproved workflows while rolling out to the remaining sites. Within 6 weeks, all sites were set up, enabling the distribution of 300,000 vaccines, and 800,000 tests.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="w-full sm:w-6/12 flex">
+                    <div class="h-max w-full rounded-2xl overflow-hidden shadow-pop-right">
+                      <div class="plyr__video-embed" data-controller="plyr">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/IRIljuMOR94" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </section>
+              <section class="min-w-full bg-blue-light">
+                <section class="flex flex-col sm:flex-row space-y-10 sm:space-y-0 sm:space-x-6 max-w-6xl items-center justify-between">
+                  <div class="sm:w-5/12 sm:mb-12 flex flex-col justify-center space-y-8 sm:ml-1">
+                    <div class="flex justify-center sm:block">
+                      <h4 class="relative text-left text-2xl text-blue-dark font-bold leading-none tracking-tight sm:text-3.5xl  transform sm:translate-x-3">
+                        How we helped Lake Elsinore Storm cut labor spend in real time
+                      </h4>
+                    </div>
+                    <div class="flex flex-col space-y-2">
+                      <h5 class="text-lg font-medium text-blue-dark border-l-2 border-blue-accent pl-3">Problem</h5>
+                      <p class="text-base sm:text-lg text-body transform sm:translate-x-3">
+                        The Storm wanted to be able to staff based on demand, and efficiently handle shift replacements. Unfortunately, management had little control over tracking and reducing labor costs and they could not predict cash flow accurately. 
+                      </p>
+                    </div>
+                    <div class="flex flex-col space-y-2">
+                      <h5 class="text-lg font-medium text-blue-dark border-l-2 border-blue-accent pl-3">Solution</h5>
+                      <p class="text-base sm:text-lg text-body transform sm:translate-x-3">
+                        We set up the team with our Live Wage Tracker, giving management the ability to control labor costs in real time, avoiding unnecessary overtime. Our shift replacement tools helped managers fill last minute vacant shifts with ease.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="w-full sm:w-6/12 flex">
+                    <div class="h-max w-full rounded-2xl overflow-hidden shadow-pop-right">
+                      <div class="plyr__video-embed" data-controller="plyr">
+                        <iframe width="560" height="315" src="https://www.youtube.com/watch?v=IaK5B3WWPYU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </section>
+              <section class="min-w-full bg-blue-light">
+                <section class="flex flex-col sm:flex-row space-y-10 sm:space-y-0 sm:space-x-6 max-w-6xl items-center justify-between">
+                  <div class="sm:w-5/12 sm:mb-12 flex flex-col justify-center space-y-8 sm:ml-1">
+                    <div class="flex justify-center sm:block">
+                      <h4 class="relative text-left text-2xl text-blue-dark font-bold leading-none tracking-tight sm:text-3.5xl  transform sm:translate-x-3">
+                        How we built advanced reporting to level up invoicing at Greenforce 
+                      </h4>
+                    </div>
+                    <div class="flex flex-col space-y-2">
+                      <h5 class="text-lg font-medium text-blue-dark border-l-2 border-blue-accent pl-3">Problem</h5>
+                      <p class="text-base sm:text-lg text-body transform sm:translate-x-3">
+                        Greenforce found themselves struggling to efficiently fulfill labor requests, having to juggle variables like employee certifications, labor costs, and shift preferences. They also needed to benchmark labor spend against fixed retainers.
+                      </p>
+                    </div>
+                    <div class="flex flex-col space-y-2">
+                      <h5 class="text-lg font-medium text-blue-dark border-l-2 border-blue-accent pl-3">Solution</h5>
+                      <p class="text-base sm:text-lg text-body transform sm:translate-x-3">
+                        Working algside the team we created a custom invoicing report, allowing management to view the billing rate against their profit margin. Streamlined scheduling and attendance then empowered Greenforce to efficiently deploy workers. 
+                      </p>
+                    </div>
+                  </div>
+                  <div class="w-full sm:w-6/12 flex">
+                    <div class="h-max w-full rounded-2xl overflow-hidden shadow-pop-right">
+                      <div class="plyr__video-embed" data-controller="plyr">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/bNGuDKgF5vU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </section>
+            </div>
+            <div class="w-full sm:mt-16 mb-10 sm:mb-0">
+              <ul class="flex" role="tablist">
+                <li data-transition="0%" data-sliding-picker-target="picker" data-action="click->sliding-picker#pick" class="w-1/3 border-b-2 sm:border-t-2 sm:border-b-0 pb-3 border-transparent cursor-pointer flex items-center justify-center sm:pt-8 filter brightness-0 opacity-40 brightness-100 border-blue-accent opacity-100" aria-selected="true">
+                  <%= image_tag("stories/covid-logo.png", class: "h-6 sm:h-10") %>
+                </li>
+                <li data-transition="-100%" data-sliding-picker-target="picker" data-action="click->sliding-picker#pick" class="w-1/3 border-b-2 sm:border-t-2 sm:border-b-0 pb-3  border-transparent cursor-pointer flex items-center justify-center sm:pt-8 filter brightness-0 opacity-40" aria-selected="false">
+                  <%= image_tag("stories/storm-logo.png", class: "h-6 sm:h-10") %>
+                </li>
+                <li data-transition="-200%" data-sliding-picker-target="picker" data-action="click->sliding-picker#pick" class="w-1/3 border-b-2 sm:border-t-2 sm:border-b-0 pb-3  border-transparent cursor-pointer flex items-center justify-center sm:pt-8 filter brightness-0 opacity-40" aria-selected="false">
+                  <%= image_tag("stories/greenforce-logo.png", class: "h-4 sm:h-8") %>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="absolute inset-0 flex flex-col" aria-hidden="true">
+          <div class="flex-1 w-full bg-section-gradient">
+          </div>
+        </div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 pb-32">
+          <div class="pt-28 relative text-center">
+            <h2 class="text-center text-3xl text-white text-opacity-90 font-extrabold tracking-tight sm:text-5xl">
+              <%= link_to "See solutions for CFOs & HRIS", role_by_role_path, class: "underline" %>, <%= link_to "learn how customers felt before & after", why_were_different_path, class: "underline" %>, or if you're ready to get started —
+            </h2>
+            <div class="flex flex-col md:flex-row items-center justify-center md:space-x-4 space-y-4 md:space-y-0 mt-8 mb-6">
+              <div class="btn-green px-4 sm:px-8 shadow-md py-2 mx-0 inline-flex space-x-2 items-center justify-center" data-action="click->demo-modal#open">
+                <%= render "layouts/phone" %>
+                <span>Book a call with our sales team</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div> 
+  </div>
+  <%= render "layouts/demo_modal", booking_type: :demo %>
+</div>

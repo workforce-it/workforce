@@ -1,0 +1,6 @@
+<% booking_type = :call if local_assigns[:booking_type].nil? %>
+<div class="fixed text-gray-500 flex items-center justify-center overflow-auto z-50 bg-black bg-opacity-40 left-0 right-0 top-0 bottom-0 hidden" data-demo-modal-target="bg" data-transition-enter="transition ease-out duration-300" data-transition-enter-start="transform opacity-0" data-transition-enter-end="transform opacity-100" data-transition-leave="z-30 transition ease-in duration-200" data-transition-leave-start="transform opacity-100" data-transition-leave-end="transform opacity-0 z-0" data-action="click->demo-modal#close">
+  <div class="bg-white rounded-xl shadow-2xl p-6 sm:p-12 py-16 sm:py-20 sm:w-2/5 mx-3 sm:mx-10" data-demo-modal-target="panel" data-transition-enter="transition ease-out duration-300" data-transition-enter-start="transform opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95" data-transition-enter-end="transform opacity-100 translate-y-0 sm:scale-100" data-transition-leave="transition ease-in duration-200" data-transition-leave-start="transform opacity-100 translate-y-0 sm:scale-100" data-transition-leave-end="transform z-0 opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95">
+	<%= turbo_frame_tag "book_demo", src: book_demo_path(type: booking_type), loading: "lazy" %>
+  </div>
+</div>

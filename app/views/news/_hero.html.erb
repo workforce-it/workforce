@@ -1,0 +1,54 @@
+<section class="flex flex-wrap items-stretch flex-col sm:flex-row mb-7">
+  <div class="w-full lg:w-2/3 pr-0 lg:pr-12 mb-7 lg:mb-0 ">
+    <%= link_to news_article_path(slug: @hero["slug"]), class: "relative flex flex-col justify-end h-full" do %>
+      <div class="absolute block z-10 w-full h-full center-both">
+        <%= image_tag(@hero["_embedded"]["wp:featuredmedia"].shift["media_details"]["sizes"]["full"]["source_url"], class: "object-cover object-center w-full h-full absolute center-both", alt: "workforce news") %>
+        <div aria-hidden="true" class="absolute inset-x-0 top-0 h-full bg-gradient-to-t from-gray-800 w-full"></div>
+      </div>
+      <div class="text-white z-30 p-4 lg:p-8">
+        <p class="text-lg uppercase"><%= @hero["_embedded"]["wp:term"].shift.shift["name"] %>
+        <h3 class="text-4xl tracking-tight leading-tight"><%= raw @hero["title"]["rendered"] %></h3>
+        <%= sanitize(@hero["excerpt"]["rendered"][0..205] + "...") %>
+        <p class="mt-3 italic"><%= @hero["_embedded"]["wp:term"][1].map { |h| h["name"] }.join(", ") %></p>
+      </div>
+    <% end %>
+  </div>
+  <div class="w-full lg:w-1/3 space-y-4">
+    <% @most_recent.each do |post| %>
+      <div class="relative block space-y-0.5">
+        <p class="uppercase text-sm text-blue-secondary"><%= post["_embedded"]["wp:term"].shift.shift["name"] %></p>
+        <%= link_to raw(post["title"]["rendered"]), news_article_path(slug: post["slug"]), class: "text-2xl font-bold text-gray-800 tracking-tight leading-tight" %>
+        <p class="text-gray-600"><%= post["_embedded"]["wp:term"][1].map { |h| h["name"] }.join(", ") %></p>
+      </div>
+    <% end %>
+  </div>
+</section>
+<section class="flex flex-wrap items-stretch flex-col lg:flex-row mb-7">
+  <div class="flex justify-start items-center space-x-2 border-b-2 border-gray-600 w-full mt-7 mb-10 pb-2">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-800 transform -rotate-12" viewBox="0 0 20 20" fill="currentColor">
+      <path fill-rule="evenodd" d="M18 3a1 1 0 00-1.447-.894L8.763 6H5a3 3 0 000 6h.28l1.771 5.316A1 1 0 008 18h1a1 1 0 001-1v-4.382l6.553 3.276A1 1 0 0018 15V3z" clip-rule="evenodd" />
+    </svg>
+    <h1 class="text-gray-800 text-4xl">State of WFM</h1>
+  </div>
+  <div class="flex flex-col space-y-12 sm:flex-row sm:space-x-6 lg:space-x-12 sm:space-y-0 border-b-2 border-gray-600 w-full pb-6 mb-10">
+    <% @commentaries.each do |post| %>
+      <div class="w-full sm:w-1/2 relative flex flex-col h-full">
+        <div class="flex flex-col-reverse space-y-6 space-y-reverse lg:space-y-0 lg:flex-row lg:space-x-8 items-stretch text-gray-600">
+          <div class="w-full lg:w-2/3 space-y-2">
+            <%= link_to raw(post["title"]["rendered"]), news_article_path(slug: post["slug"]), class: "text-2xl font-bold tracking-tight leading-tight text-gray-800" %>
+            <%= sanitize(post["excerpt"]["rendered"][0..155] + "...") %>
+            <p class="mt-3 italic text-blue-logodark"><%= post["_embedded"]["wp:term"][2].map { |h| h["name"] }.join(", ") %></p>
+          </div>
+          <%= link_to news_article_path(slug: post["slug"]), class: "lg:w-1/3 h-44 lg:h-auto" do %>
+            <div class="relative flex flex-col justify-end h-full">
+              <div class="absolute block z-10 w-full h-full center-both">
+                <%= image_tag(post["_embedded"]["wp:featuredmedia"].shift["media_details"]["sizes"]["full"]["source_url"], class: "object-cover object-center w-full h-full absolute center-both" , alt: "workforce news") %>
+                <div aria-hidden="true" class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-blue-800 w-full"></div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</section>

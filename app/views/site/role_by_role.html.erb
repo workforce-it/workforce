@@ -1,0 +1,261 @@
+<% content_for :title do %>
+  Use cases
+<% end %>
+
+<% content_for :description do %>
+  Never compromise on scheduling again. Workforce.com gives frontline and executive teams the insights they need to make better decisions, all while integrating with your existing HRIS and payroll systems.
+<% end %>
+
+<div data-controller="demo-modal">
+  <div class="bg-blue-light">
+    <div class="relative overflow-hidden">
+      <%= render "layouts/pattern" %>
+      <div class="relative pt-6 pb-10 sm:pb-12 2xl:pb-20">
+        <%= render "layouts/nav" %>
+        <div class="mt-16 mx-auto max-w-6xl px-4 sm:mt-24 sm:px-6">
+          <div class="text-left">
+            <h1 class="text-5xl tracking-tight font-extrabold text-blue-dark sm:text-5xl md:text-7xl">
+              <span class="block">Built for frontline ops.</span>
+              Loved by <span class="text-blue-tertiary">everyone else.</span>
+            </h1>
+            <p class="mt-3 text-xl text-body sm:text-lg md:mt-5 md:text-xl max-w-2xl">
+             Never compromise on scheduling again. Workforce.com gives frontline and executive teams the insights they need to make better decisions, all while integrating with your existing HRIS systems.
+            </p>
+          </div>
+          <div class="flex flex-col md:flex-row items-center justify-left md:space-x-4 space-y-4 md:space-y-0 mt-8 -mb-6 md:mb-6 2xl:-mb-10">
+            <div class="btn-blue-action inline-flex space-x-2 items-center justify-center" data-action="click->demo-modal#open">
+              <%= render "layouts/phone" %>
+              <span>Book a call</span>
+            </div>
+            <%= link_to "Try Workforce.com today", try_path, class: "font-medium text-base text-blue-dark mt-8" %>
+          </div>
+        </div>
+      </div>
+      <div class="relative -mb-2">
+        <div class="relative inset-0 flex flex-col h-72 2xl:h-96" aria-hidden="true">
+          <div class="h-24 sm:flex-1 w-full bg-white-wave">
+          </div>
+        </div>
+      </div>
+
+      <div class="relative py-8 pt-4 sm:py-20 sm:pt-16 2xl:pt-4 bg-white -mt-48">
+        <div class="flex flex-col space-y-2 sm:space-x-2 sm: space-y-0 sm:flex-row max-w-6xl mx-auto">
+          <div class="w-full sm:w-1/2 px-4 sm:px-6 text-left">
+            <h2 class="relative text-4xl text-blue-dark font-extrabold tracking-tight sm:text-5xl z-10 -mr-6">
+              For CEOs & CFOs</span>
+            </h2>
+            <div class="relative text-body flex space-y-4 flex-col my-4 sm:my-6">
+              <p class="text-xl">When you're using a legacy system, comparing forecasted <%= labor %> spend with actual can take weeks. Comparing that spend with revenue to calculate sales-per-labor-hour is even harder.
+               <p class="text-xl">Our custom BI dashboards give you visibility into <%= labor %> spending as it happens. Set budgets for specific locations & regions, then drill down to the root cause of any variance.</p>
+            </div>
+          </div>
+          <div class="w-full sm:w-1/2 relative px-10 mb-12 mt-2">
+            <div class="inset-0 max-w-6xl mx-auto absolute flex w-full h-full">
+              <div class="hidden blob-1 w-2/5 h-full flex absolute transform -left-8 -top-32"></div>
+              <div class="hidden blob-3 w-2/6 h-full sm:flex absolute transform rotate-12 -right-4 -bottom-24 scale-x-n125 scale-125"></div>
+            </div>
+
+            <div class="bg-white p-2 border-opacity-20 border-2 border-gray-200 w-4/5 rounded-lg shadow-lg z-20 mb-16 transform -rotate-1">
+              <%= image_tag("bi_1.jpg", class: "filter saturate-200") %>
+            </div>
+            <div class="bg-white p-1 border-opacity-20 border-2 border-gray-200 top-2/4 absolute rounded-lg w-60 shadow-lg translate-x-16 sm:translate-x-48 transform rotate-2 z-30">
+              <%= image_tag("bi_division.jpg", class: "filter saturate-200") %>
+            </div>
+            <div class="absolute translate-x-48 sm:translate-x-24 -translate-y-40 sm:-translate-y-16 z-30 transform scale-x-n1 -rotate-90 sm:-rotate-12">
+              <%= render "layouts/drawn_arrow", custom_class: "h-20 w-20 fill-current text-blue-secondary" %> 
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative py-8 pt-24 sm:py-20 sm:pt-8 bg-white">
+        <div class="flex flex-col-reverse space-y-2 sm:space-x-2 sm: space-y-0 sm:flex-row max-w-6xl mx-auto">
+          <div class="w-full sm:w-1/2 relative px-10 mb-12 mt-0">
+            <div class="inset-0 max-w-6xl mx-auto absolute flex w-full h-full">
+              <div class="hidden blob-1 w-96 h-96 sm:flex absolute transform -rotate-90 -translate-x-16 -translate-y-8 scale-x-n125 scale-125"></div>
+            </div>
+            <div class="p-2 w-2/4 z-20 -mt-5 transform -rotate-1">
+              <%= image_tag("clock_in_q_1.png") %>
+            </div>
+            <div class="p-1 top-1/4 absolute w-48 sm:w-56 translate-x-32 sm:translate-x-48 transform rotate-2 z-30">
+              <%= image_tag("clock_in_q_2.png") %>
+            </div>
+            <div class="absolute translate-x-12 sm:translate-x-28 -translate-y-9 sm:-translate-y-16 z-30 transform rotate-45">
+              <%= render "layouts/drawn_arrow", custom_class: "h-20 w-20 fill-current text-blue-secondary" %> 
+            </div>
+          </div>
+          <div class="w-full sm:w-1/2 px-4 sm:px-6 text-left">
+            <h2 class="relative text-4xl text-blue-dark font-extrabold tracking-tight sm:text-5xl z-10 -mr-6">
+              For HR officers</span>
+            </h2>
+            <div class="relative text-body flex space-y-4 flex-col my-4 sm:my-6">
+              <p class="text-xl">Never worry about complying with complex <%= labor %> regulations again. Break compliance<% unless uk? %>, californian overtime compliance,<% end %> and fair work week are handled for your frontline managers.</p>
+              <p class="text-xl">Clock-in questions help you reach employees on the ground, and integrations to your HCM & payroll systems keep PTO and timesheets balances insync automatically.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative py-8 pt-20 sm:py-20 sm:pt-8 bg-white">
+        <div class="flex flex-col space-y-2 sm:space-x-2 sm: space-y-0 sm:flex-row max-w-6xl mx-auto">
+          <div class="w-full sm:w-1/2 px-4 sm:px-6 text-left">
+            <h2 class="relative text-4xl text-blue-dark font-extrabold tracking-tight sm:text-5xl z-10 -mr-6">
+              <%= translate uk: "For payroll admins", us: "For HRIS admins" %></span>
+            </h2>
+            <div class="relative text-body flex space-y-4 flex-col my-4 sm:my-6">
+              <% if uk? %>
+                <p class="text-xl"> From employment contracts, timesheets, benefits, to labour laws, there’s lot's involved in payroll — it can leave you with hours of work.</p>
+                <p class="text-xl">With integrations to your existing payroll platforms, Workforce.com gives you the tools you need to solve business and compliance challenges, bringing clarity to all stakeholders.</p>
+              <% else %>
+                <p class="text-xl">If you look under the hood of scheduling modules in HCM products, it's evident they're upsells built without your ops team in mind.</p>
+                <p class="text-xl">With your own staging environment you can test exports, configuration changes and new features dafely before they impact users.</p>
+              <% end %>
+            </div>
+          </div>
+          <div class="w-full sm:w-1/2 h-80 sm:h-auto relative px-10 mt-6 mb-12">
+            <div class="inset-0 max-w-6xl mx-auto absolute flex w-full h-full">
+              <div class="hidden blob-1 w-96 h-96 sm:flex absolute transform -rotate-90 translate-x-32 -translate-y-8 scale-x-n125 scale-y-n125"></div>
+            </div>
+            <%= image_tag("scheduling.png", class: "w-4/5 transform rotate-2 absolute rounded-lg shadow-lg translate-y-20") %>
+            <div class="bg-white p-3 border-opacity-20 border-2 border-gray-200 rounded-full h-14 w-14 shadow-lg z-20 transform rotate-2 flex justify-center items-center transform translate-x-48 sm:translate-x-80 translate-y-2">
+              <% if us? %><%= image_tag("ceridian.jpg") %><% else %><%= image_tag("brightpay.png") %><% end %>
+            </div>
+            <div class="absolute bg-white <% if us? %>p-6<% else %>p-2<% end %> border-opacity-20 border-2 border-gray-200 rounded-full h-20 w-20 shadow-lg z-20 transform -rotate-2 justify-center items-center flex translate-x-32 translate-y-44 mt-1">
+              <% if us? %><%= image_tag("workday.png") %><% else %><%= image_tag("sage.png") %><% end %>
+            </div>
+            <div class="bg-white <% if us? %>p-3<% end %> border-opacity-20 border-2 border-gray-200 rounded-full h-14 w-14 shadow-lg z-20 transform -rotate-2 flex justify-center items-center absolute translate-y-36 left-24">
+              <% if us? %><%= image_tag("ukg.png") %><% else %><%= image_tag("xero.png") %><% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <% if uk? %>
+        <div class="relative z-20">
+          <div class="absolute inset-0 flex flex-col" aria-hidden="true">
+            <div class="flex-1 w-full bg-section-gradient">
+            </div>
+          </div>
+          <div class="max-w-3xl mx-auto px-4 sm:px-6 pb-20 sm:pb-32">
+            <div class="pt-28 relative text-center">
+              <div class="text-white text-xl flex space-x-2 items-center justify-center">
+                <span>285 sites</span>
+                <span class="bg-white h-2 w-2 rounded-full"></span>
+                <span>7,000 employees</span>
+              </div>
+              <h2 class="text-white text-3.5xl sm:text-4xl my-6 mb-12"><span class="underline">Case Study:</span> "With Workforce.com we've saved 25-30 <%= labor %> hours a week'"</h2>
+              <div class="rounded-2xl shadow-2xl overflow-hidden">
+                <div class="plyr__video-embed" data-controller="plyr">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/DCz_KwXSdkU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="mt-14 max-w-2xl mx-auto">
+                <h3 class="text-xl sm:text-2xl text-center text-white font-normal text-opacity-90">"One of the big challenges they've solved for us is high <%= labor %> cost. Stores that use Workforce.com can save between 25-30 <%= labor %> hours a week. In euros <span class="px-2 bg-opacity-80 bg-yellow-500">that's saving €150-€160 per week per store</span>."</span></h3>
+                <p class="text-white text-center text-opacity-80 text-base sm:text-lg my-3">— Martin Steenks, Frachise Operations Director, Domino's Netherlands</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% else %>
+        <div class="relative z-20">
+          <div class="absolute inset-0 flex flex-col" aria-hidden="true">
+            <div class="flex-1 w-full bg-section-gradient">
+            </div>
+          </div>
+          <div class="max-w-3xl mx-auto px-4 sm:px-6 pb-20 sm:pb-32">
+            <div class="pt-28 relative text-center">
+              <div class="text-white text-xl flex space-x-2 items-center justify-center">
+                <span>55 sites</span>
+                <span class="bg-white h-2 w-2 rounded-full"></span>
+                <span>2,442 employees</span>
+              </div>
+              <h2 class="text-white text-3.5xl sm:text-4xl my-6 mb-12"><span class="underline">Case Study:</span> "We wouldn't have been able to run our vaccine sites"</h2>\
+              <div class="rounded-2xl shadow-2xl overflow-hidden">
+                <div class="plyr__video-embed" data-controller="plyr">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/IRIljuMOR94" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+              </div>
+              <div class="mt-14 max-w-2xl mx-auto">
+                <h3 class="text-xl sm:text-2xl text-center text-white font-normal text-opacity-90">"This was a time of urgent critical need, for our entire state, and our entire country. And the thing we had to offer, that others couldn't, was speed. And <span class="px-2 bg-opacity-80 bg-yellow-500">Workforce.com was an accelerant of that speed</span>."</h3>
+                <p class="text-white text-center text-opacity-80 text-base sm:text-lg my-3">— Eric Parrie, CEO, COVIDCheck Colorado</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+
+      <div class="relative py-8 sm:py-20 pt-24 sm:pt-44 bg-white -mt-10">
+        <div class="flex flex-col space-y-2 sm:space-x-2 sm: space-y-0 sm:flex-row max-w-6xl mx-auto">
+          <div class="w-full sm:w-1/2 px-4 sm:px-6 text-left">
+            <h2 class="relative text-4xl text-blue-dark font-extrabold tracking-tight sm:text-5xl z-10 -mr-6">
+              For managers</span>
+            </h2>
+            <div class="relative text-body flex space-y-4 flex-col my-4 sm:my-6">
+              <p class="text-xl">Frontline leaders have the biggest leverage over profitability — they shouldn't be spending hours on <%= schedule %> changes, managing shift swaps, or deciphering overtime rules.</p>
+              <p class="text-xl">Manage shift swaps on the go, see who's clocking in late, and pin down overtime risk with our Mobile App. With Live Insights they'll see real-time spend against revenue, and make better <%= labor %> decisions in the moment.</p>
+            </div>
+          </div>
+          <div class="w-full sm:w-1/2 h-80 sm:h-auto relative px-10 my-12">
+            <div class="inset-0 max-w-6xl mx-auto absolute flex w-full h-full">
+              <div class="hidden blob-1 w-full h-96 sm:flex absolute transform -right-24 scale-150 rotate-90 -translate-y-9 sm:-translate-y-20" style="background-size: 82%;"></div>
+            </div>
+            <div class="bg-white py-1 border-opacity-20 border-2 border-gray-200 w-full sm:w-8/12 rounded-lg shadow-lg z-30 mb-16 transform -rotate-1 -translate-x-3 sm:-translate-y-5 pr-4">
+              <%= image_tag("manager_insights.png", class: "self-center") %>
+            </div>
+            <div class="absolute w-52 sm:w-60 -right-2 sm:-right-6 transform rotate-2 z-20 translate-y-32 sm:translate-y-16 top-0">
+              <%= image_tag("manager_shift_swap.png") %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative py-8 sm:py-20 sm:pt-8 bg-white z-10">
+        <div class="flex flex-col-reverse space-y-2 sm:space-x-2 sm: space-y-0 sm:flex-row max-w-6xl mx-auto">
+          <div class="w-full sm:w-1/2 h-60 sm:h-auto relative px-5 sm:px-10 my-12">
+            <div class="inset-0 max-w-6xl mx-auto absolute flex w-full h-full">
+              <div class="hidden blob-1 w-96 h-96 scale-150 sm:flex absolute transform rotate-12 -translate-y-12 translate-x-5"></div>
+            </div>
+            <%= image_tag("employee_shifts.png", class: "p-5 w-5/12 transform -rotate-2 absolute -translate-y-14 sm:-translate-y-20") %>
+            <div class="z-10 transform rotate-2 flex justify-center items-center absolute right-10 w-56 sm:w-1/2 translate-y-8 sm:translate-y-12 p-6 -translate-x-2 sm:translate-x-3">
+              <%= image_tag("employee_feedback.png") %>
+            </div>
+          </div>
+          <div class="w-full sm:w-1/2 px-4 sm:px-6 text-left">
+            <h2 class="relative text-4xl text-blue-dark font-extrabold tracking-tight sm:text-5xl z-10 -mr-6">
+              For employees</span>
+            </h2>
+            <div class="relative text-body flex space-y-4 flex-col my-4 sm:my-6">
+              <p class="text-xl">By empowering staff to manage their availability and leave, the Workforce.com mobile app reduces admin time and boosts employee satisfaction.</p>
+              <p class="text-xl">Employees can view their <%= schedule %>, clock-in via GPS, leave end-of-shift feedback, and offer up shifts to swap — job satisfaction goes up, and time spent managing call outs goes down.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative -mt-32 -mb-2 transform scale-y-n1">
+        <div class="relative inset-0 flex flex-col h-52 sm:h-72 2xl:h-96" aria-hidden="true">
+          <div class="h-24 sm:flex-1 w-full bg-white-wave">
+          </div>
+        </div>
+      </div>
+      
+      <div class="relative bg-blue-light">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 pb-16">
+          <div class="pt-20 relative text-center">
+            <h2 class="text-center text-2xl text-blue-dark text-opacity-90 font-extrabold tracking-tight sm:text-4xl">
+              <%= link_to "Learn about how it works", how_it_works_path, class: "underline" %>, <%= link_to "see how customers felt before & after", why_were_different_path, class: "underline" %>, or if you're ready to get started —
+            </h2>
+            <div class="flex flex-col md:flex-row items-center justify-center md:space-x-4 space-y-4 md:space-y-0 mt-8 mb-6">
+              <div class="btn-green-action mx-0 inline-flex space-x-2 items-center justify-center" data-action="click->demo-modal#open">
+              <%= render "layouts/phone" %>
+              <span>Book a call</span>
+              </div>
+              <%= link_to "Try Workforce.com today", try_path, class: "font-medium text-blue-dark mt-8 mb-6 py-2 mx-auto" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <%= render "layouts/demo_modal" %>
+</div>

@@ -1,0 +1,451 @@
+<% content_for :title do %>
+  Workforce Management Software
+<% end %>
+
+<% content_for :description do %>
+  The leading workforce management software for employee scheduling, time & attendance, legal compliance, and more.
+<% end %>
+
+<div data-controller="demo-modal">
+  <div class="bg-blue-light">
+    <div class="relative overflow-hidden">
+      <%= render "layouts/pattern" %>
+      <div class="relative pt-6 pb-14">
+        <%= render "layouts/nav" %>
+        <div class="flex flex-col-reverse sm:flex-row relative space-y-reverse space-y-12 sm:space-y-52 sm:space-x-20 mt-16 mx-auto max-w-6xl px-4 sm:mt-24 sm:px-6 sm:mb-48">
+          <div class="text-left sm:w-8/12 flex flex-col justify-center">
+            <span class="relative block uppercase mb-3 text-gray-400">Workforce Management Software for Frontline Teams</span>
+            <h1 class="text-6xl tracking-tight font-extrabold text-blue-dark sm:text-5xl md:text-7xl">
+              <span class="block">Scheduling driven by actual <span class="text-blue-tertiary"><%= labor %> insights.</span></span>
+            </h1>
+            <p class="mt-3 text-xl text-body sm:text-lg md:mt-7 md:text-xl max-w-md">
+              Simplify employee scheduling, <%= optimize %> <%= labor %> costs across locations, and help managers make the right decisions in the moment. 
+            </p>
+            <div class="inline-flex sm:flex-col items-center md:flex-row my-7 space-x-4 sm:space-y-4 md:space-y-0">
+              <div class="btn-blue-action cursor-pointer mx-0 flex w-max items-center space-x-2" data-action="click->demo-modal#open">
+                <div class="flex space-x-2 items-center">
+                  <%= render "layouts/camera" %>
+                  <span>Book a demo</span>
+                </div>
+              </div>
+              <%= link_to "Create free account", try_path, class: "text-blue-dark text-base font-medium" %>
+            </div>
+          </div>
+          <div class="hidden sm:block sm:w-8/12 h-full absolute -right-28">
+            <div class="absolute flex items-center space-x-2 transform -translate-x-60 bottom-14">
+              <span class="handwriting font-bold text-gray-600 text-6xl">Try it out</span>
+              <%= render "layouts/drawn_arrow", custom_class: "h-20 w-20 fill-current text-gray-600" %> 
+            </div>
+            <div class="h-full z-20">
+              <% if uk? %>
+                <iframe src="https://my.tanda.co/live-insights-demo?locale=en-GB" width="100%" height="95%" class="rounded-2xl" title="Hospitality Live Insights"></iframe>
+              <% else %>
+                <iframe src="https://my.tanda.co/live-insights-demo?locale=en-US&country=United%20States" width="100%" height="95%" class="rounded-2xl" title="Hospitality Live Insights"></iframe>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <div class="flex space-x-10 max-w-6xl mx-auto justify-center items-center pt-20 pb-5 relative">
+          <% if es? || us? %>
+            <%= image_tag("reef-logo.png", class: "h-6 sm:h-7 filter brightness-0 opacity-60") %>
+            <%= image_tag("covid-logo.png", class: "h-6 sm:h-78 filter brightness-0 opacity-60") %>
+            <%= image_tag("dominos-logo.png", class: "h-6 sm:h-10 filter brightness-0 opacity-60") %>
+            <%= image_tag("westgate-logo.png", class: "h-6 sm:h-12 filter brightness-0 opacity-60") %>
+            <%= image_tag("benandjerrys-logo.png", class: "h-6 sm:h-8 filter brightness-0 opacity-60") %>
+          <% end %>
+        </div>
+      </div>
+
+      <div data-controller="sliding-picker" data-sliding-picker-axis-value="X" data-sliding-picker-active-class="bg-blue-tertiary text-white shadow-sm" class="relative py-8 sm:py-32 sm:pt-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:mt-16 sm:px-6">
+          <div class="flex flex-col justify-center">
+            <h2 class="relative text-5xl sm:text-center text-blue-dark font-extrabold tracking-tight max-w-4xl mx-auto sm:text-5xl z-10">
+              Built for frontline teams.</span>
+            </h2>
+          </div>
+          <ul class="-mx-6 px-6 py-3 sm:py-1.5 sm:px-1.5 bg-blue-light space-y-1 sm:space-y-0 sm:rounded-full cursor-pointer flex flex-wrap sm:space-x-2 sm:w-max sm:mx-auto text-base sm:text-lg my-6 sm:my-12 text-blue-dark" role="tablist">
+            <li data-transition="0%" data-sliding-picker-target="picker" data-action="click->sliding-picker#pick" class="text-white rounded-full px-4 py-1 mt-1 sm:mt-0 bg-blue-tertiary shadow-sm" aria-selected="true">
+              Smart Scheduling
+            </li>
+            <li data-transition="-100%" data-sliding-picker-target="picker" data-action="click->sliding-picker#pick" class="rounded-full px-4 py-1" aria-selected="false">
+              Workforce Visibility
+            </li>
+            <li data-transition="-200%" data-sliding-picker-target="picker" data-action="click->sliding-picker#pick" class="rounded-full px-4 py-1" aria-selected="false">
+              Leading Indicators™
+            </li>
+            <li data-transition="-300%" data-sliding-picker-target="picker" data-action="click->sliding-picker#pick" class="hidden-es rounded-full px-4 py-1" aria-selected="false">
+              Payroll Integrations
+            </li>
+            <li data-transition="-400%" data-sliding-picker-target="picker" data-action="click->sliding-picker#pick" class="rounded-full px-4 py-1" aria-selected="false">
+              HR Engagement
+            </li>
+          </ul>
+        </div>
+        <div data-sliding-picker-target="content" class="relative flex transition duration-300 ease-in-out">
+          <section class="min-w-full bg-white">
+            <section class="flex flex-col sm:flex-row space-y-10 sm:space-y-0 space-x-6 max-w-6xl mx-auto px-4 sm:mt-12 sm:px-16">
+              <div class="sm:w-5/12 sm:mb-12 flex flex-col justify-center space-y-3">
+                <div class="mt-5 sm:mt-10 px-4 sm:px-6 flex justify-center sm:block">
+                  <div class="absolute flex flex-col items-center justify-center h-20 sm:h-28 w-20 sm:w-28 -mt-3 sm:-mt-8 -ml-3 sm:ml-2 z-0 transform -translate-x-36 sm:-translate-x-16">
+                    <span class="absolute handwriting text-white font-bold text-6xl sm:text-7xl">1</span>
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <linearGradient x1="-1.17230468e-05%" y1="-20.203665%" x2="99.9997948%" y2="-20.203665%" id="linearGradient-1">
+                          <stop stop-color="#5cd2e9" offset="0%"></stop>
+                          <stop stop-color="#3c98c9" offset="100%"></stop>
+                        </linearGradient>
+                      </defs>
+                      <path fill="url(#linearGradient-1)" d="M52.4,-27.8C64.5,-9.5,68.3,16.1,58.2,36.5C48.1,56.9,24,72.2,0.1,72.1C-23.8,72.1,-47.7,56.7,-55.4,37.6C-63.2,18.6,-54.8,-4.1,-42.9,-22.4C-31,-40.7,-15.5,-54.5,2.4,-55.9C20.2,-57.2,40.4,-46.1,52.4,-27.8Z" transform="translate(100 100)" />
+                    </svg>
+                  </div>
+                  <h2 class="relative text-left text-3xl text-blue-dark font-extrabold leading-none sm:leading-none tracking-tight sm:text-4xl z-10 transform translate-x-2 sm:translate-x-12 sm:-translate-y-2">
+                    Smarter <%= schedules %> <span class="block">based on demand.</span>
+                  </h2>
+                </div>
+                <p class="text-lg md:text-lg text-body sm:pr-6">
+                  With Workforce.com, revenue and shift data from previous weeks are used to accurately forecast upcoming demand, and build the best <%= schedule %>.<span class="sm:block"> We make sure the right person is scheduled at the right time, <%= link_to "automatically.", software_auto_scheduling_path, class: "font-medium underline" %></span>
+                </p>
+                <div class="pt-3 flex space-x-2">
+                  <div class="btn-blue-action bg-blue-tertiary cursor-pointer mx-0 flex w-max items-center space-x-2 opacity-90" data-action="click->demo-modal#open">
+                    <div class="flex space-x-2 items-center">
+                      <%= render "layouts/camera" %>
+                      <span>Book a demo</span>
+                    </div>
+                  </div>
+                  <%= link_to "Learn more", software_auto_scheduling_path, class: "w-auto items-center mx-auto inline-flex justify-center py-1.5 sm:px-3 text-base font-medium text-body font-medium" %>
+                </div>
+              </div>
+              <div class="sm:w-7/12 relative sm:pl-10 items-center flex sm:mb-12">
+                <%= image_tag("demand_larger.png", class: "w-7/12 rounded-lg shadow-lg z-20 transform rotate-1 self-center sm:-mt-20") %>
+                <%= image_tag("auto_build.png", class: "hidden sm:block absolute rounded-full bottom-8 h-8 shadow-lg left-16  transform -rotate-2 z-20") %>
+                <%= image_tag("automatic-restaurant.png", class: "absolute bg-white rounded-md shadow-md w-6/12 bottom-5 right-2 sm:right-5 z-20") %>
+              </div>
+            </section>
+          </section>
+
+          <section class="min-w-full bg-white">
+            <section class="flex flex-col sm:flex-row space-y-10 sm:space-y-0 space-x-6 max-w-6xl mx-auto px-4 sm:mt-12 sm:px-16">
+              <div class="sm:w-5/12 sm:mb-12 flex flex-col justify-center space-y-3">
+                <div class="mt-5 sm:mt-10 px-4 sm:px-6 flex justify-center sm:block">
+                  <div class="absolute flex flex-col items-center justify-center h-20 sm:h-28 w-20 sm:w-28 -mt-3 sm:-mt-8 -ml-3 sm:ml-2 z-0 transform -translate-x-36 sm:-translate-x-16">
+                    <span class="absolute handwriting text-white font-bold text-6xl sm:text-7xl">2</span>
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <linearGradient x1="-1.17230468e-05%" y1="-20.203665%" x2="99.9997948%" y2="-20.203665%" id="linearGradient-1">
+                          <stop stop-color="#5cd2e9" offset="0%"></stop>
+                          <stop stop-color="#3c98c9" offset="100%"></stop>
+                        </linearGradient>
+                      </defs>
+                      <path fill="url(#linearGradient-1)" d="M52.4,-27.8C64.5,-9.5,68.3,16.1,58.2,36.5C48.1,56.9,24,72.2,0.1,72.1C-23.8,72.1,-47.7,56.7,-55.4,37.6C-63.2,18.6,-54.8,-4.1,-42.9,-22.4C-31,-40.7,-15.5,-54.5,2.4,-55.9C20.2,-57.2,40.4,-46.1,52.4,-27.8Z" transform="translate(100 100)" />
+                    </svg>
+                  </div>
+                  <h2 class="relative text-left text-3xl text-blue-dark font-extrabold leading-none sm:leading-none tracking-tight sm:text-4xl z-10 transform translate-x-4 sm:translate-x-12 sm:-translate-y-2">
+                    A 30,000 ft view with<span class="block">custom BI reporting.
+                  </h2>
+                </div>
+                <p class="text-lg md:text-lg text-body sm:pr-6">
+                  When frontline teams have the right software to make the best <%= labor %> decisions, it's visible all the way up to the executive level. Workforce.com gives C-suite execs a bigger picture of ops, with real-time 'drill down' dashboards for metrics that matter most.
+                </p>
+                <div class="pt-3 flex space-x-2">
+                  <div class="btn-blue-action bg-blue-tertiary cursor-pointer mx-0 flex w-max items-center space-x-2 opacity-90" data-action="click->demo-modal#open">
+                    <div class="flex space-x-2 items-center">
+                      <%= render "layouts/camera" %>
+                      <span>Book a demo</span>
+                    </div>
+                  </div>
+                  <%= link_to "Learn more", role_by_role_path, class: "w-auto items-center mx-auto inline-flex justify-center py-1.5 sm:px-3 text-base font-medium text-body font-medium" %>
+                </div>
+              </div>
+              <div class="sm:w-7/12 relative sm:pl-10 items-center flex sm:mb-12">
+                <div class="bg-white p-2 border-opacity-20 border-2 border-gray-200 w-8/12 rounded-lg shadow-lg z-20 mb-12 transform -rotate-1 mr-5 sm:ml-5">
+                  <%= image_tag("bi_1.jpg", class: "filter saturate-150") %>
+                </div>
+                <div class="bg-white right-2 sm:-right-5 absolute w-3/5 rounded-lg shadow-lg p-3 z-20 border-opacity-20 border-2 border-gray-200 bottom-5">
+                  <%= image_tag("bi_final.jpg", class: "filter saturate-150")  %>
+                </div>
+              </div>
+            </section>
+          </section>
+
+          <section class="min-w-full bg-white">
+            <section class="flex flex-col sm:flex-row space-y-10 sm:space-y-0 space-x-6 max-w-6xl mx-auto px-4 sm:mt-12 sm:px-16">
+              <div class="sm:w-5/12 sm:mb-12 flex flex-col justify-center space-y-3">
+                <div class="mt-5 sm:mt-10 px-4 sm:px-6 flex justify-center sm:block">
+                  <div class="absolute flex flex-col items-center justify-center h-20 sm:h-28 w-20 sm:w-28 -mt-3 sm:-mt-8 -ml-3 sm:ml-2 z-0 transform -translate-x-36 sm:-translate-x-16">
+                    <span class="absolute handwriting text-white font-bold text-6xl sm:text-7xl">3</span>
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <linearGradient x1="-1.17230468e-05%" y1="-20.203665%" x2="99.9997948%" y2="-20.203665%" id="linearGradient-1">
+                          <stop stop-color="#5cd2e9" offset="0%"></stop>
+                          <stop stop-color="#3c98c9" offset="100%"></stop>
+                        </linearGradient>
+                      </defs>
+                      <path fill="url(#linearGradient-1)" d="M52.4,-27.8C64.5,-9.5,68.3,16.1,58.2,36.5C48.1,56.9,24,72.2,0.1,72.1C-23.8,72.1,-47.7,56.7,-55.4,37.6C-63.2,18.6,-54.8,-4.1,-42.9,-22.4C-31,-40.7,-15.5,-54.5,2.4,-55.9C20.2,-57.2,40.4,-46.1,52.4,-27.8Z" transform="translate(100 100)" />
+                    </svg>
+                  </div>
+                  <h2 class="relative text-left text-3xl text-blue-dark font-extrabold leading-none sm:leading-none tracking-tight sm:text-4xl z-10 transform translate-x-2 sm:translate-x-12 sm:-translate-y-2">
+                    Reduce <%= labor %> costs <span class="block">by between 4-11%.</span>
+                  </h2>
+                </div>
+                <p class="text-lg md:text-lg text-body sm:pr-6">
+                   Workforce.com Leading Indicators™ maps your <%= labor %> costs to sales in real time. With this data, frontline managers are able to receive alerts on potential overtime, and stay ontop of SPLH. This proprietry feature suite delivers results from day one.
+                </p>
+                <div class="pt-3 flex space-x-2">
+                  <div class="btn-blue-action bg-blue-tertiary cursor-pointer mx-0 flex w-max items-center space-x-2 opacity-90" data-action="click->demo-modal#open">
+                    <div class="flex space-x-2 items-center">
+                      <%= render "layouts/camera" %>
+                      <span>Book a demo</span>
+                    </div>
+                  </div>
+                  <p class="hidden sm:flex w-auto items-center mx-auto inline-flex justify-center py-1.5 sm:px-3 text-base font-medium text-body font-medium cursor-pointer" data-action="click->demo-modal#open">Contact sales to learn more</p>
+                </div>
+              </div>
+              <div class="sm:w-7/12 relative sm:pl-10 items-center flex sm:mb-12">
+                <%= image_tag("insights.png", class: "w-10/12 rounded-lg shadow-lg z-20 transform rotate-1 sm:translate-x-8 sm:-mt-28") %>
+                <%= image_tag("costed-larger.png", class: "hidden sm:block absolute -bottom-5 sm:bottom-8 translate-x-52 h-32 transform rotate-1 z-30 pt-3") %>
+                <%= image_tag("indicators.png", class: "absolute bg-white rounded-md shadow-md w-3/12 -bottom-20 right-52 sm:bottom-20 sm:-right-5 z-20 pb-3") %>
+              </div>
+            </section>
+          </section>
+
+          <section class="min-w-full bg-white">
+            <section class="flex flex-col sm:flex-row space-y-10 sm:space-y-0 space-x-6 max-w-6xl mx-auto px-4 sm:mt-12 sm:px-16">
+              <div class="sm:w-5/12 sm:mb-12 flex flex-col justify-center space-y-3">
+                <div class="mt-5 sm:mt-10 px-4 sm:px-6 flex justify-center sm:block">
+                  <div class="absolute flex flex-col items-center justify-center h-20 sm:h-28 w-20 sm:w-28 -mt-3 sm:-mt-8 -ml-3 sm:ml-2 z-0 transform -translate-x-36 sm:-translate-x-16">
+                    <span class="absolute handwriting text-white font-bold text-6xl sm:text-7xl">4</span>
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <linearGradient x1="-1.17230468e-05%" y1="-20.203665%" x2="99.9997948%" y2="-20.203665%" id="linearGradient-1">
+                          <stop stop-color="#5cd2e9" offset="0%"></stop>
+                          <stop stop-color="#3c98c9" offset="100%"></stop>
+                        </linearGradient>
+                      </defs>
+                      <path fill="url(#linearGradient-1)" d="M52.4,-27.8C64.5,-9.5,68.3,16.1,58.2,36.5C48.1,56.9,24,72.2,0.1,72.1C-23.8,72.1,-47.7,56.7,-55.4,37.6C-63.2,18.6,-54.8,-4.1,-42.9,-22.4C-31,-40.7,-15.5,-54.5,2.4,-55.9C20.2,-57.2,40.4,-46.1,52.4,-27.8Z" transform="translate(100 100)" />
+                    </svg>
+                  </div>
+                  <h2 class="relative text-left text-3xl text-blue-dark font-extrabold leading-none sm:leading-none tracking-tight sm:text-4xl z-10 transform translate-x-4 sm:translate-x-12 sm:-translate-y-2 w-10/12 sm:w-full">
+                    Payroll integrations <span class="sm:block">that actually work.</span>
+                  </h2>
+                </div>
+                <p class="text-lg md:text-lg text-body sm:pr-6">
+                   Our team of implementation engineers build and maintain our payroll integrations. Each integration has stringent testing, performance budgets, and error monitoring, to ensure that it works when you need it most: at 4pm on pay day.
+                </p>
+                <div class="pt-3 flex space-x-2">
+                  <div class="btn-blue-action bg-blue-tertiary cursor-pointer mx-0 flex w-max items-center space-x-2 opacity-90" data-action="click->demo-modal#open">
+                    <div class="flex space-x-2 items-center">
+                      <%= render "layouts/camera" %>
+                      <span>Book a demo</span>
+                    </div>
+                  </div>
+                  <%= link_to "Learn more", software_payroll_integration_path, class: "w-auto items-center mx-auto inline-flex justify-center py-1.5 sm:px-3 text-base font-medium text-body" %>
+                </div>
+              </div>
+              <div class="sm:w-7/12 relative sm:pl-10 items-center flex sm:mb-12">
+                <%= image_tag("payroll-header-us.png", class: "w-full rounded-lg shadow-lg z-20 self-center") %>
+              </div>
+            </section>
+          </section>
+
+          <section class="min-w-full bg-white">
+            <section class="flex flex-col sm:flex-row space-y-10 sm:space-y-0 space-x-6 max-w-6xl mx-auto px-4 sm:mt-12 sm:px-16">
+              <div class="sm:w-5/12 sm:mb-12 flex flex-col justify-center space-y-3">
+                <div class="mt-5 sm:mt-10 px-4 sm:px-6 flex justify-center sm:block">
+                  <div class="absolute flex flex-col items-center justify-center h-20 sm:h-28 w-20 sm:w-28 -mt-3 sm:-mt-8 -ml-3 sm:ml-2 z-0 transform -translate-x-36 sm:-translate-x-16">
+                    <span class="absolute handwriting text-white font-bold text-6xl sm:text-7xl">5</span>
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                      <defs>
+                        <linearGradient x1="-1.17230468e-05%" y1="-20.203665%" x2="99.9997948%" y2="-20.203665%" id="linearGradient-1">
+                          <stop stop-color="#5cd2e9" offset="0%"></stop>
+                          <stop stop-color="#3c98c9" offset="100%"></stop>
+                        </linearGradient>
+                      </defs>
+                      <path fill="url(#linearGradient-1)" d="M52.4,-27.8C64.5,-9.5,68.3,16.1,58.2,36.5C48.1,56.9,24,72.2,0.1,72.1C-23.8,72.1,-47.7,56.7,-55.4,37.6C-63.2,18.6,-54.8,-4.1,-42.9,-22.4C-31,-40.7,-15.5,-54.5,2.4,-55.9C20.2,-57.2,40.4,-46.1,52.4,-27.8Z" transform="translate(100 100)" />
+                    </svg>
+                  </div>
+                  <h2 class="relative text-left text-3xl text-blue-dark font-extrabold leading-none sm:leading-none tracking-tight sm:text-4xl z-10 transform translate-x-4 sm:translate-x-12 sm:-translate-y-2 w-10/12 sm:w-full">
+                    Meet employees <span class="sm:block">where they're at.</span>
+                  </h2>
+                </div>
+                <p class="text-base sm:text-lg md:text-lg text-body sm:pr-6">
+                   Retain employees and stay in the loop with workforce management software designed to increase employee engagement. Employees can swap shifts, manage their <%= schedules %>, and provide live feedback all from their mobile phone.
+                </p>
+                <div class="pt-3 flex space-x-2">
+                  <div class="btn-blue-action bg-blue-tertiary cursor-pointer mx-0 flex w-max items-center space-x-2 opacity-90" data-action="click->demo-modal#open">
+                    <div class="flex space-x-2 items-center">
+                      <%= render "layouts/camera" %>
+                      <span>Book a demo</span>
+                    </div>
+                  </div>
+                  <%= link_to "Learn more", software_employee_app_path, class: "w-auto items-center mx-auto inline-flex justify-center py-1.5 sm:px-3 text-base font-medium text-body" %>
+                </div>
+              </div>
+              <div class="sm:w-7/12 relative sm:pl-10 items-center flex sm:mb-12">
+                <%= image_tag("shift-communication-UK.png", class: "w-full") %>
+              </div>
+            </section>
+          </section>
+            ea
+        </div>
+      </div>
+
+      <div class="relative flex justify-center mt-3 2xl:-mt-12 2xl:-mb-12 -mb-32 z-20">
+         <%= render "layouts/drawn_down_arrow", custom_class: "h-14 sm:h-24 w-14 sm:w-24 fill-current text-blue-dark rotate-45 transform scale-y-n1" %> 
+      </div>
+
+
+      <div class="relative -mb-24 bg-white">
+        <div class="relative inset-0 flex flex-col h-96" aria-hidden="true">
+          <div class="flex-1 w-full bg-blue-wave">
+          </div>
+        </div>
+      </div>
+
+      <div class="relative bg-blue-light">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 pb-16">
+          <div class="transform -translate-y-48 sm:-translate-y-52 2xl:-translate-y-80 px-4 sm:px-0 pt-14 sm:pt-28 pb-10 bg-white rounded-3xl shadow-2xl -mb-52 2xl:-mb-72">
+            <div class="relative max-w-2xl px-2 sm:px-4 mx-auto sm:max-w-xl sm:px-6 lg:px-0">
+              <div class="mt-5 text-left text-body space-y-8">
+                <p class="text-1.5xl sm:text-1.5xl">
+                  Most HCM software offers a smorgasbord of tools, but their scheduling just feels off — it's 'one-size-fits-all', hard to use, and doesn't scale in the long run.
+                </p>
+                <p class="text-1.5xl sm:text-1.5xl">
+                  For 10 years we've given our undivided attention to building scheduling & attendance software for frontline teams<%= " with 200+ staff" unless uk? %>. <span class="inline-block">We do one thing, and we do it well.</span>
+                </p>
+                <p class="text-1.5xl sm:text-1.5xl">
+                  With custom BI reporting, demand-driven scheduling, and live <%= labor %> cost insights, we help <%= translate us: "ops", uk: "operations" %> teams make decisions that actually improve the bottom line.
+                </p>
+                <p class="text-1.5xl sm:text-1.5xl">
+                  Workforce.com helps you reduce <%= labor %> spend, and increase profitability across your business.
+                </p>
+                <p class="text-1.5xl sm:text-1.5xl">
+                  It's as simple as that.
+                </p>
+              </div>
+              <div class="flex justify-end items-end">
+                <%= link_to "See how it works ➜", how_it_works_path, class: "btn-blue-action my-12 mx-0" %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative py-16 sm:py-24 bg-blue-light">
+        <div class="mx-auto max-w-4xl px-4 sm:px-6 text-center">
+          <h2 class="text-3xl text-blue-dark font-extrabold tracking-tight sm:text-5xl">
+            We've been writing about better workforce management for years
+          </h2>
+        </div>
+        <div class="lg:mx-auto lg:max-w-6xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-20 lg:items-start">
+          <div class="relative py-6 sm:py-16 lg:py-0">
+            <div aria-hidden="true" class="hidden sm:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-screen">
+              <svg class="absolute top-10 left-1/2 -ml-3 lg:-right-28 lg:left-auto lg:top-12" width="404" height="392" fill="none" viewBox="0 0 404 392">
+                <defs>
+                  <pattern id="02f20b47-fd69-4224-a62a-4c9de5c763f7" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                    <circle cx="1.5" cy="1.5" r="1.5" class="text-gray-200" fill="currentColor" />
+                  </pattern>
+                </defs>
+                <rect width="340" height="192" fill="url(#02f20b47-fd69-4224-a62a-4c9de5c763f7)" />
+              </svg>
+            </div>
+
+            <div class="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none lg:py-20">
+              <div class="relative flex pt-10 pb-5 sm:space-x-16 justify-between">
+                <div class="flex absolute w-full -mt-7 justify-center">
+                  <%= image_tag("magazine-1.jpg", class: "w-2/5 shadow-md rounded-md sm:ml-16 self-center", alt: "Workforce Magazine") %>
+                </div>
+                <%= image_tag("magazine-2.jpg", class: "w-1/3 shadow-md rounded-md self-center", alt: "Workforce Magazine") %>
+                <%= image_tag("magazine-3.jpg", class: "w-1/3 shadow-md rounded-md self-center", alt: "Workforce Magazine") %>
+              </div>
+            </div>
+          </div>
+          <div class="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
+            <div class="sm:pt-12 -mt-6 sm:mt-0 sm:pt-16 lg:pt-24">
+              <div class="mt-6 text-body space-y-6">
+                <p class="text-xl sm:text-xl px-2 sm:px-0">
+                  We help thousands of businesses through our software — we also research and write about workforce management. Workforce.com is built off years of research into compliance, automation, and productivity. Stay on top of issues affecting modern workforces, and start making better decisions. 
+                </p>
+              </div>
+              <%= link_to "Read the latest news", news_path, class: "btn-blue-action mt-5" %>
+              <%= link_to "or browse our ebooks", whitepapers_path, class: "sm:my-4 w-auto mx-auto inline-flex justify-center py-1.5 sm:px-3 text-base font-medium text-blue-dark font-medium" %>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative py-8 bg-white sm:py-24">
+        <div class="mx-auto max-w-4xl px-4 sm:px-6 text-center">
+          <div class="my-4 flex space-x-2 justify-center items-center">
+            <%= render "layouts/star", custom_class: "h-8 w-8 text-yellow-400" %>
+            <%= render "layouts/star", custom_class: "h-8 w-8 text-yellow-400" %>
+            <%= render "layouts/star", custom_class: "h-8 w-8 text-yellow-400" %>
+            <%= render "layouts/star", custom_class: "h-8 w-8 text-yellow-400" %>
+            <%= render "layouts/star", custom_class: "h-8 w-8 text-yellow-400" %>
+          </div>
+          <h2 class="text-3xl max-w-xl mx-auto text-blue-dark font-extrabold tracking-tight sm:text-5xl">
+            Businesses get more out of work using Workforce.com
+          </h2>
+          <p class="text-body text-lg sm:text-xl my-4 sm:max-w-2xl mx-auto">
+            Restaurants, hospitals, hotels, and franchises have all switched to Workforce.com to <span class="font-bold">radically re-think</span> employee <%= schedules %>, <%= labor %> costs, and time & attendance.
+          </p>
+        </div>
+        <div class="lg:mx-auto lg:max-w-5xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-12 lg:items-start text-blue-dark mt-10 sm:mt-20 mb-10 text-center px-3 space-y-6 sm:space-y-0">
+          <div class="relative">
+            <h2 class="text-xl sm:text-2xl leading-tight font-bold">"Love being able to log in from anywhere and <span class="highlight-light">see who's there - when they came, when they left</span>. I've never seen it before."</h2>
+            <p class="text-gray-500 text-sm my-2">— Dickie O'Reilly, Managing Partner, Spyder</p>
+          </div>
+          <div class="relative">
+            <% if uk? %>
+              <h2 class="text-xl sm:text-2xl leading-tight font-bold">"One of the big challenges they've solved is <%= labor %> cost. Stores that use Workforce.com can <span class="highlight-light">save between 25-30 hours a week.</span>"</h2>
+              <p class="text-gray-500 text-sm my-2">— Martin Steenks, Frachise Operations Director, Domino's Netherlands</p>
+            <% else %>
+              <h2 class="text-xl sm:text-2xl leading-tight font-bold">"For me it's a revolution. Implementation was very good, and <span class="highlight-light">in two weeks we have trained everyone</span> to use the platform."</h2>
+              <p class="text-gray-500 text-sm my-2">— Aerie Albaz, COO, Domino's Israel</p>
+            <% end %>
+          </div>
+          <div class="relative">
+            <h2 class="text-xl sm:text-2xl leading-tight font-bold">"Each manager would probably have saved 2-3 hours a week. <span class="highlight-light">Wage costs have dropped</span>."</h2>
+            <p class="text-gray-500 text-sm my-2">— Natasha Laidler, MyHealth Medical Group</p>
+          </div>
+          <div class="relative">
+            <h2 class="text-xl sm:text-2xl leading-tight font-bold">"We were using paper-based timesheets, which was a problem. <span class="highlight-light">Now it’s just streamlined</span>."</h2>
+            <p class="text-gray-500 text-sm my-2">— Myriam Freer, Pennwood Aged Care</p>
+          </div>    
+          <div class="relative">
+            <h2 class="text-xl sm:text-2xl leading-tight font-bold">"Freed up so much time for my leaders to actually <span class="highlight-light">focus on the projects that make us money</span> and are better for the business."</h2>
+            <p class="text-gray-500 text-sm my-2">— Chris Tankard, Culture & HR Manager, Ferguson Plarre</p>
+          </div>
+          <div class="relative">
+            <h2 class="text-xl sm:text-2xl leading-tight font-bold">"We don’t have to get people involved when someone can’t make their shift. It <span class="highlight-light">basically allows us to automate it all</span>."</h2>
+            <p class="text-gray-500 text-sm my-2">— Jordan Grives, CEO, Fonebox</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative -mt-10 -mb-32 lg:-mb-40 2xl:-mb-60 bg-white">
+        <div class="relative inset-0 flex flex-col h-52 sm:h-72 2xl:h-96" aria-hidden="true">
+          <div class="h-24 sm:flex-1 w-full bg-blue-wave">
+          </div>
+        </div>
+      </div>
+
+      <div class="relative bg-blue-light">
+        <div class="max-w-2xl mx-auto px-4 sm:px-6 pb-16">
+          <div class="pt-20 relative text-center">
+            <h2 class="text-center text-2xl text-blue-dark font-extrabold tracking-tight sm:text-4xl">
+              <%= link_to "Learn about how it works", how_it_works_path, class: "underline" %>, <%= link_to "see how customers felt before & after", why_were_different_path, class: "underline" %>, or if you're ready to get started —
+            </h2>
+            <div class="flex flex-col md:flex-row items-center justify-center md:space-x-4 space-y-4 md:space-y-0 mt-8 mb-6">
+              <div class="btn-green-action mx-0 inline-flex space-x-2 items-center justify-center" data-action="click->demo-modal#open">
+                <%= render "layouts/phone" %>
+                <span>Book a call</span>
+              </div>
+              <%= link_to "Try Workforce.com today", try_path, class: "text-blue-dark font-medium" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <%= render "layouts/demo_modal", booking_type: :demo %>
+</div>
